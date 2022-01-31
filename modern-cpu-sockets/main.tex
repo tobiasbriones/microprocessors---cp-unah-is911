@@ -6,7 +6,7 @@
 %
 % This source code is licensed under the Creative Commons Attribution 4.0 
 % International License found in the LICENSE file in the root directory of 
-% this source tree or at https://spdx.org/licenses/CC-BY-4.0.html.
+% this source tree or at https://spdx.org/licenses/CC-BY-4.0.
 
 \documentclass[conference]{IEEEtran}
 \usepackage[letterpaper, portrait, margin=2cm]{geometry}
@@ -20,6 +20,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage[table,xcdraw]{xcolor}
+\usepackage{lipsum}
 
 \addbibresource{bibliography.bib}
 
@@ -42,7 +43,14 @@
     urlcolor=cyan,
     citecolor=black
 }
-    
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
 \begin{document}
 
 \maketitle
@@ -52,6 +60,12 @@ En esta investigación se provee un resumen sobre los sockets para PC modernos a
 \end{abstract}
 
 \tableofcontents
+
+\blfootnote{
+Copyright (c) 2022 Tobias Briones. All rights reserved. \\
+This work is licensed under the Creative Commons Attribution 4.0 International License (\href{https://spdx.org/licenses/CC-BY-4.0}{CC-BY-4.0}). \\
+Third party contents available under their respective copyright and license.\\
+For more details go to the \href{https://github.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
 
 \section{Introducción}
 
