@@ -142,6 +142,98 @@ Entre los modelos mencionados arriba y otros populares se resume la siguiente in
 
 \small Fuente: tom'sHARDWARE \cite{harding-2021}.
 
+\section{Funcionamiento}
+
+De acuerdo al paquete del zócalo, se define su mecanismo de funcionamiento. Como se ha mencionado, el funcionamiento de un zócalo es tal que permite la conexión física del microprocesador a la tarjeta madre.
+
+\subsection{Matriz de Contactos en Rejilla (LGA)}
+
+Los zócalos LGA son los más populares ya que como se ha visto anteriormente, muchos modelos de CPUs actuales para PCs normales lo utilizan.
+
+\bigbreak
+
+Según ONLOGIC Blog \cite{fanton-2021} la mayoría de procesadores modernos removibles utilizan zócalo LGA.
+
+\bigbreak
+
+Su funcionamiento consiste en:
+
+\bigbreak
+
+\begin{displayquote}
+    A diferencia de las interfaces de matriz de rejilla de pines (PGA) y matriz de rejilla de bolas (BGA), la interfaz LGA no presenta ni pines ni esferas, la conexión de la que dispone el chip es únicamente una matriz de superficies conductoras o contactos chapadas en oro que hacen contacto con la placa base a través del zócalo de CPU.
+
+    \bigbreak
+
+    Su alineación de pines es vertical y horizontal.
+    
+    \bigbreak
+    
+    Esta interfaz se beneficia por reducir el proceso de fabricación, amén de unas características térmicas, eléctricas y físicas superiores a las interfaces de chips previamente usados.\\
+    \small
+    Fuente: Wikipedia $\mid$ Land Grid Array \cite{wikipedia-lga-2021D}.
+\end{displayquote}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\paperwidth]{images/lga-socket.jpg}
+    \caption{Zócalo de Matriz de Contactos en Rejilla} \footnotesize
+    Fuente: De User Smial on de.wikipedia - Trabajo propio, CC BY-SA 2.0 de, https://commons.wikimedia.org/w/index.php?curid=1066500 \cite{wikipedia-lga-2021D}.
+\end{figure}
+
+\bigbreak
+
+Como se puede notar, ambos fabricantes mayores, AMD e Intel lo emplean para muchos de sus microprocesadores. Notar que, por ejemplo, el Socket sTRX4 es en realidad un LGA 4094 \cite{wikipedia-lga-2021D}.
+
+\subsection{Matriz de Rejilla de Pines (PGA)}
+
+Su funcionamiento consiste en:
+
+\bigbreak
+
+\begin{displayquote}
+    En un PGA, el IC se monta en una losa de cerámica, que presenta una matriz de contactos o olas en una de sus caras. Luego, los pines se pueden insertar en los agujeros de un circuito impreso y soldarse.
+    \small
+    Fuente: Wikipedia $\mid$ Pin grid array \cite{wikipedia-pga-2021C}.
+\end{displayquote}
+
+\subsection{Matriz de Rejilla de Bolas (BGA)}
+
+Estos son más que todo usados para móviles, portátiles o casos de uso en ingeniería eléctrica \cite{wikipedia-bga-2021B} por lo que no nos interesan mucho en este artículo. Tenemos que:
+
+\begin{displayquote}
+    Son usadas comúnmente en la producción y fijación de placas base para computadoras y la fijación de microprocesadores ya que los mismos suelen tener una cantidad muy grande de terminales los cuales son soldados a conciencia a la placa base para evitar la pérdida de frecuencias y aumentar la conductividad de los mismos.
+    \small
+    Fuente: Wikipedia $\mid$ Ball grid array \cite{wikipedia-bga-2021B}.
+\end{displayquote}
+
+\subsection{Cero Fuerza de Inserción (ZIF)}
+
+El zócalo ZIF (Zero Insertion Force) permite insertar el CI de forma muy fácil. Se ve por ejemplo, en los programadores de PIC donde el microcontrolador se inserta directamente en el socket.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\paperwidth]{images/zif-socket.jpg}
+    \caption{Zócalo de Cero Fuerza de Insersión} \footnotesize
+    Fuente: Por usuario Smial en de.wikipedia - Trabajo propio, CC BY-SA 2.0 de, https://commons.wikimedia.org/w/index.php?curid=1058788 \cite{wikipedia-zif-2021}.
+\end{figure}
+
+\bigbreak
+
+Su funcionamiento consiste en:
+
+\bigbreak
+
+\begin{displayquote}
+    Fuerza de inserción cero (ZIF por sus siglas en inglés) es un tipo de zócalo para CI o conector eléctrico que requiere muy poca fuerza para la inserción. Con un zócalo ZIF, antes de insertar el CI, se mueve una palanca o deslizador en el costado del zócalo, separando todos los contactos suspendidos para que el CI pueda insertarse con muy poca fuerza; por lo general, el peso del CI en sí es suficiente y no se requiere ninguna fuerza externa hacia abajo. Luego, la palanca se mueve hacia atrás, lo que permite que los contactos se cierren y agarren los pines del CI. Los zócalos ZIF son mucho más caros que los zócalos de CI estándar y también tienden a ocupar un área de placa más grande debido al espacio que ocupa el mecanismo de palanca. Por lo general, solo se usan cuando hay una buena razón para hacerlo.
+    \small
+    Fuente: Wikipedia $\mid$ Zero Insertion Force \cite{wikipedia-zif-2021}.
+\end{displayquote}
+
+\bigbreak
+
+Por lo que también son zócalos de nicho y no nos interesa mucho por aquí.
+
 \section{Conclusión}
 
 \printbibliography
