@@ -11,4 +11,6 @@
     - Derivative screenshot from Arduino IDE.
 - [Sim-1](sim-1.png)
     - Derivative screenshot from Proteus.
+- [Sim-2](sim-2.png)
+    - Derivative screenshot from Proteus.
     
