@@ -4,7 +4,7 @@
 
 Copyright © 2022 Tobias Briones. All rights reserved.
 
-Work licensed under the [CC-BY-4.0 License](LICENSE).
+Work licensed under the [CC-BY-SA-4.0 License](LICENSE).
 
 Project bibliography given at each respective article module.
 
