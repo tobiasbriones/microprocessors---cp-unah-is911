@@ -220,11 +220,11 @@ Primero hay que abrir un nuevo proyecto en Arduino IDE.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\paperwidth]{images/arduino-1.png}
+    \includegraphics[width=0.3\paperwidth]{images/arduino-1.png}
     \caption{Programa inicial en Arduino IDE}
 \end{figure}
 
-Para actualizar el nombre del programa ir a File -> Save As y seleccionar el directorio de destino y nombre del programa. En este caso, el nombre del programa es \say{activating-a-digital-output}.
+Para actualizar el nombre del programa ir a File - Save As y seleccionar el directorio de destino y nombre del programa. En este caso, el nombre del programa es \say{activating-a-digital-output}.
 
 \bigbreak
 
@@ -233,12 +233,12 @@ Se utilizará el siguiente programa sensillo para este laboratorio:
 \begin{lstlisting}[language=C, caption=Programa para activar una salida digital]
 const int PIN = 12;
 
-void setup() 
+void setup()
 {
   pinMode(PIN, OUTPUT);
 }
 
-void loop() 
+void loop()
 {
   digitalWrite(PIN, HIGH);
   delay(500);
@@ -249,11 +249,11 @@ void loop()
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\paperwidth]{images/arduino-2.png}
+    \includegraphics[width=0.3\paperwidth]{images/arduino-2.png}
     \caption{Programa final a correr}
 \end{figure}
 
-Para obtener el binario hexadecimal compilado del código fuente, ir a Sketch -> Export compiled binary. 
+Para obtener el binario hexadecimal compilado del código fuente, ir a Sketch - Export compiled binary.
 Ahora, los archivos .hex compilados se encontrarán en el directorio donde del programa fue guardado.
 
 \subsection{Correr simulación en Proteus}
