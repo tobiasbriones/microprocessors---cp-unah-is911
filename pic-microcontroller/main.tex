@@ -21,6 +21,7 @@
 \usepackage{hyperref}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{lipsum}
+\usepackage{dirtytalk}
 
 \addbibresource{bibliography.bib}
 
@@ -29,6 +30,7 @@
     \includegraphics[width = 40mm]{images/logo-unah.png}\\[8ex]
     \IEEEauthorblockN{Tobias Briones}
     \IEEEauthorblockN{tobias.briones@unah.hn}
+    \IEEEauthorblockN{Cuenta: 20152030017}
     \IEEEauthorblockA{\textit{Universidad Nacional Autónoma de Honduras} \\
     \textit{Ingeniería de Sistemas} \\
     \textit{I PAC 2022} \\
@@ -90,6 +92,83 @@
         \caption{Microcontroladores PIC} \footnotesize
         Fuente: Wikipedia $\mid$ Por MikeMurphy, dominio público, https://commons.wikimedia.org/w/index.php?curid=1225813 \cite{wikipedia-pic-2022}
     \end{figure}
+
+    \subsection{Familia de PICs de Entrada}
+
+    Con respecto a la familia $16$ reconocida como número $10Fxxx$, $12Fxxx$, y $16Fxxx$ de los PIC tenemos que es una gama de entrada que utiliza palabras de $12-bit$ y funciona de forma que sea económica y funcional con una arquitectura de $8-bit$ y poseen \cite{microchip-developer-help-2022}.
+
+    \begin{itemize}
+        \item Simplicidad para desarrollo con conjunto de instrucciones de $33$ ($12-bit$ de ancho).
+        \item Palabra de $2K$ ($3KB$) de memoria de programación direccionable.
+        \item RAM de máximo $144bytes$.
+        \item Hardware de 2 niveles.
+        \item Un registro ($8-bit$) de registro de selección.
+        \item Fácil migración y opciones de producto.
+        \item Factores de forma más pequeños posible.
+    \end{itemize}
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/microchip-pic16c58a.jpg}
+        \caption{Microcontrolador PIC 16C58A} \footnotesize
+        Fuente: Wikipedia $\mid$ By © Raimond Spekking / CC BY-SA 4.0 (via Wikimedia Commons), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=75910927 \cite{wikipedia-pic-2022}
+    \end{figure}
+
+    En el año $1,998$ Microchip introdujo el PIC 16F84 el cual ya tenía memoria flash programable y borrable, sin embargo, el modelo PIC16C84 introducido en $1,993$ fue el primero con memoria EEPROM \cite{wikipedia-pic-2022}.
+
+    \bigbreak
+
+    Asimismo, con respecto a la versión F específicamente se sabe que:
+
+    \begin{quote}
+        El PIC16F84/PIC16F84A es una versión mejorada del PIC16C84, y casi completamente compatible, con mejor seguridad de programa y usando memoria flash en lugar de memoria EEPROM para la memoria del programa. El PIC16F84/PIC16F84A tiene 68 bytes de RAM mientras que el PIC16C84 tiene 36 bytes.\\
+        \small Fuente: Wikipedia $\mid$ PIC16x84 (traducido de inglés a español) \cite{wikipedia-pc16x84-2020}
+    \end{quote}
+
+    \subsection{Atributos del PIC 16F84}
+
+    Entre las características comerciales actualmente encontradas en \textit{Mouser Electronics} -Tienda de gran variedad de semiconductores y componentes electrónicos en el mundo- tenemos:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            \rowcolor[HTML]{CBCEFB}
+            \textbf{Atributo}                                                            & \textbf{Valor}                  \\ \hline
+            Fabricante                                                                   & Microchip                       \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Categoría                                                                    & Microcontrolador de 8bits - MCU \\ \hline
+            RoHS                                                                         & Si                              \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Serie                                                                        & PIC16(L)F8x                     \\ \hline
+            Tipo de montaje                                                              & SMD/SMT                         \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Paquete                                                                      & SOIC-18                         \\ \hline
+            Núcleo                                                                       & PIC16                           \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            \begin{tabular}[c]{@{}l@{}}Tamaño de memoria \\ del programa\end{tabular}    & 1.75kB                          \\ \hline
+            \begin{tabular}[c]{@{}l@{}}Ancho de banda\\ del bus de datos\end{tabular}    & 8bit                            \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Frecuencia de reloj máxima                                                   & 10MHz                           \\ \hline
+            Número de I/Os                                                               & 13I/O                           \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Tamaño de RAM de datos                                                       & 68B                             \\ \hline
+            Voltaje de operación                                                         & 2V a 6V                         \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            \begin{tabular}[c]{@{}l@{}}Min.-Máx Temperatura \\ de operación\end{tabular} & 0C hasta +70C                   \\ \hline
+            Alto                                                                         & 2.31mm                          \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Longitud                                                                     & 11.53mm                         \\ \hline
+            Ancho                                                                        & 7.49mm                          \\ \hline
+            \rowcolor[HTML]{EFEFEF}
+            Peso por unidad                                                              & 0.007408oz                      \\ \hline
+        \end{tabular}
+        \caption{Especificaciones comerciales del PIC16F84-10/SO} \footnotesize
+        Fuente: PIC16F84-10/SO Microchip Technology $\mid$ Mouser \cite{mouser-electronics-inc-2022}
+    \end{table}
+
+    Para mayor detalle técnico sobre el PIC16F8X (notar que X es un comodín) se encuentra como de costumbre la hoja de especificaciones oficial del dispositivo \cite{microchip-technology-pic16f8x-2013} que el lector puede leer pero también tener en cuenta el modelo a adquirir al momento de la compra como lo describe la tabla de arriba.
 
     \printbibliography
 
