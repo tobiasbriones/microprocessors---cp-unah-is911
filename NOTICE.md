@@ -15,3 +15,4 @@ The following modules contain third party content:
 - [images](images/notice.md)
 - [modern-cpu-sockets](modern-cpu-sockets/images/notice.md)
 - [activating-a-digital-output](activating-a-digital-output/images/notice.md)
+- [pic-microcontroller](pic-microcontroller/images/notice.md)
