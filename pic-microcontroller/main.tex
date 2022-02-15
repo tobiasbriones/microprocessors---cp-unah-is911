@@ -277,8 +277,51 @@ end ; requerido por algunos comp.
 
     Con la excepción de que varían algunas cosas en el simulador Proteus. Solo se fue capaz de agragar un PIC 16F84\textbf{A} el cual no cuenta con la terminar 14 para la alimentación y la 5 para tierra o $0V$.
 
+    \section{Programa C}
+
+    En esta sección se provee un programa escrito en lenguaje C para PIC16 de \textit{PIC1000: Getting Started with Writing C-Code for PIC16 and PIC18} \cite{microchip-c-program-2020}.
+
     \bigbreak
 
-    \printbibliography
+    El programa que se mostrará es sobre como configurar el microcontrolador para encender un LED cuando un usuario presione un botón. Por tanto, es parecido al programa desarrollado en ensamblador.
+
+    \bigbreak
+
+    Para esto, el usuario necesita identificar los pines del microcontrolador que van al LED del usuario y al botón. El programa es para el PIC18F47Q10 (el cual no pertenece a la gama de entrada que se mencionó arriba) pero puede resultar útil al lector ya que es de la guía oficial la cual es para modelos PIC16 y PIC18.
+
+    \begin{lstlisting}[language=C, caption=Encender el LED al presionar el botón (con unión de bit)]
+    #include <xc.h>
+    void main(void)
+    {
+    /* Configurar el pin RE0 como salida del LED */
+    TRISEbits.TRISE0 = 0;
+    /* Configurar el pin RE2 como entrada del botón */
+    TRISEbits.TRISE2 = 1;
+    /* Activar el buffer de entrada digital para el pin RE2 (botón) */
+    ANSELEbits.ANSELE2 = 0;
+    /* Activar el pull-up interno para el pin RE2 (botón)*/
+    WPUEbits.WPUE2 = 1;
+
+    /* Loop principal */
+    while(1)
+    {
+    /* Si se presiona el botón (RE2 en alto) */
+    if(PORTEbits.RE2)
+    {
+    /* Encender el LED (RE0 en alto) */
+    LATEbits.LATE0 = 1;
+    }
+    else
+    {
+    /* Apagar el LED (RE0 bajo) */
+    LATEbits.LATE0 = 0;
+    }
+    }
+    }
+\end{lstlisting}
+
+Tener en cuenta la entrada (el botón) y la salida (el LED) al realizar el circuito el cual va en el mismo estilo que el circuito presentado anteriormente con el programa en ensamblador. Con este ejemplo se concluye la sección del lenguaje C.
+
+\printbibliography
 
 \end{document}
