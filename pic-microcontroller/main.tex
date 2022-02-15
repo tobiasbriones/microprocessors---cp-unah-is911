@@ -22,6 +22,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{lipsum}
 \usepackage{dirtytalk}
+\usepackage{listings}
 
 \addbibresource{bibliography.bib}
 
@@ -52,6 +53,32 @@
     \addtocounter{footnote}{-1}%
     \endgroup
 }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \begin{document}
 
@@ -86,6 +113,8 @@
 
     El IDE que utilizan los PICs es un software propietario del proveedor Microchip Technologies el cual permite lenguaje ensamblador y C/C++ \cite{microchip-technology-inc-2013} \cite{wikipedia-pic-2022}. Aunque otros lenguajes de bajo nivel como Rust \footnote{A veces causa polémica decir que un lenguaje es de bajo nivel. Yo lo defino como tomar el subconjunto (unsafe) del lenguaje que lo hace de bajo nivel (o framework de ensamblador) o simplemente referirse como \say{lenguaje de más bajo nivel}.} también se pueden emplear para programar dispositivos sin sistema operativo (\say{el metal}) pero hay que tener en cuenta que puede haber falta de soporte para las arquitecturas de CPU y compiladores u otras herramientas.
 
+    \bigbreak
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\paperwidth]{images/pic-microcontrollers.jpg}
@@ -97,6 +126,8 @@
 
     Con respecto a la familia $16$ reconocida como número $10Fxxx$, $12Fxxx$, y $16Fxxx$ de los PIC tenemos que es una gama de entrada que utiliza palabras de $12-bit$ y funciona de forma que sea económica y funcional con una arquitectura de $8-bit$ y poseen \cite{microchip-developer-help-2022}.
 
+    \bigbreak
+
     \begin{itemize}
         \item Simplicidad para desarrollo con conjunto de instrucciones de $33$ ($12-bit$ de ancho).
         \item Palabra de $2K$ ($3KB$) de memoria de programación direccionable.
@@ -107,6 +138,7 @@
         \item Factores de forma más pequeños posible.
     \end{itemize}
 
+    \bigbreak
 
     \begin{figure}[H]
         \centering
@@ -115,11 +147,15 @@
         Fuente: Wikipedia $\mid$ By © Raimond Spekking / CC BY-SA 4.0 (via Wikimedia Commons), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=75910927 \cite{wikipedia-pic-2022}
     \end{figure}
 
+    \bigbreak
+
     En el año $1,998$ Microchip introdujo el PIC 16F84 el cual ya tenía memoria flash programable y borrable, sin embargo, el modelo PIC16C84 introducido en $1,993$ fue el primero con memoria EEPROM \cite{wikipedia-pic-2022}.
 
     \bigbreak
 
     Asimismo, con respecto a la versión F específicamente se sabe que:
+
+    \bigbreak
 
     \begin{quote}
         El PIC16F84/PIC16F84A es una versión mejorada del PIC16C84, y casi completamente compatible, con mejor seguridad de programa y usando memoria flash en lugar de memoria EEPROM para la memoria del programa. El PIC16F84/PIC16F84A tiene 68 bytes de RAM mientras que el PIC16C84 tiene 36 bytes.\\
@@ -129,6 +165,8 @@
     \subsection{Atributos del PIC 16F84}
 
     Entre las características comerciales actualmente encontradas en \textit{Mouser Electronics} -Tienda de gran variedad de semiconductores y componentes electrónicos en el mundo- tenemos:
+
+    \bigbreak
 
     \begin{table}[H]
         \centering
@@ -168,7 +206,78 @@
         Fuente: PIC16F84-10/SO Microchip Technology $\mid$ Mouser \cite{mouser-electronics-inc-2022}
     \end{table}
 
+    \bigbreak
+
     Para mayor detalle técnico sobre el PIC16F8X (notar que X es un comodín) se encuentra como de costumbre la hoja de especificaciones oficial del dispositivo \cite{microchip-technology-pic16f8x-2013} que el lector puede leer pero también tener en cuenta el modelo a adquirir al momento de la compra como lo describe la tabla de arriba.
+
+    \section{Programa en Ensamblador}
+
+    En esta sección se provee un programa básico para PIC16F84 que enciende y apaga un LED tomado de \textit{PIC Programming in Assembly}\cite{mit-no-date}.
+
+    \bigbreak
+
+    \begin{lstlisting}[language={[x86masm]Assembler}, caption=Programa en ensamblador para PIC16F84 que enciende y apaga un LED]
+; PIC Programming in Assembly at http://groups.csail.mit.edu/lbr/stack/pic/pic-prog-assembly.pdf
+
+; Definir las constantes
+STATUS equ 03h ;Dirección del registro para STATUS
+TRISA equ 85h ;Dirección del registro TRISTATE para el puerto A
+PORTA equ 05h ;Dirección del puerto A
+COUNT1 equ 08h ;Primer contador para el retraso de los loops
+COUNT2 equ 09h ;Segundo contador para el retraso de los loops
+
+; Configurar el puerto
+    bsf STATUS,5 ; Cambiar al Banco 1
+    movlw 00h ; Hacer los pines del puerto A
+    movwf TRISA ; Para la salida
+    bcf STATUS,5 ; Cambiar  de regreso al Banco 0
+
+; Encender el LED
+Start   movlw 02h ; Encender el LED poniéndolo en el
+        movwf PORTA ; registro w y luego en el puerto
+
+; Empezar el retraso del loop 1
+Loop1 decfsz COUNT1,1 ; Restar 1 de 255
+      goto   Loop1 ; Si COUNT es cero, continuar
+      decfsz COUNT2,1 ; Restar 1 de 255
+      goto   Loop1 ; Regresar al inicio del loop
+                    ; Este retraso cuenta atrás desde
+                    ; 255 a cero, 255 veces
+
+; Retraso terminado, ahora apagar el LED
+    movlw   00h ; Apagar el LED poniéndolo en el registro
+    movwf   PORTA ; w y entonces en el puerto
+
+; Agragar otro retraso
+Loop2   decfsz COUNT1,1 ; Mantiene el LED apagado
+        goto Loop2 ; lo suficiente para notarlo
+        decfsz COUNT2,1
+        goto Loop2
+
+; Ir al inicio del programa
+    goto Start ; Ir al inicio y encender
+                 el LED de nuevo
+
+end ; requerido por algunos comp.
+    \end{lstlisting}
+
+    \bigbreak
+
+    El circuito para probar este código es el siguiente:
+
+    \bigbreak
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/pic16f84a-assembly-sim.png}
+        \caption{Circuito para PIC16F84A, programa ensamblador}
+    \end{figure}
+
+    \bigbreak
+
+    Con la excepción de que varían algunas cosas en el simulador Proteus. Solo se fue capaz de agragar un PIC 16F84\textbf{A} el cual no cuenta con la terminar 14 para la alimentación y la 5 para tierra o $0V$.
+
+    \bigbreak
 
     \printbibliography
 
