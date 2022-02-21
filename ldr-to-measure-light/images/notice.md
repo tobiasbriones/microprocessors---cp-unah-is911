@@ -14,3 +14,6 @@
 - [LDR Three Sizes](ldr-three-sizes.jpg)
     - From [Wikipedia](https://en.wikipedia.org/wiki/Photoresistor#/media/File:Photoresistors_-_three_sizes_-_mm_scale.jpg). 
     - By Junkyardsparkle - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=35977178
+
+- [Arduino Sketch](arduino-sketch.png)
+    - Derivative screenshot from Arduino IDE.
