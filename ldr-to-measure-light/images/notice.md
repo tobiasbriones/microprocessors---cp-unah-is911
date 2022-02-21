@@ -10,3 +10,7 @@
     - From [Wikipedia](https://en.wikipedia.org/wiki/Photoresistor#/media/File:Photoresistor_symbol.svg).
     - Modification: Convert from SVG to PNG.
     - By User:FDominec et al. - File:Electrical_symbols_library.svg, CC0, https://commons.wikimedia.org/w/index.php?curid=49516462
+
+- [LDR Three Sizes](ldr-three-sizes.jpg)
+    - From [Wikipedia](https://en.wikipedia.org/wiki/Photoresistor#/media/File:Photoresistors_-_three_sizes_-_mm_scale.jpg). 
+    - By Junkyardsparkle - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=35977178
