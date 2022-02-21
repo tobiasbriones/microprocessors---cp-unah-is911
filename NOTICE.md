@@ -16,3 +16,4 @@ The following modules contain third party content:
 - [modern-cpu-sockets](modern-cpu-sockets/images/notice.md)
 - [activating-a-digital-output](activating-a-digital-output/images/notice.md)
 - [pic-microcontroller](pic-microcontroller/images/notice.md)
+- [ldr-to-measure-light](ldr-to-measure-light/images/notice.md)
