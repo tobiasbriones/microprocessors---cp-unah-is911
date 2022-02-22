@@ -257,6 +257,76 @@ Fuente: \textit{Wikipedia $\mid$ Photoresistor} \cite{wikipedia-ldr-2022}. By Ju
 
 \section{Procedimiento Experimental}
 
+\subsection{Programa Arduino}
+
+Para crear el programa en Arduino IDE primero se declara una variable $ldr$ para indicar el puerto del sensor LDR el cual será medido en el puerto $0$. Recordar que debería de ser puerto $0$ o $1$.
+
+\bigbreak
+
+En el $setup$ se establece el pin del LDR y se inicializa el Serial a una velocidad de $9,600$ baudios de datos.
+
+\bigbreak
+
+Por último, se lee la entrada análoga del sensor con el método $analogRead$, se imprime el valor por el Serial y se espera $1$ segundo para dar chance al sistema.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/arduino-sketch.png}
+\caption{Programa Arduino}\footnotesize
+\textit{Derivative screenshot from Arduino IDE under fair use}
+\end{figure}
+
+Para terminar se compila el código para su verificación en el botón \say{Verificar} y se guarda el binario con el bootloader para que sea cargado a Proteus en \say{Sketch - Export compiled binary}.
+
+\subsection{Simulación}
+
+Para hacer la simulación es posible hacerla de la forma sencilla como en el laboratorio 1 o instalando la librería de Arduino (SIMULINO) el cual consiste en solo copiar los archivos al directorio de instalación de Proteus. Se usará la segunda opción.
+
+\bigbreak
+
+Crear un nuevo proyecto y seleccionar las opciones por defecto. Agregar y conectar como se muestra en el diagrama abajo los siguientes dispositivos:
+
+\begin{itemize}
+\item Arduino UNO
+\item Resistencia (10K)
+\item LDR (con foquito)
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\paperwidth]{images/proteus-devices.png}
+\caption{Dispositivos a agregar}\footnotesize
+\textit{Derivative screenshot from Proteus under fair use}
+\end{figure}
+
+Al hacer la conexión del circuito faltará agregar la \say{Terminal virtual} que se encuentra en el menú \say{Virtual Instruments Mode} de Proteus.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\paperwidth]{images/proteus-virtual-terminal.png}
+\caption{Agregar terminal virtual}\footnotesize
+\textit{Derivative screenshot from Proteus under fair use}
+\end{figure}
+
+Por último se corre la simulación.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/sim-1.png}
+\caption{Simulación en Proteus}\footnotesize
+\textit{Derivative screenshot from Proteus under fair use}
+\end{figure}
+
+Y se verifica con un voltímetro de corriente directa el divisor de tensión el cual cambia su resistencia cuando se cambia la luminosidad de la fotoresistencia.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/sim-2.png}
+\caption{Verificación del divisor de tensión}\footnotesize
+\textit{Derivative screenshot from Proteus under fair use}
+\end{figure}
+
+Sin embargo no fue posible que el Arduino tomara los valores de $A0$ a pesar de estar el circuito y el programa bien y haber intentado varias formas diferentes.
 
 \section{Análisis de Resultados}
 
