@@ -26,3 +26,6 @@
   
 - [Proteus Devices](proteus-devices.png)
     - Derivative screenshot from Proteus.
+  
+- [Proteus Virtual Terminal](proteus-virtual-terminal.png)
+    - Derivative screenshot from Proteus.
