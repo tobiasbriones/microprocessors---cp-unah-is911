@@ -332,9 +332,9 @@ Sin embargo no fue posible que el Arduino tomara los valores de $A0$ a pesar de 
 
 El valor del puerto $A0$ del Arduino es proporcional al la cantidad de luz que incide sobre la fotoresistencia. Se probó que cuando la iluminación es máxima hay $+4.76V$ en $A0$ y cuando es mínima el valor es de $+0.04V$ el cual varía proporcionalmente a la variación de la fuente de luz. La salida Serial del Arduino debió haber leído estos valores que obtuvo el voltímetro pero no fue posible por alguna razón de la simulación y solo mostraba $1023$ el valor máximo de forma constante.
 
-\section{Conclusiones}
+\section{Conclusión}
 
-
+Se desarrolló un programa en Arduino que lee la entrada análoga de una fotoresistencia e imprime el valor por la salida Serial y se simuló el circuito en Proteus comprobando el funcionamiento del divisor de tensión con un voltímetro de corriente directa. También se tuvo que agregar una terminal virtual para leer el Serial del Arduino y se utilizó la versión \say{colorida} de la tarjeta Arduino para la simulación en Proteus.
 
 \printbibliography
 
