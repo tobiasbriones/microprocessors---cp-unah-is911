@@ -17,3 +17,4 @@ The following modules contain third party content:
 - [activating-a-digital-output](activating-a-digital-output/images/notice.md)
 - [pic-microcontroller](pic-microcontroller/images/notice.md)
 - [ldr-to-measure-light](ldr-to-measure-light/images/notice.md)
+- [arduino-sensors-and-motors](arduino-sensors-and-motors/images/notice.md)
