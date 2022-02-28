@@ -114,9 +114,131 @@
         \item Motor paso a paso unipolar.
     \end{itemize}
 
-    \section{Conclusión}
+    \section{Sensores PIR/IR}
+
+    Los \textbf{sensores PIR} son \textbf{sensores IR} pasivos. IR significa infrarrojo y simplemente los IR pueden emitir luz infrarroja mientras que los PIR son pasivos y solo la detectan. La \say{P} en PIR significa pasivo ya que como se dijo no emiten energía. Las aplicaciones más útiles para estos sensores destaca entre detectar cualquier objeto o persona u animal que tenga más de $5K$ de temperatura ya que estos emiten luz infrarroja que el ser humano no detecta pero el dispositivo si \cite{jost-ir-sensor-2019} y por tanto se puede saber si algo o alguien pasa o se mueve al medir un cambio diferencial en el sensor dado la energía de lo que se acerca al sensor. Todo esto se emplea para aplicaciones de seguridad por ejemplo.
+
+    \bigbreak
+
+    Según Wikipedia, los sensores PIR:
+
+    \begin{quote}
+        Un sensor infrarrojo pasivo (\textbf{sensor PIR}) es un sensor electrónico que mide la luz infrarroja (IR) que irradian los objetos en su campo de visión. Se utilizan con mayor frecuencia en detectores de movimiento basados en PIR. Los sensores PIR se usan comúnmente en alarmas de seguridad y aplicaciones de iluminación automática.\\
+        \small Fuente: Wikipedia $\mid$ Passive infrared sensor (traducido de inglés a español) \cite{wikipedia-pir-sensor-2022}
+    \end{quote}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/house-pir.jpg}
+        \caption{Sensor PIR de casa}
+        \footnotesize
+        Fuente: Wikipedia $\mid$ Passive infrared sensor. By Jack LaRosa - Photographed and uploaded by me., Public Domain, https://commons.wikimedia.org/w/index.php?curid=4479143.
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/pir-motion-detection.jpg}
+        \caption{Sensor PIR para detección de movimiento}
+        \footnotesize
+        Fuente: Wikipedia $\mid$ Passive infrared sensor. By CHG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=6087132.
+    \end{figure}
+
+    Como se puede ver, los sensores PIR son utilizados para detección en movimiento en casas, esto puede detectar ladrones, animales, etc. Hay que tener en cuenta el lugar para la instalación de estos dispositivos para evitar falsos positivos, por ejemplo, evitar que el sensor detecte el ambiente exterior por una ventana.
+
+    \bigbreak
+
+    Los sensores PIR funcionan mediante la detección de un cambio en la temperatura que detectan internamente. Estos no pueden medir la temperatura pero si el cambio que se da cuando un objeto pasa por el sensor. Hay dos sensores sensibles a la luz infrarroja internamente que detectan la temperatura del ambiente y al pasar un objeto caliente a través del sensor, esa temperatura es detectada por una de las placas o sensores y estas dos señales son la entrada de un amplificador diferencial \footnote{Un amplificador operacional se puede decir que es un amplificador diferencial más sensible con más ganancia.} el cual produce la señal de cambio ya sea una cambio positivo si el objeto más caliente va pasando o negativo si va saliendo. Al no haber cuerpos calientes cercanos las señales se cancelan. \cite{wikipedia-pir-sensor-2022} \cite{adafruit-learning-system-pir-how-it-works-2014B}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/proximity-pyrosensor.png}
+        \caption{Sensor de proximidad piroeléctrico}
+        \footnotesize
+        Fuente: Adafruit Learning System $\mid$ How PIRs Work. Converted from GIF to PNG. By lady ada. Licensed under the Attribution-ShareAlike Creative Commons License.
+    \end{figure}
+
+    La siguiente figura explica como funciona un PIR:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/pir-trigger-consists-of-a-pyroelectric-sensor-and-fresnel-lens.png}
+        \caption{El sensor PIR consiste de un sensor piroeléctrico y de un lente de Fresnel}
+        \footnotesize
+        Fuente: Research Gate $\mid$ How do passive infrared triggered camera traps operate and why does it matter? Breaking down common misconceptions. Licensed under the Creative Commons Attribution-NonCommercial 4.0 International.
+    \end{figure}
+
+    El lente de Fresnel se puede utilizar para recopilar la luz de forma más puntual y el resto del funcionamiento es como se ha descrito anteriormente.
+
+    \subsection{Sensor PIR en Arduino}
+
+    Este programa Arduino demuestra como utilizar el sensor PIR para detectar objetos cercanos. El sensor PIR simplemente actúa como entrada digital para establecer si hay o no hay objeto en el área de visión del sensor.
+
+    \begin{lstlisting}[language=C, caption=Sensor PIR en Arduino. Fuente: Adafruit Learning System $\mid$ PIR Motion Sensor \cite{adafruit-learning-system-pir-sensor-2014A}]
+/*
+* PIR sensor tester
+* by Adafruit Learning System
+*/
+
+int ledPin = 13;
+int inputPin = 2;
+int pirState = LOW;
+int val = 0;
+
+void setup()
+{
+pinMode(ledPin, OUTPUT);
+pinMode(inputPin, INPUT);
+Serial.begin(9600);
+}
+
+void loop()
+{
+val = digitalRead(inputPin);
+if (val == HIGH)
+{
+digitalWrite(ledPin, HIGH);
+if (pirState == LOW)
+{
+Serial.println("Motion detected!");
+pirState = HIGH;
+}
+}
+else
+{
+digitalWrite(ledPin, LOW);
+if (pirState == HIGH)
+{
+Serial.println("Motion ended!");
+pirState = LOW;
+}
+}
+}
+\end{lstlisting}
+
+Simplemente se definen la salida del LED en la terminal $13$ del Arduino y la entrada del sensor en el PIN $2$. Se tiene una variable de estado $pirState$ para depurar por Serial el valor actual del sensor. En la variable $val$ se guarda el valor digital del sensor.
+
+\bigbreak
+
+El diagrama del circuito es simplemente:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/proximity-pir-arduino-circuit.png}
+\caption{Circuito para sensor PIR en Arduino}
+\footnotesize
+Fuente: Adafruit Learning System $\mid$ Using a PIR w/Arduino. Converted from GIF to PNG. By lady ada. Licensed under the Attribution-ShareAlike Creative Commons License.
+\end{figure}
+
+El cual consiste en alimentar el sensor y conectar la salida del sensor a la entrada $2$ del Arduino. Recordar también conectar el LED a la terminal $13$ del Arduino.
+
+\subsection{Sensores IR}
+
+Los sensores IR activos actúan como sensores de proximidad al contar con la emisión de luz LED, recordando el principio de que la luz puede salir y ser reflejada por el objeto \say{intruso} y poder medir la latencia . Básicamente esa es la diferencia con respecto a los PIR.
 
 
-    \printbibliography
+\section{Conclusión}
+
+
+\printbibliography
 
 \end{document}
