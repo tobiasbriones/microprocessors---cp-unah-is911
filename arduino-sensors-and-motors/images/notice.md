@@ -13,8 +13,9 @@
     - Converted from GIF to PNG
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
-- [Proximity PIR Arduino Circuit](proximity-pir-arduino-circuit.gif)
+- [Proximity PIR Arduino Circuit](proximity-pir-arduino-circuit.png)
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/543)
+    - Converted from GIF to PNG
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
 - [DC Motor Arduino Circuit](dc-motor-arduino-circuit.jpg)
