@@ -20,3 +20,8 @@
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/2346)
     - By Simon Monk
     - Licensed under the Attribution Creative Commons License
+- [Unipolar Knob Circuit](unipolar-knob-circuit.png)
+    - From [Arduino Docs](https://docs.arduino.cc/learn/electronics/stepper-motors)
+    - By Arduino
+    - Licensed under the Creative Commons Attribution Share Alike 4.0 
+      International License
