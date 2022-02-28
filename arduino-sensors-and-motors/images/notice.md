@@ -31,3 +31,6 @@
     - From [Research Gate | How do passive infrared triggered camera traps operate and why does it matter? Breaking down common misconceptions](https://www.researchgate.net/figure/The-passive-infrared-PIR-trigger-consists-of-a-pyroelectric-sensor-and-Fresnel-lens_fig5_304608153)
     - DOI 10.1002/rse2.20
     - Licensed under the Creative Commons Attribution-NonCommercial 4.0 International
+- [BT HC-06 vs HC-05](bt-hc-06-vs-hc-05.jpg)
+    - From [www.prometec.net](https://www.prometec.net/bt-hc06/)
+    - Under fair use.
