@@ -16,3 +16,7 @@
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/543)
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
+- [DC Motor Arduino Circuit](dc-motor-arduino-circuit.jpg)
+    - From [Adafruit Learning System](https://learn.adafruit.com/assets/2346)
+    - By Simon Monk
+    - Licensed under the Attribution Creative Commons License
