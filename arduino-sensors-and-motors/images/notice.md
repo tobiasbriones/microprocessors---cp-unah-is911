@@ -8,3 +8,7 @@
 - [PIR Motion Detection](pir-motion-detection.jpg)
     - From [Wikipedia](https://en.wikipedia.org/wiki/Passive_infrared_sensor#/media/File:Motion_detector.jpg).
     - By CHG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=6087132
+- [Proximity Pyrosensor](proximity-pyrosensor.gif)
+    - From [Adafruit Learning System](https://learn.adafruit.com/assets/512)
+    - By lady ada
+    - Licensed under the Attribution-ShareAlike Creative Commons License
