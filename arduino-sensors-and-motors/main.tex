@@ -95,6 +95,7 @@
         Third party contents available under their respective copyright and license.\\
         For more details go to the \href{https://github.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
 
+
     \section{Introducción}
 
 
@@ -113,6 +114,7 @@
         \item Control de motores CD.
         \item Motor paso a paso unipolar.
     \end{itemize}
+
 
     \section{Sensores PIR/IR}
 
@@ -215,6 +217,8 @@ pirState = LOW;
 }
 \end{lstlisting}
 
+\bigbreak
+
 Simplemente se definen la salida del LED en la terminal $13$ del Arduino y la entrada del sensor en el PIN $2$. Se tiene una variable de estado $pirState$ para depurar por Serial el valor actual del sensor. En la variable $val$ se guarda el valor digital del sensor.
 
 \bigbreak
@@ -235,6 +239,86 @@ El cual consiste en alimentar el sensor y conectar la salida del sensor a la ent
 
 Los sensores IR activos actúan como sensores de proximidad al contar con la emisión de luz LED, recordando el principio de que la luz puede salir y ser reflejada por el objeto \say{intruso} y poder medir la latencia . Básicamente esa es la diferencia con respecto a los PIR.
 
+\section{Módulo Bluetooth HC-06}
+
+Con conectividad Bluetooth se puede tomar mayor control sobre las aplicaciones en Arduino al poder pasar el control a dispositivos móviles como smartphones. Existen dos módulos populares, el HC-06 y el HC-05 los cuales presentan diferencias principalmente en el software y con respecto a funcionalidad en tanto a que el HC-06 solo funciona como esclavo mientras que el HC-05 puede ser esclavo o maestro. Esto significa que una conexión de un esclavo solo puede conectarse a un maestro únicamente mientras que un módulo maestro no tiene esta limitación. Al conectar un dispositivo Bluetooth, este cuenta con una dirección única de $48bit$ y un nombre para ser identificado. \cite{prometecnet-2019}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/bt-hc-06-vs-hc-05.jpg}
+\caption{Módulos Bluetooth HC-06 vs HC-05}
+\footnotesize
+Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}
+\end{figure}
+
+\subsection{Programa que lee y escribe por Bluetooth}
+
+El siguiente programa utiliza la librería $SoftwareSerial$ para establecer la conexión con el módulo Bluetooth HC-06 mediante Serial y según especificación a una velocidad de datos de $9,600 \, baudios$ la cual debe estar correctamente configurada. Recordar que las terminales $0$ y $1$ del Arduino están destinadas para la comunicación serial con el ordenador de acuerdo a artículos anteriores, por lo que se utilizarán otras terminales para el módulo Bluetooth.
+
+\begin{lstlisting}[language=C, caption=Programa que lee y escribe por Bluetooth. Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}]
+// By https://www.prometec.net/bt-hc06/
+
+#include <SoftwareSerial.h>
+
+SoftwareSerial BT1(4,2);
+
+void setup()
+{
+Serial.begin(9600);
+Serial.println("Enter AT commands:");
+BT1.begin(9600);
+}
+
+void loop()
+{
+if (BT1.available())
+{
+Serial.write(BT1.read());
+}
+if (Serial.available())
+{
+String str = getLine();
+BT1.print(str);
+Serial.println("---> " + str);
+}
+}
+
+String getLine()
+{
+String S = "" ;
+if (Serial.available())
+{
+char c = Serial.read();
+while (c != '\n')
+{
+S = S + c;
+delay(25);
+c = Serial.read();
+}
+return(S + '\n');
+}
+}
+\end{lstlisting}
+
+\bigbreak
+
+Como se explicó, se importa la librería $SoftwareSerial$ para crear un objeto $BT1$ el cual nos da el API para comunicarse con el dispositivo Bluetooth. Así mismo, el serial del Arduino se usa para comunicarse con el ordenador. En el loop se ve que al existir datos del dispositivo bluetooth se leen e imprimen por el serial, y si hay datos esperando en el serial entonces se solicita una línea de texto a ingresar para posteriormente mandarla por el dispositivo Bluetooth.
+
+\bigbreak
+
+Para leer la línea de texto del serial, se concatena el string mediante la entrada de $Serial.read()$ hasta que se ingrese una nueva línea o enter en el ordenador.
+
+El circuito es trivial y se ilustra a continuación.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/bt-arduino-circuit.jpg}
+\caption{Circuito para conexión de Arduino con módulo Bluetooth HC-06}
+\footnotesize
+Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}
+\end{figure}
+
+Para probar la otra parte del sistema, se puede utilizar un smartphone con alguna aplicación como Bluetooth SPP Manager para establecer la comunicación con el módulo Bluetooth HC-06.
 
 \section{Conclusión}
 
