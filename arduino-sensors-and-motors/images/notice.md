@@ -34,3 +34,6 @@
 - [BT HC-06 vs HC-05](bt-hc-06-vs-hc-05.jpg)
     - From [www.prometec.net](https://www.prometec.net/bt-hc06/)
     - Under fair use.
+- [BT Arduino Circuit](bt-arduino-circuit.jpg)
+    - From [www.prometec.net](https://www.prometec.net/bt-hc06/)
+    - Under fair use.
