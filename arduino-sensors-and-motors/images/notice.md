@@ -12,3 +12,7 @@
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/512)
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
+- [Proximity PIR Arduino Circuit](proximity-pir-arduino-circuit.gif)
+    - From [Adafruit Learning System](https://learn.adafruit.com/assets/543)
+    - By lady ada
+    - Licensed under the Attribution-ShareAlike Creative Commons License
