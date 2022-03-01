@@ -37,3 +37,6 @@
 - [BT Arduino Circuit](bt-arduino-circuit.jpg)
     - From [www.prometec.net](https://www.prometec.net/bt-hc06/)
     - Under fair use.
+- [Unipolar Stepper Motor Windings](unipolar-stepper-motor-windings.png)
+    - From [Wikipedia](https://en.wikipedia.org/wiki/Stepper_motor#/media/File:Unipolar-stepper-motor-windings.png)
+    - By Yegorius - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3845597
