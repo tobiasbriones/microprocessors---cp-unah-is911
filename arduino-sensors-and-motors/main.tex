@@ -251,7 +251,7 @@ Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{p
 
 \subsection{Programa que lee y escribe por Bluetooth}
 
-El siguiente programa utiliza la librería $SoftwareSerial$ para establecer la conexión con el módulo Bluetooth HC-06 mediante Serial y según especificación a una velocidad de datos de $9,600 \, baudios$ la cual debe estar correctamente configurada. Recordar que las terminales $0$ y $1$ del Arduino están destinadas para la comunicación serial con el ordenador de acuerdo a artículos anteriores, por lo que se utilizarán otras terminales para el módulo Bluetooth.
+El siguiente programa utiliza la biblioteca $SoftwareSerial$ para establecer la conexión con el módulo Bluetooth HC-06 mediante Serial y según especificación a una velocidad de datos de $9,600 \, baudios$ la cual debe estar correctamente configurada. Recordar que las terminales $0$ y $1$ del Arduino están destinadas para la comunicación serial con el ordenador de acuerdo a artículos anteriores, por lo que se utilizarán otras terminales para el módulo Bluetooth.
 
 \begin{lstlisting}[language=C, caption=Programa que lee y escribe por Bluetooth. Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}]
 // By https://www.prometec.net/bt-hc06/
@@ -300,7 +300,7 @@ return(S + '\n');
 
 \bigbreak
 
-Como se explicó, se importa la librería $SoftwareSerial$ para crear un objeto $BT1$ el cual nos da el API para comunicarse con el dispositivo Bluetooth. Así mismo, el serial del Arduino se usa para comunicarse con el ordenador. En el loop se ve que al existir datos del dispositivo bluetooth se leen e imprimen por el serial, y si hay datos esperando en el serial entonces se solicita una línea de texto a ingresar para posteriormente mandarla por el dispositivo Bluetooth.
+Como se explicó, se importa la biblioteca $SoftwareSerial$ para crear un objeto $BT1$ el cual nos da el API para comunicarse con el dispositivo Bluetooth. Así mismo, el serial del Arduino se usa para comunicarse con el ordenador. En el loop se ve que al existir datos del dispositivo bluetooth se leen e imprimen por el serial, y si hay datos esperando en el serial entonces se solicita una línea de texto a ingresar para posteriormente mandarla por el dispositivo Bluetooth.
 
 \bigbreak
 
@@ -386,6 +386,82 @@ Aquí vemos que se requiere:
 \bigbreak
 
 El transistor actúa como conmutador para controlar el motor con la señal que recibe en su base desde el pin del Arduino y hacia el colector que conecta al motor mediante el diodo y el emisor que va a tierra. Notar que, como usualmente cuando se estudia electrónica, ponemos un diodo cuando hay dispositivos inductivos como bobinas o motores para evitar una descarga con corriente en dirección opuesta hacia nuestro circuito o polarizaciones incorrectas. También, el motor consume mucha corriente obviamente por lo que el Arduino no lo puede manejar, y se usa un simple transistor para el control de potencia.
+
+\section{Motor paso a paso unipolar}
+
+Los motores paso a paso son motores DC que rotan una cantidad específica cada vez que reciben un pulso. Este pulso puede ser una onda cuadrada. Hay dos tipos de motores paso a paso de dos fases de acuerdo al arreglo de sus bobinas: unipolares y bipolares \cite{wikipedia-stepper-motor-2022}.
+
+\bigbreak
+
+Los motores unipolares tienen un devanado central por fase el cual permite que se pueda cambiar la polaridad fácilmente sin cambiar el devanado central.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\paperwidth]{images/unipolar-stepper-motor-windings.png}
+\caption{Devanado de un motor unipolar}
+\footnotesize
+Fuente: Wikipedia $\mid$ Stepper motor. By Yegorius - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3845597.
+\end{figure}
+
+Sin embargo los motores bipolares tienen un devanado simple por fase.
+
+\subsection{Configuración de un motor paso a paso en Arduino}
+
+El circuito tiene el siguiente diagrama:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-circuit.png}
+\caption{Circuito para motor unipolar}
+\footnotesize
+Fuente: Arduino Docs $\mid$ Arduino and Stepper Motor Configurations. By Arduino. Licensed under the Creative Commons Attribution Share Alike 4.0
+International License.
+\end{figure}
+
+Para que sea más claro se adjunta el esquemático:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-schematic.png}
+\caption{Esquemático para motor unipolar}
+\footnotesize
+Fuente: Arduino Docs $\mid$ Arduino and Stepper Motor Configurations. By Arduino. Licensed under the Creative Commons Attribution Share Alike 4.0
+International License.
+\end{figure}
+
+Se necesita básicamente un U2004 Darlington Array \footnote{Los ULN2004 son arreglos Darlington de alto voltaje y alta corriente, cada uno de los cuales contiene siete pares Darlington de colector abierto con emisores comunes. Cada canal tiene una capacidad nominal de 500 mA y puede soportar corrientes máximas de 600 mA. Fuente: grobotronics.com $\mid$ Darlington Array ULN2004 \cite{grobotronicscom-2022}.}, un motor paso a paso unipolar, un potenciómetro y la tarjeta Arduino. Los pines $8$, $9$, $10$ y $11$ controlan al motor.
+
+\bigbreak
+
+El código controlará el motor mediante la entrada analógica del potenciómetro y funciona para motores unipolares y para bipolares (pero el circuito dado es para unipolares).
+
+\begin{lstlisting}[language=C, caption=Programa para controlar motor paso a paso unipolar/bipolar mediante potenciómetro. Fuente: Arduino Docs $\mid$ https://docs.arduino.cc/learn/electronics/stepper-motors \cite{arduino-docs-stepper-motor-2022}]
+// By https://docs.arduino.cc/learn/electronics/stepper-motors
+
+#include <Stepper.h>
+
+#define STEPS 100
+
+Stepper stepper(STEPS, 8, 9, 10, 11);
+int previous = 0;
+
+void setup()
+{
+stepper.setSpeed(30);
+}
+
+void loop()
+{
+int val = analogRead(0);
+
+stepper.step(val - previous);
+previous = val;
+}
+\end{lstlisting}
+
+\bigbreak
+
+Se importa la biblioteca $Stepper$ para crear un objeto de la clase $Stepper$ y se define la cantidad de pasos de acuerdo al motor. Para el objeto $Stepper$ construye pasando los pasos y los pines donde está conectado el motor. En el $setup$ se configura la velocidad del motor a $30RPM$. En el $loop$ se lee el valor del potenciómetro y se calcula la diferencia de lectura con respecto a la anterior para poder mover el motor con esa diferencia.
 
 \section{Conclusión}
 
