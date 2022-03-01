@@ -95,7 +95,6 @@
         Third party contents available under their respective copyright and license.\\
         For more details go to the \href{https://github.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
 
-
     \section{Introducción}
 
 
@@ -114,7 +113,6 @@
         \item Control de motores CD.
         \item Motor paso a paso unipolar.
     \end{itemize}
-
 
     \section{Sensores PIR/IR}
 
@@ -319,6 +317,75 @@ Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{p
 \end{figure}
 
 Para probar la otra parte del sistema, se puede utilizar un smartphone con alguna aplicación como Bluetooth SPP Manager para establecer la comunicación con el módulo Bluetooth HC-06.
+
+\section{Motor DC}
+
+Los motores de corriente directa fueron de los primeros en usarse ampliamente y transforman la energía eléctrica en mecánica. Su funcionamiento está relacionado con torques, bobinas y electromagnetismo.
+
+\subsection{Control de un Motor DC con PWM}
+
+El motor se controlará mediante salida análogo con PWM. Recordar que PWN modula la señal que se envía para controlar la potencia entregada al hacer variar el ancho de la onda cuadrada o digital lo cual hace un promedio de voltaje entregado en cada ciclo por lo cual la potencia que es proporcional al voltaje es eventualmente controlada.
+
+\bigbreak
+
+El código es el siguiente:
+
+\begin{lstlisting}[language=C, caption=Control de motor DC con PWM. Fuente: Adafruit Learning System $\mid$ Arduino Lesson 13. DC Motors. Under fair use. \cite{monk-dc-motors-2012}]
+/*
+Adafruit Arduino - Lesson 13. DC Motor
+*/
+
+int motorPin = 3;
+
+void setup()
+{
+pinMode(motorPin, OUTPUT);
+Serial.begin(9600);
+while (!Serial);
+Serial.println("Speed 0 to 255");
+}
+
+void loop()
+{
+if (Serial.available())
+{
+int speed = Serial.parseInt();
+if (speed >= 0 && speed <= 255)
+{
+analogWrite(motorPin, speed);
+}
+}
+}
+\end{lstlisting}
+
+Se define la terminal para el motor como la $3$ en modo salida. En el loop se lee el valor en $[0, 255]$ del Serial para controlar la velocidad del motor. Este valor se escribe mediante PWM y el método $analogWrite$.
+
+\bigbreak
+
+El diagrama contiene algunos aspectos a tener en cuenta:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/dc-motor-arduino-circuit.jpg}
+\caption{Circuito para control de motor DC en Arduino}
+\footnotesize
+Fuente: Adafruit Learning System $\mid$ Arduino Lesson 13. DC Motors. By Simon Monk. Licensed under the Attribution Creative Commons License.
+\end{figure}
+
+Aquí vemos que se requiere:
+
+\begin{itemize}
+\item 1 Motor DC 6V
+\item 1 Transistor PN2222
+\item 1 Diodo 1N4001
+\item 1 Resistencia $270 \Omega$
+\item Tarjeta Arduino
+\item Otros como cables
+\end{itemize}
+
+\bigbreak
+
+El transistor actúa como conmutador para controlar el motor con la señal que recibe en su base desde el pin del Arduino y hacia el colector que conecta al motor mediante el diodo y el emisor que va a tierra. Notar que, como usualmente cuando se estudia electrónica, ponemos un diodo cuando hay dispositivos inductivos como bobinas o motores para evitar una descarga con corriente en dirección opuesta hacia nuestro circuito o polarizaciones incorrectas. También, el motor consume mucha corriente obviamente por lo que el Arduino no lo puede manejar, y se usa un simple transistor para el control de potencia.
 
 \section{Conclusión}
 
