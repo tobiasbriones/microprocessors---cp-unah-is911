@@ -121,7 +121,77 @@
 
     \section{Procedimiento Experimental}
 
+    Para conectar un LCD al Arduino se utilizará la biblioteca $LiquidCrystal$ que trae ya el Arduino IDE. Para hacer la conexión del LCD es posible hacerlo directamente como se ha descrito o instalar de internet una biblioteca que extiende a la mencionada y que permite usar un bus I2C de forma que solo se necesitan $2$ pines para establecer la conexión con la tarjeta Arduino. Esto requiere algunos pasos extras y que se dejan al lector para su exploración.
 
+    \bigbreak
+
+    El programa consiste en el siguiente snippet:
+
+    \begin{lstlisting}[language=C, caption=Arduino Sketch]
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.setCursor(4, 1);
+  lcd.write("IES ZOCO");
+}
+
+void loop() {}
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/arduino-sketch.png}
+        \caption{Programa Arduino para configuración del LCD}\footnotesize
+        \textit{Derivative screenshot from Arduino IDE under fair use}
+    \end{figure}
+
+    El código es super sencillo pero hay que tener en cuenta los argumentos para el objeto $LiquidCrystal$. Para empezar se importa la biblioteca $LiquidCrystal$ y se instancia un objeto $LiquidCrystal$ para manejar el LCD. En el $setup$ se configura al LCD como una rejilla de $16$ columnas por $2$ filas, se pone el cursor en la posición $4 \, 1$ y se escribe el texto deseado \say{IES ZOCO} por ejemplo. En el loop del programa no se hará ninguna actualización.
+
+    \bigbreak
+
+    La firma del constructor $LiquidCrystal$ es:
+
+    $$LiquidCrystal lcd(rs, en, d_4, d_5, d_6, d_7);$$
+
+    donde $rs$ es el selector de registro y $en$ es habilitar. Los otros $4$ pines son los datos para imprimir el texto.
+
+    \bigbreak
+
+    Ahora hay que fijarse en el diagrama del circuito.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\paperwidth]{images/sim-schematic.png}
+        \caption{Diagrama del circuito para configuración del LCD}\footnotesize
+        \textit{Derivative screenshot from Proteus under fair use}
+    \end{figure}
+
+    Se debe conectar $VSS$ y $RW$ a tierra. $RW$ va a tierra ya que se quiere mantener enviando caracteres de forma constante y no se mandarán comandos diferentes. $VDD$ va a alimentación y $VEE$ va al potenciómentro de $10K$ para controlar el contraste del LCD el cual es un divisor de tensión para esa terminal. $RS$ se conecta al pin $7$ y $E$ (enable) al $8$. Los bits del $D_0$ al $D_3$ no se usarán y se establecerá la conexión con los otros cuatro bits restantes $D_4-D_7$.
+
+    \bigbreak
+
+    Los dispositivos necesarios son simplemente:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/sim-devices.png}
+        \caption{Dispositivos necesarios para el programa del LCD}\footnotesize
+        \textit{Derivative screenshot from Proteus under fair use}
+    \end{figure}
+
+    \bigbreak
+
+    Al correr la simulación se obtiene un resultado como el siguiente:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\paperwidth]{images/sim-running.png}
+        \caption{Simulación del programa para el LCD}\footnotesize
+        \textit{Derivative screenshot from Proteus under fair use}
+    \end{figure}
 
     \section{Análisis de Resultados}
 
