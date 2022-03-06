@@ -8,3 +8,5 @@
     - Derivative screenshot from Proteus.
 - [Sim Schematic](sim-schematic.png)
     - Derivative screenshot from Proteus.
+- [Sim Running](sim-running.png)
+    - Derivative screenshot from Proteus.
