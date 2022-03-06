@@ -113,11 +113,31 @@
         \item Crear y correr la simulación del proyecto en Proteus.
     \end{itemize}
 
-
-
     \section{Marco Teórico}
 
+    LCD significa $Liquid Crystal Display$ y son pantallas muy populares para hacer proyectos en Arduino. Estas cuentan con un arreglo de rejilla y se diferencian en tamaño por la cantidad de columnas y filas que tienen. El texto se puede imprimir y actualizar en la pantalla mediante Arduino o cualquier microcontrolador como un PIC y también se pueden enviar otros comandos al LCD y manejar la cantidad de contraste que tenga la pantalla.
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/lcd-photo.png}
+        \caption{LCD de 16x2}\footnotesize
+        Fuente: \textit{Arduino Docs $\mid$ Liquid Crystal Displays (LCD) with Arduino}. Licensed under the Creative Commons Attribution-Share Alike 4.0 License. \cite{arduino-docs-lcd-2021}
+    \end{figure}
+
+    Los LCDs trabajan con interfase en paralelo por lo que hay que configurar varios pines para controlar la pantalla y los pines que se utilizan consisten en \cite{arduino-docs-lcd-2021}:
+
+    \begin{itemize}
+        \item \textbf{El selector de registro (RS):} Controla las acciones a tomar para el LCD ya sea para imprimir texto o comandos para instrucciones para el LCD.
+        \item \textbf{Lectura/Escritura (RW):} Configura el modo como lectura o escritura.
+        \item \textbf{Habilitador:} Este pin habilita la escritura para los registros.
+        \item \textbf{8 pines de datos $D_0-D_7$:} Los valores digitales de estos pines son los que ya sea se escriben o leen.
+    \end{itemize}
+
+    Por último también está el pin para configurar el contraste $V_0$, el de alimentación que requiere $5V$, y el tierra.
+
+    \subsection{Bus I2C}
+
+    I2C es un protocolo que usa solo dos líneas para enviar y recibir datos: reloh (SCL) y datos (SDA). Cada bit forma una sucesión que da la dirección de un dispositivo y un dato o comando que son mandados por el pin SDA. El dispositivo puede también responder de vuelta hacia el Arduino \cite{arduino-docs-i2c-2021}.
 
     \section{Procedimiento Experimental}
 
