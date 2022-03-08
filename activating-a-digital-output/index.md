@@ -1,5 +1,5 @@
 ---
-permalink: /arduino-lab-activating-a-digital-output
+permalink: /activating-a-digital-output
 ---
 <link rel="icon" type="image/png" href="favicon.png">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
