@@ -97,13 +97,18 @@
 
     \blfootnote{
         Copyright (c) 2022 Tobias Briones. All rights reserved. \\
-        This work is licensed under the Creative Commons Attribution Share Alike 4.0 International License (\href{https://spdx.org/licenses/CC-BY-SA-4.0}{CC-BY-SA-4.0}). \\
-        Third party contents available under their respective copyright and license.\\
-        For more details go to the \href{https://github.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
+        This work is licensed under the Creative Commons Attribution Share
+        Alike 4.0 International License (\href{https://spdx
+.org/licenses/CC-BY-SA-4.0}{CC-BY-SA-4.0}). \\
+        Third party contents available under their respective copyright and
+        license.\\
+        For more details go to the \href{https://github
+.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
 
     \section{Objetivo}
 
-    Desarrollar un projecto en Arduino y Proteus para imprimir una cadena de texto por un LCD.
+    Desarrollar un projecto en Arduino y Proteus para imprimir una cadena de
+    texto por un LCD.
 
     \subsection{Objetivos Específicos}
 
@@ -115,33 +120,58 @@
 
     \section{Marco Teórico}
 
-    LCD significa $Liquid Crystal Display$ y son pantallas muy populares para hacer proyectos en Arduino. Estas cuentan con un arreglo de rejilla y se diferencian en tamaño por la cantidad de columnas y filas que tienen. El texto se puede imprimir y actualizar en la pantalla mediante Arduino o cualquier microcontrolador como un PIC y también se pueden enviar otros comandos al LCD y manejar la cantidad de contraste que tenga la pantalla.
+    LCD significa $Liquid Crystal Display$ y son pantallas muy populares para
+    hacer proyectos en Arduino. Estas cuentan con un arreglo de rejilla y se
+    diferencian en tamaño por la cantidad de columnas y filas que tienen. El
+    texto se puede imprimir y actualizar en la pantalla mediante Arduino o
+    cualquier microcontrolador como un PIC y también se pueden enviar otros
+    comandos al LCD y manejar la cantidad de contraste que tenga la pantalla.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\paperwidth]{images/lcd-photo.png}
         \caption{LCD de 16x2}\footnotesize
-        Fuente: \textit{Arduino Docs $\mid$ Liquid Crystal Displays (LCD) with Arduino}. Licensed under the Creative Commons Attribution-Share Alike 4.0 License. \cite{arduino-docs-lcd-2021}
+        Fuente: \textit{Arduino Docs $\mid$ Liquid Crystal Displays (LCD)
+            with Arduino}. Licensed under the Creative Commons
+        Attribution-Share Alike 4.0 License. \cite{arduino-docs-lcd-2021}
     \end{figure}
 
-    Los LCDs trabajan con interfase en paralelo por lo que hay que configurar varios pines para controlar la pantalla y los pines que se utilizan consisten en \cite{arduino-docs-lcd-2021}:
+    Los LCDs trabajan con interfase en paralelo por lo que hay que configurar
+    varios pines para controlar la pantalla y los pines que se utilizan
+    consisten en \cite{arduino-docs-lcd-2021}:
 
     \begin{itemize}
-        \item \textbf{El selector de registro (RS):} Controla las acciones a tomar para el LCD ya sea para imprimir texto o comandos para instrucciones para el LCD.
-        \item \textbf{Lectura/Escritura (RW):} Configura el modo como lectura o escritura.
-        \item \textbf{Habilitador:} Este pin habilita la escritura para los registros.
-        \item \textbf{8 pines de datos $D_0-D_7$:} Los valores digitales de estos pines son los que ya sea se escriben o leen.
+        \item \textbf{El selector de registro (RS):} Controla las acciones a
+        tomar para el LCD ya sea para imprimir texto o comandos para
+        instrucciones para el LCD.
+        \item \textbf{Lectura/Escritura (RW):} Configura el modo como lectura
+        o escritura.
+        \item \textbf{Habilitador:} Este pin habilita la escritura para los
+        registros.
+        \item \textbf{8 pines de datos $D_0-D_7$:} Los valores digitales de
+        estos pines son los que ya sea se escriben o leen.
     \end{itemize}
 
-    Por último también está el pin para configurar el contraste $V_0$, el de alimentación que requiere $5V$, y el tierra.
+    Por último también está el pin para configurar el contraste $V_0$, el de
+    alimentación que requiere $5V$, y el tierra.
 
     \subsection{Bus I2C}
 
-    I2C es un protocolo que usa solo dos líneas para enviar y recibir datos: reloh (SCL) y datos (SDA). Cada bit forma una sucesión que da la dirección de un dispositivo y un dato o comando que son mandados por el pin SDA. El dispositivo puede también responder de vuelta hacia el Arduino \cite{arduino-docs-i2c-2021}.
+    I2C es un protocolo que usa solo dos líneas para enviar y recibir datos:
+    reloh (SCL) y datos (SDA). Cada bit forma una sucesión que da la
+    dirección de un dispositivo y un dato o comando que son mandados por el
+    pin SDA. El dispositivo puede también responder de vuelta hacia el
+    Arduino \cite{arduino-docs-i2c-2021}.
 
     \section{Procedimiento Experimental}
 
-    Para conectar un LCD al Arduino se utilizará la biblioteca $LiquidCrystal$ que trae ya el Arduino IDE. Para hacer la conexión del LCD es posible hacerlo directamente como se ha descrito o instalar de internet una biblioteca que extiende a la mencionada y que permite usar un bus I2C de forma que solo se necesitan $2$ pines para establecer la conexión con la tarjeta Arduino. Esto requiere algunos pasos extras y que se dejan al lector para su exploración.
+    Para conectar un LCD al Arduino se utilizará la biblioteca
+    $LiquidCrystal$ que trae ya el Arduino IDE. Para hacer la conexión del
+    LCD es posible hacerlo directamente como se ha descrito o instalar de
+    internet una biblioteca que extiende a la mencionada y que permite usar
+    un bus I2C de forma que solo se necesitan $2$ pines para establecer la
+    conexión con la tarjeta Arduino. Esto requiere algunos pasos extras y que
+    se dejan al lector para su exploración.
 
     \bigbreak
 
@@ -168,7 +198,13 @@ void loop() {}
         \textit{Derivative screenshot from Arduino IDE under fair use}
     \end{figure}
 
-    El código es super sencillo pero hay que tener en cuenta los argumentos para el objeto $LiquidCrystal$. Para empezar se importa la biblioteca $LiquidCrystal$ y se instancia un objeto $LiquidCrystal$ para manejar el LCD. En el $setup$ se configura al LCD como una rejilla de $16$ columnas por $2$ filas, se pone el cursor en la posición $4 \, 1$ y se escribe el texto deseado \say{IES ZOCO} por ejemplo. En el loop del programa no se hará ninguna actualización.
+    El código es super sencillo pero hay que tener en cuenta los argumentos
+    para el objeto $LiquidCrystal$. Para empezar se importa la biblioteca
+    $LiquidCrystal$ y se instancia un objeto $LiquidCrystal$ para manejar el
+    LCD. En el $setup$ se configura al LCD como una rejilla de $16$ columnas
+    por $2$ filas, se pone el cursor en la posición $4 \, 1$ y se escribe el
+    texto deseado \say{IES ZOCO} por ejemplo. En el loop del programa no se
+    hará ninguna actualización.
 
     \bigbreak
 
@@ -176,7 +212,8 @@ void loop() {}
 
     $$LiquidCrystal lcd(rs, en, d_4, d_5, d_6, d_7);$$
 
-    donde $rs$ es el selector de registro y $en$ es habilitar. Los otros $4$ pines son los datos para imprimir el texto.
+    donde $rs$ es el selector de registro y $en$ es habilitar. Los otros $4$
+    pines son los datos para imprimir el texto.
 
     \bigbreak
 
@@ -189,7 +226,13 @@ void loop() {}
         \textit{Derivative screenshot from Proteus under fair use}
     \end{figure}
 
-    Se debe conectar $VSS$ y $RW$ a tierra. $RW$ va a tierra ya que se quiere mantener enviando caracteres de forma constante y no se mandarán comandos diferentes. $VDD$ va a alimentación y $VEE$ va al potenciómentro de $10K$ para controlar el contraste del LCD el cual es un divisor de tensión para esa terminal. $RS$ se conecta al pin $7$ y $E$ (enable) al $8$. Los bits del $D_0$ al $D_3$ no se usarán y se establecerá la conexión con los otros cuatro bits restantes $D_4-D_7$.
+    Se debe conectar $VSS$ y $RW$ a tierra. $RW$ va a tierra ya que se quiere
+    mantener enviando caracteres de forma constante y no se mandarán comandos
+    diferentes. $VDD$ va a alimentación y $VEE$ va al potenciómentro de $10K$
+    para controlar el contraste del LCD el cual es un divisor de tensión para
+    esa terminal. $RS$ se conecta al pin $7$ y $E$ (enable) al $8$. Los bits
+    del $D_0$ al $D_3$ no se usarán y se establecerá la conexión con los
+    otros cuatro bits restantes $D_4-D_7$.
 
     \bigbreak
 
@@ -215,15 +258,20 @@ void loop() {}
 
     \section{Análisis de Resultados}
 
-    Al correr la simulación se imprimió inmediatamente el texto dado en la pantalla del LCD tal como se configuró en la rejilla del LCD utilizado.
+    Al correr la simulación se imprimió inmediatamente el texto dado en la
+    pantalla del LCD tal como se configuró en la rejilla del LCD utilizado.
 
     \bigbreak
 
-    Al hacer variar el potenciómetro se pudo manejar el contraste del LCD de menor a mayor valor.
+    Al hacer variar el potenciómetro se pudo manejar el contraste del LCD de
+    menor a mayor valor.
 
     \section{Conclusión}
 
-    Se desarrolló un programa en Arduino que configura de forma básica un LCD que se implementó con el circuito correspondiente en Proteus y se corrió la simulación obteniendo el resultado esperado para establecer la conexión del LCD con la tarjeta Arduino.
+    Se desarrolló un programa en Arduino que configura de forma básica un LCD
+    que se implementó con el circuito correspondiente en Proteus y se corrió
+    la simulación obteniendo el resultado esperado para establecer la
+    conexión del LCD con la tarjeta Arduino.
 
     \printbibliography
 
