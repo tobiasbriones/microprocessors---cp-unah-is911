@@ -43,10 +43,10 @@
 
     \section{Objetivo}
 
-    Desarrollar un projecto en Arduino y Proteus para imprimir una cadena de
-    texto por un LCD.
+    Desarrollar un proyecto en Arduino y Proteus para imprimir una cadena de
+    texto por un LCD\@.
 
-    \subsection{Objetivos Específicos}
+    \subsection{Objetivos Específicos}\label{subsec:objetivos-específicos}
 
     \begin{itemize}
         \item Desarrollar el programa Arduino.
@@ -54,7 +54,7 @@
         \item Crear y correr la simulación del proyecto en Proteus.
     \end{itemize}
 
-    \section{Marco Teórico}
+    \section{Marco Teórico}\label{sec:marco-teórico}
 
     LCD significa $Liquid Crystal Display$ y son pantallas muy populares para
     hacer proyectos en Arduino. Estas cuentan con un arreglo de rejilla y se
@@ -69,12 +69,12 @@
         \caption{LCD de 16x2}\footnotesize
         Fuente: \textit{Arduino Docs $\mid$ Liquid Crystal Displays (LCD)
             with Arduino}. Licensed under the Creative Commons
-        Attribution-Share Alike 4.0 License. \cite{arduino-docs-lcd-2021}
+        Attribution-Share Alike 4.0 License.~\cite{arduino-docs-lcd-2021}\label{fig:figure}
     \end{figure}
 
     Los LCDs trabajan con interfase en paralelo por lo que hay que configurar
     varios pines para controlar la pantalla y los pines que se utilizan
-    consisten en \cite{arduino-docs-lcd-2021}:
+    consisten en~\cite{arduino-docs-lcd-2021}:
 
     \begin{itemize}
         \item \textbf{El selector de registro (RS):} Controla las acciones a
@@ -97,9 +97,9 @@
     reloh (SCL) y datos (SDA). Cada bit forma una sucesión que da la
     dirección de un dispositivo y un dato o comando que son mandados por el
     pin SDA. El dispositivo puede también responder de vuelta hacia el
-    Arduino \cite{arduino-docs-i2c-2021}.
+    Arduino~\cite{arduino-docs-i2c-2021}.
 
-    \section{Procedimiento Experimental}
+    \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
 
     Para conectar un LCD al Arduino se utilizará la biblioteca
     $LiquidCrystal$ que trae ya el Arduino IDE. Para hacer la conexión del
@@ -113,7 +113,7 @@
 
     El programa consiste en el siguiente snippet:
 
-    \begin{lstlisting}[language=C, caption=Arduino Sketch]
+    \begin{lstlisting}[language=C, caption=Arduino Sketch,label={lst:lstlisting}]
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
@@ -131,7 +131,8 @@ void loop() {}
         \centering
         \includegraphics[width=0.3\paperwidth]{images/arduino-sketch}
         \caption{Programa Arduino para configuración del LCD}\footnotesize
-        \textit{Derivative screenshot from Arduino IDE under fair use}
+        \textit{Derivative screenshot from Arduino IDE under fair use}\label
+        {fig:figure2}
     \end{figure}
 
     El código es super sencillo pero hay que tener en cuenta los argumentos
@@ -146,7 +147,7 @@ void loop() {}
 
     La firma del constructor $LiquidCrystal$ es:
 
-    $$LiquidCrystal lcd(rs, en, d_4, d_5, d_6, d_7);$$
+    \[LiquidCrystal lcd(rs, en, d_4, d_5, d_6, d_7);\]
 
     donde $rs$ es el selector de registro y $en$ es habilitar. Los otros $4$
     pines son los datos para imprimir el texto.
@@ -159,7 +160,7 @@ void loop() {}
         \centering
         \includegraphics[width=0.6\paperwidth]{images/sim-schematic}
         \caption{Diagrama del circuito para configuración del LCD}\footnotesize
-        \textit{Derivative screenshot from Proteus under fair use}
+        \textit{Derivative screenshot from Proteus under fair use}\label{fig:figure3}
     \end{figure}
 
     Se debe conectar $VSS$ y $RW$ a tierra. $RW$ va a tierra ya que se quiere
@@ -178,7 +179,7 @@ void loop() {}
         \centering
         \includegraphics[width=0.2\paperwidth]{images/sim-devices}
         \caption{Dispositivos necesarios para el programa del LCD}\footnotesize
-        \textit{Derivative screenshot from Proteus under fair use}
+        \textit{Derivative screenshot from Proteus under fair use}\label{fig:figure4}
     \end{figure}
 
     \bigbreak
@@ -189,10 +190,11 @@ void loop() {}
         \centering
         \includegraphics[width=0.6\paperwidth]{images/sim-running}
         \caption{Simulación del programa para el LCD}\footnotesize
-        \textit{Derivative screenshot from Proteus under fair use}
+        \textit{Derivative screenshot from Proteus under fair use}\label{fig
+        :figure3}
     \end{figure}
 
-    \section{Análisis de Resultados}
+    \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
     Al correr la simulación se imprimió inmediatamente el texto dado en la
     pantalla del LCD tal como se configuró en la rejilla del LCD utilizado.
@@ -202,7 +204,7 @@ void loop() {}
     Al hacer variar el potenciómetro se pudo manejar el contraste del LCD de
     menor a mayor valor.
 
-    \section{Conclusión}
+    \section{Conclusión}\label{sec:conclusion}
 
     Se desarrolló un programa en Arduino que configura de forma básica un LCD
     que se implementó con el circuito correspondiente en Proteus y se corrió

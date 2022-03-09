@@ -38,10 +38,10 @@
 
     \import{}{footer}
 
-    \section{Introducción}
+    \section{Introducción}\label{sec:introduction}
 
     Los PIC son una familia de microcontroladores desarrollados por Microchip
-    Technologies \cite{microchip-technology-inc-2013} los cuales son muy
+    Technologies~\cite{microchip-technology-inc-2013} los cuales son muy
     conocidos y utilizados tanto a nivel educativo como industrial.
     Cualquiera que está interesado en el aprendizaje o implementación de
     circuitos electrónicos, IoT o sistemas embebidos definitivamente debió de
@@ -63,21 +63,20 @@
         en una amplia variedad de sistemas integrados.
         \\
         \small Fuente: Wikipedia $\mid$ PIC microcontrollers (traducido de
-        inglés a español) \cite{wikipedia-pic-2022}
+        inglés a español)~\cite{wikipedia-pic-2022}
     \end{quote}
 
     Los PICs han evolucionado en el tiempo. Por ejemplo, algunos modelos
     iniciales usaban la ROM directamente (o como se dice hard-coded o
     hard-written) para almacenar el código pero luego los modelos actuales
     empezaron a utilizar EPROM y EEPROM, ahora memoria flash y por último el
-    PIC permite que se reprograme solo \cite{wikipedia-pic-2022}. Esto
+    PIC permite que se reprograme solo~\cite{wikipedia-pic-2022}. Esto
     implica una gran ventaja para el programador humano.
 
     \bigbreak
 
     El IDE que utilizan los PICs es un software propietario del proveedor
-    Microchip Technologies el cual permite lenguaje ensamblador y C/C++
-    \cite{microchip-technology-inc-2013,wikipedia-pic-2022} . Aunque
+    Microchip Technologies el cual permite lenguaje ensamblador y C/C++~\cite{microchip-technology-inc-2013,wikipedia-pic-2022} . Aunque
     otros lenguajes de bajo nivel como Rust \footnote{A veces causa polémica
     decir que un lenguaje es de bajo nivel. Yo lo defino como tomar el
     subconjunto (unsafe) del lenguaje que lo hace de bajo nivel (o framework
@@ -94,11 +93,11 @@
         \includegraphics[width=0.3\paperwidth]{images/pic-microcontrollers}
         \caption{Microcontroladores PIC} \footnotesize
         Fuente: Wikipedia $\mid$ Por MikeMurphy, dominio público,
-        https://commons.wikimedia.org/w/index.php?curid=1225813
-        \cite{wikipedia-pic-2022}
+        https://commons.wikimedia.org/w/index.php?curid=1225813~\cite{wikipedia-pic-2022}\label{fig:figure}
     \end{figure}
 
-    \subsection{Familia de PICs de Entrada}
+    \subsection{Familia de PICs de Entrada}\label{subsec:familia-de-pics-de
+    -entrada}
 
     Con respecto a la familia $16$ reconocida como número $10Fxxx$, $12Fxxx$,
     y $16Fxxx$ de los PIC tenemos que es una gama de entrada que utiliza
@@ -125,8 +124,7 @@
         \includegraphics[width=0.3\paperwidth]{images/microchip-pic16c58a}
         \caption{Microcontrolador PIC 16C58A} \footnotesize
         Fuente: Wikipedia $\mid$ By © Raimond Spekking / CC BY-SA 4.0 (via
-        Wikimedia Commons), CC BY-SA 4.0, https://commons.wikimedia
-        .org/w/index.php?curid=75910927 \cite{wikipedia-pic-2022}
+        Wikimedia Commons), CC BY-SA 4.0, https://commons.wikimedia .org/w/index.php?curid=75910927~\cite{wikipedia-pic-2022}\label{fig:figure2}
     \end{figure}
 
     \bigbreak
@@ -148,10 +146,10 @@
         . El PIC16F84/PIC16F84A tiene 68 bytes de RAM mientras que el
         PIC16C84 tiene 36 bytes.\\
         \small Fuente: Wikipedia $\mid$ PIC16x84 (traducido de inglés a
-        español) \cite{wikipedia-pc16x84-2020}
+        español)~\cite{wikipedia-pc16x84-2020}
     \end{quote}
 
-    \subsection{Atributos del PIC 16F84}
+    \subsection{Atributos del PIC 16F84}\label{subsec:atributos-del-pic-16f84}
 
     Entre las características comerciales actualmente encontradas en
     \textit{Mouser Electronics} -Tienda de gran variedad de semiconductores y
@@ -213,18 +211,18 @@
         \end{tabular}
         \caption{Especificaciones comerciales del PIC16F84-10/SO} \footnotesize
         Fuente: PIC16F84-10/SO Microchip Technology $\mid$ Mouser
-        \cite{mouser-electronics-inc-2022}
+        \cite{mouser-electronics-inc-2022}\label{tab:table}
     \end{table}
 
     \bigbreak
 
     Para mayor detalle técnico sobre el PIC16F8X (notar que X es un comodín)
     se encuentra como de costumbre la hoja de especificaciones oficial del
-    dispositivo \cite{microchip-technology-pic16f8x-2013} que el lector puede
+    dispositivo~\cite{microchip-technology-pic16f8x-2013} que el lector puede
     leer pero también tener en cuenta el modelo a adquirir al momento de la
     compra como lo describe la tabla de arriba.
 
-    \section{Programa en Ensamblador}
+    \section{Programa en Ensamblador}\label{sec:programa-en-ensamblador}
 
     En esta sección se provee un programa básico para PIC16F84 que enciende y
     apaga un LED tomado de \textit{PIC Programming in
@@ -288,16 +286,16 @@ end ; requerido por algunos comp.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\paperwidth]{images/pic16f84a-assembly-sim}
-        \caption{Circuito para PIC16F84A, programa ensamblador}
+        \caption{Circuito para PIC16F84A, programa ensamblador}\label{fig:figure3}
     \end{figure}
 
     \bigbreak
 
     Con la excepción de que varían algunas cosas en el simulador Proteus.
-    Solo se fue capaz de agragar un PIC 16F84\textbf{A} el cual no cuenta con
-    la terminar 14 para la alimentación y la 5 para tierra o $0V$.
+    Solo se fue capaz de agregar un PIC 16F84\textbf{A} el cual no cuenta con
+    la terminal 14 para la alimentación y la 5 para tierra o $0V$.
 
-    \section{Programa C}
+    \section{Programa C}\label{sec:programa-c}
 
     En esta sección se provee un programa escrito en lenguaje C para PIC16 de
     \textit{PIC1000: Getting Started with Writing C-Code for PIC16 and PIC18}~\cite{microchip-c-program-2020}.
@@ -313,7 +311,7 @@ end ; requerido por algunos comp.
     Para esto, el usuario necesita identificar los pines del microcontrolador
     que van al LED del usuario y al botón. El programa es para el PIC18F47Q10
     (el cual no pertenece a la gama de entrada que se mencionó arriba) pero
-    puede resultar útil al lector ya que es de la guía oficial la cual es
+    puede resultar útil al lector, ya que es de la guía oficial la cual es
     para modelos PIC16 y PIC18.
 
     \begin{lstlisting}[language=C, caption=Encender el LED al presionar el
@@ -353,7 +351,7 @@ circuito el cual va en el mismo estilo que el circuito presentado
 anteriormente con el programa en ensamblador. Con este ejemplo se concluye la
 sección del lenguaje C.
 
-\section{Conclusión}
+\section{Conclusión}\label{sec:conclusion}
 
 Se detalló brevemente sobre los microcontroladores PIC y la importancia que
 tienen en la actualidad y han tenido en el pasado. Se presentaron dos

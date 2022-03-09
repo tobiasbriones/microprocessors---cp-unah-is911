@@ -41,12 +41,12 @@
 
     \import{}{footer}
 
-    \section{Objetivo}
+    \section{Objetivo}\label{sec:objetivo}
 
     Desarrollar y simular un programa de Arduino que encienda y apague
     iterativamente un LED.
 
-    \subsection{Objetivos Específicos}
+    \subsection{Objetivos Específicos}\label{subsec:objetivos-específicos}
 
     \begin{itemize}
         \item General el código objeto (hex) del programa de Arduino.
@@ -56,12 +56,12 @@
         \item Cargar y ejecutar el programa en Proteus.
     \end{itemize}
 
-    \section{Marco Teórico}
+    \section{Marco Teórico}\label{sec:marco-teórico}
 
     Para cubrir este laboratorio se utilizará Arduino y Proteus para poder
     simular el programa que se desarrollará.
 
-    \subsection{Arduino}
+    \subsection{Arduino}\label{subsec:arduino}
 
     Oficialmente tenemos que:
 
@@ -93,7 +93,7 @@
     utiliza Arduino IDE el cual es el IDE oficial de Arduino para programar
     estas tarjetas y está disponible desde su \href{https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing}{descarga oficial}.
 
-    \subsection{Simulador Proteus}
+    \subsection{Simulador Proteus}\label{subsec:simulador-proteus}
 
     Según \textit{Labcenter Electronics}\cite{labcenter-electronics-2022}
     -Empresa proveedora de Proteus-:
@@ -103,10 +103,10 @@
         conjunto de funciones para permitir el diseño, la prueba y el diseño
         rápidos de placas de circuito impreso profesionales.\\ \footnotesize
         Fuente: \textit{Labcenter Electronics} (traducido de inglés a
-        español) \cite{labcenter-electronics-2022}
+        español)~\cite{labcenter-electronics-2022}
     \end{quote}
 
-    \subsection{Reseña}
+    \subsection{Reseña}\label{subsec:review}
 
     Proteus es un software de uso en áreas como la ingeniería en electrónica
     donde se puede hacer simulaciones de todo tipo de circuito electrónico.
@@ -116,7 +116,7 @@
     lo personal, yo he usado Proteus de forma básica desde que estudié
     electrónica en la secundaria.
 
-    \subsection{Diseñador para Arduino}
+    \subsection{Diseñador para Arduino}\label{subsec:diseñador-para-arduino}
 
     La plataforma Proteus permite entre tantos, diseñar y correr simulaciones
     en la tarjeta Arduino.
@@ -147,8 +147,7 @@
         personalizado directamente en el esquema usando los miles de modelos
         de simulación en Proteus VSM.\bigbreak \footnotesize
         Fuente: \textit{Arduino Simulation Software - Processor, Shields and
-        Peripherals} (traducido de inglés a español)
-        \cite{labcenter-electronics-2022}
+        Peripherals} (traducido de inglés a español)~\cite{labcenter-electronics-2022}
     \end{quote}
 
     \begin{figure}[H]
@@ -156,24 +155,25 @@
         \includegraphics[width=0.3\paperwidth]{images/schematic}
         \caption{Tarjeta Arduino en Proteus}\footnotesize
         Fuente: \textit{Arduino Simulation Software - Processor, Shields and
-        Peripherals} \cite{labcenter-electronics-2022}, bajo uso justo.
+        Peripherals}~\cite{labcenter-electronics-2022}, bajo uso justo.\label
+        {fig:figure}
     \end{figure}
 
-    \subsection{Instalar la Biblioteca de Arduino}
+    \subsection{Instalar la Biblioteca de Arduino}\label{subsec:instalar-la
+    -biblioteca-de-arduino}
 
     En caso de ser necesario, se deberá instalar la biblioteca de Arduino
     para Proteus. Al finalizar con la simple instalación ya se podrá agregar
     la tarjeta Arduino desde la lista de dispositivos. Para mayor detalles,
-    ir a \textit{How to Add Arduino Library in to Proteus 7 $\&$ 8}
-    \cite{instructables-2018}.
+    ir a \textit{How to Add Arduino Library in to Proteus 7 $\&$ 8}~\cite{instructables-2018}.
 
-    \subsection{Cálculo de la Resistencia del LED}
+    \subsection{Cálculo de la Resistencia del LED}\label{subsec:cálculo-de-la
+    -resistencia-del-led}
 
     El diodo LED se alimenta usualmente de una fuente directa de $3-5V$. La
     corriente y potencia del LED está especificada de acuerdo a cada diodo
     pero se sabe de antemano que algunos valores aproximados funcionan bien
-    para un simple LED que se utilizará. Según \textit{Omni Calculator}
-    \cite{szyk-2022} tenemos que conocer las siguientes variables:
+    para un simple LED que se utilizará. Según \textit{Omni Calculator}~\cite{szyk-2022} tenemos que conocer las siguientes variables:
 
     \begin{itemize}
         \item \textbf{Tipo de Circuito:} Serie o paralelo.
@@ -203,18 +203,18 @@
         \item $P_r = I_0^2 * R$
     \end{itemize}
 
-    \section{Procedimiento Experimental}
+    \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
 
     El procedimiento consiste en la implementación en Arduino IDE y en Proteus.
 
-    \subsection{Crear Programa Arduino}
+    \subsection{Crear Programa Arduino}\label{subsec:crear-programa-arduino}
 
     Primero hay que abrir un nuevo proyecto en Arduino IDE.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\paperwidth]{images/arduino-1}
-        \caption{Programa inicial en Arduino IDE}
+        \caption{Programa inicial en Arduino IDE}\label{fig:figure2}
     \end{figure}
 
     Para actualizar el nombre del programa ir a File - Save As y seleccionar
@@ -226,7 +226,7 @@
     Se utilizará el siguiente programa sensillo para este laboratorio:
 
     \begin{lstlisting}[language=C, caption=Programa para activar una salida
-    digital]
+    digital, label={lst:lstlisting}]
 const int PIN = 12;
 
 void setup()
@@ -246,7 +246,7 @@ void loop()
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\paperwidth]{images/arduino-2}
-        \caption{Programa final a correr}
+        \caption{Programa final a correr}\label{fig:figure3}
     \end{figure}
 
     Para obtener el binario hexadecimal compilado del código fuente, ir a
@@ -254,7 +254,8 @@ void loop()
     Ahora, los archivos .hex compilados se encontrarán en el directorio donde
     del programa fue guardado.
 
-    \subsection{Correr simulación en Proteus}
+    \subsection{Correr simulación en Proteus}\label{subsec:correr-simulación
+    -en-proteus}
 
     Para correr la simulación se usará Proteus.
 
@@ -285,7 +286,7 @@ void loop()
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/sim-1}
-        \caption{Configuración inicial del Proteus con Arduino Uno}
+        \caption{Configuración inicial del Proteus con Arduino Uno}\label{fig:figure4}
     \end{figure}
 
     En el simulador se debe cargar el programa que se escribió. Dar click
@@ -299,9 +300,9 @@ void loop()
 
     Calculando el valor de la resistencia tenemos que con valores estándar
 
-    $$
+    \[
     R_{LED} = \frac{5v}{20mA} = 100\Omega
-    $$
+    \]
 
     En caso de no ser exacto la resistencia en valor comercial se deberá
     redondear o aplicar otra configuración para obtener la resistencia
@@ -310,10 +311,10 @@ void loop()
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/sim-2}
-        \caption{Configuración del circuito final en Proteus}
+        \caption{Configuración del circuito final en Proteus}\label{fig:figure5}
     \end{figure}
 
-    \section{Análisis de Resultados}
+    \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
     Al correr satisfactoriamente el programa en Proteus, el LED $D2$ parpadea
     de acuerdo a las iteraciones establecidas en el programa. Tener en cuenta
@@ -325,7 +326,7 @@ void loop()
     La tarjeta Arduino emitió las señales digitales mediante el pin $12$ que
     se definió en el loop del programa.
 
-    \section{Conclusión}
+    \section{Conclusión}\label{sec:conclusion}
 
     Se desarrolló un programa en Arduino IDE que activa la señal del pin $12$
     del Arduino dado un intervalo establecido. Luego, se creó una simulación

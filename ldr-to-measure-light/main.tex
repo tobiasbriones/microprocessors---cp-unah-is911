@@ -41,12 +41,12 @@
 
     \import{}{footer}
 
-    \section{Objetivo}
+    \section{Objetivo}\label{sec:objetivo}
 
     Depurar el valor análogo de un LDR mediante el serial de Arduino y el
     simulador Proteus.
 
-    \subsection{Objetivos Específicos}
+    \subsection{Objetivos Específicos}\label{subsec:objetivos-específicos}
 
     \begin{itemize}
         \item Crear un programa Arduino que mida y depure por Serial el valor
@@ -57,12 +57,12 @@
         analógicas básicas del Arduino.
     \end{itemize}
 
-    \section{Marco Teórico}
+    \section{Marco Teórico}\label{sec:marco-teórico}
 
     Para el desarrollo de este laboratorio se necesita comprender conceptos
     básicos sobre foto-resistencias y señales análogas en Arduino.
 
-    \subsection{Señales Analógicas}
+    \subsection{Señales Analógicas}\label{subsec:señales-analógicas}
 
     Al emplear sensores digitales las variables obviamente son cero o uno, es
     decir, valores binarios o digitales o discretos donde un cero puede
@@ -91,9 +91,10 @@
     Por último, también se encuentran aplicaciones del transistor para
     control de potencia, opto-acopladores en la sección $4.4$ y comunicación
     mediante el Serial de Arduino en la sección $4.6$ de \textit{Curso Básico
-    de Arduino} \cite{flores-2018}.
+    de Arduino}~\cite{flores-2018}.
 
-    \subsection{Comunicación con el Serial}
+    \subsection{Comunicación con el Serial}\label{subsec:comunicación-con-el
+    -serial}
 
     De acuerdo a la documentación, la API Serial de Arduino:
 
@@ -103,7 +104,7 @@
         menos un puerto serie (también conocido como UART o USART), y algunas
         tienen varios.\\ \footnotesize
         Fuente: Arduino $\mid$ Serial - Arduino Reference (traducido de
-        inglés a español) \cite{arduino-serial}
+        inglés a español)~\cite{arduino-serial}
     \end{quote}
 
     También menciona que los pines $0,1$ deberían ser usados para la
@@ -123,7 +124,7 @@
 
     \begin{lstlisting}[language=C, caption=Uso de Serial en Arduino Mega con
     todos sus puertos Seriales. \footnotesize Fuente: Serial - Arduino
-    Reference (begin) \cite{arduino-serial}]
+    Reference (begin)~\cite{arduino-serial}]
     void setup()
     {
         Serial.begin(9600);
@@ -138,9 +139,8 @@
     }
 \end{lstlisting}
 
-
 \begin{lstlisting}[language=C, caption=Uso del método read. \footnotesize
-Fuente: Serial - Arduino Reference (read) \cite{arduino-serial}]
+Fuente: Serial - Arduino Reference (read)~\cite{arduino-serial}]
 int incomingByte = 0; // for incoming serial data
 
 void setup()

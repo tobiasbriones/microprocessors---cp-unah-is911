@@ -36,11 +36,11 @@
 
     \import{}{footer}
 
-    \section{Introducción}
+    \section{Introducción}\label{sec:introduction}
 
     Los sockets son conectores que permiten la conectividad física y
     eléctrica del microprocesador a la tarjeta madre. Se le denominará a los
-    sockets o slots como zócalos ya que esa es su equivalencia en el español.
+    sockets o slots como zócalos, ya que esa es su equivalencia en el español.
 
     \bigbreak
 
@@ -54,19 +54,18 @@
         colocar y reemplazar la unidad central de procesamiento (CPU) sin
         soldar.\\
         \small Fuente: Wikipedia $\mid$ CPU socket (traducido de inglés a
-        español) \cite{wikipedia-contributors-2022}
+        español)~\cite{wikipedia-contributors-2022}
     \end{displayquote}
 
     \bigbreak
 
-    Algunos tipos de sockets, por mencionar, tenemos
-    \cite{authortechnews-2020}: TR4, AM4, LGA 1151, 2066, sTRX4. Al momento
+    Algunos tipos de sockets, por mencionar, tenemos~\cite{authortechnews-2020}: TR4, AM4, LGA 1151, 2066, sTRX4. Al momento
     de diseñar una configuración para un PC se debe tener en cuenta que la
     tarjeta madre sea compatible con el resto del hardware escogido y en
     particular, el socket sea el que corresponde al modelo del CPU que se
     deberá instalar.
 
-    \subsection{Definición}
+    \subsection{Definición}\label{subsec:def}
 
     Una definición simple de un socket es:
 
@@ -76,7 +75,7 @@
         solo chip físico. Muchas placas base pueden tener varios sockets que,
         a su vez, pueden aceptar chips de varios núcleos.\\
         \small Fuente: University Information Technology Services (traducido
-        de inglés a español) \cite{university-information-technology-services-2019}
+        de inglés a español)~\cite{university-information-technology-services-2019}
     \end{displayquote}
 
     Los ordenadores personales (incluyendo PCs gaming) e industriales cuentan
@@ -90,12 +89,10 @@
         \centering
         \includegraphics[width=0.3\paperwidth]{images/cpu-socket}
         \caption{Zócalo de CPU} \footnotesize
-        Fuente: Imágen por \href{https://pixabay
-.com/users/bru-no-1161770}{Bruno /Germany} de \href{https://pixabay
-.com}{Pixabay} \cite{pixabay-cpu-socket-2019}.
+        Fuente: Imágen por \href{https://pixabay.com/users/bru-no-1161770}{Bruno /Germany} de \href{https://pixabay.com}{Pixabay}~\cite{pixabay-cpu-socket-2019}.\label{fig:figure}
     \end{figure}
 
-    \section{Tipos de Zócalos}
+    \section{Tipos de Zócalos}\label{sec:tipos-de-zócalos}
 
     De acuerdo a datos actuales, se van a presentar los tipos de zócalos que
     se utilizan en la actualidad para computadoras personales, gaming e
@@ -189,15 +186,16 @@
         X570/X470/X370/B550/B450/B350/B450/A320/X300/A300, Convencional.
     \end{itemize}
 
-    \small Fuente: tom'sHARDWARE \cite{harding-2021}.
+    \small Fuente: tom'sHARDWARE~\cite{harding-2021}.
 
-    \section{Funcionamiento}
+    \section{Funcionamiento}\label{sec:funcionamiento}
 
     De acuerdo al paquete del zócalo, se define su mecanismo de
     funcionamiento. Como se ha mencionado, el funcionamiento de un zócalo es
     tal que permite la conexión física del microprocesador a la tarjeta madre.
 
-    \subsection{Matriz de Contactos en Rejilla (LGA)}
+    \subsection{Matriz de Contactos en Rejilla (LGA)}\label{subsec:matriz-de
+    -contactos-en-rejilla-(lga)}
 
     Los zócalos LGA son los más populares ya que como se ha visto
     anteriormente, muchos modelos de CPUs actuales para PCs normales lo
@@ -205,7 +203,7 @@
 
     \bigbreak
 
-    Según ONLOGIC Blog \cite{fanton-2021} la mayoría de procesadores modernos
+    Según ONLOGIC Blog~\cite{fanton-2021} la mayoría de procesadores modernos
     removibles utilizan zócalo LGA.
 
     \bigbreak
@@ -232,7 +230,7 @@
         superiores a las interfaces de chips previamente usados.\\
         \small
         Fuente: Wikipedia $\mid$ Land Grid Array (traducido de inglés a
-        español) \cite{wikipedia-lga-2021D}.
+        español)~\cite{wikipedia-lga-2021D}.
     \end{displayquote}
 
     \begin{figure}[H]
@@ -241,16 +239,17 @@
         \caption{Zócalo de Matriz de Contactos en Rejilla} \footnotesize
         Fuente: De User Smial on de.wikipedia - Trabajo propio, CC BY-SA 2.0
         de, https://commons.wikimedia.org/w/index.php?curid=1066500
-        \cite{wikipedia-lga-2021D}.
+        \cite{wikipedia-lga-2021D}.\label{fig:figure2}
     \end{figure}
 
     \bigbreak
 
     Como se puede notar, ambos fabricantes mayores, AMD e Intel lo emplean
     para muchos de sus microprocesadores. Notar que, por ejemplo, el Socket
-    sTRX4 es en realidad un LGA 4094 \cite{wikipedia-lga-2021D}.
+    sTRX4 es en realidad un LGA 4094~\cite{wikipedia-lga-2021D}.
 
-    \subsection{Matriz de Rejilla de Pines (PGA)}
+    \subsection{Matriz de Rejilla de Pines (PGA)}\label{subsec:matriz-de
+    -rejilla-de-pines-(pga)}
 
     Su funcionamiento consiste en:
 
@@ -262,13 +261,14 @@
         pueden insertar en los agujeros de un circuito impreso y soldarse.\\
         \small
         Fuente: Wikipedia $\mid$ Pin grid array (traducido de inglés a
-        español) \cite{wikipedia-pga-2021C}.
+        español)~\cite{wikipedia-pga-2021C}.
     \end{displayquote}
 
-    \subsection{Matriz de Rejilla de Bolas (BGA)}
+    \subsection{Matriz de Rejilla de Bolas (BGA)}\label{subsec:matriz-de
+    -rejilla-de-bolas-(bga)}
 
     Estos son más que todo usados para móviles, portátiles o casos de uso en
-    ingeniería eléctrica \cite{wikipedia-bga-2021B} por lo que no nos
+    ingeniería eléctrica~\cite{wikipedia-bga-2021B} por lo que no nos
     interesan mucho en este artículo. Tenemos que:
 
     \begin{displayquote}
@@ -279,10 +279,11 @@
         frecuencias y aumentar la conductividad de los mismos.\\
         \small
         Fuente: Wikipedia $\mid$ Ball grid array (traducido de inglés a
-        español) \cite{wikipedia-bga-2021B}.
+        español)~\cite{wikipedia-bga-2021B}.
     \end{displayquote}
 
-    \subsection{Cero Fuerza de Inserción (ZIF)}
+    \subsection{Cero Fuerza de Inserción (ZIF)}\label{subsec:cero-fuerza-de
+    -inserción-(zif)}
 
     El zócalo ZIF (Zero Insertion Force) permite insertar el CI de forma muy
     fácil. Se ve por ejemplo, en los programadores de PIC donde el
@@ -293,8 +294,7 @@
         \includegraphics[width=0.2\paperwidth]{images/zif-socket}
         \caption{Zócalo de Cero Fuerza de Insersión} \footnotesize
         Fuente: Por usuario Smial en de.wikipedia - Trabajo propio, CC BY-SA
-        2.0 de, https://commons.wikimedia.org/w/index.php?curid=1058788
-        \cite{wikipedia-zif-2021}.
+        2.0 de, https://commons.wikimedia.org/w/index.php?curid=1058788~\cite{wikipedia-zif-2021}.\label{fig:figure3}
     \end{figure}
 
     \bigbreak
@@ -318,14 +318,14 @@
         lo general, solo se usan cuando hay una buena razón para hacerlo.\\
         \small
         Fuente: Wikipedia $\mid$ Zero Insertion Force (traducido de inglés a
-        español) \cite{wikipedia-zif-2021}.
+        español)~\cite{wikipedia-zif-2021}.
     \end{displayquote}
 
     \bigbreak
 
     Por lo que también son zócalos de nicho y no nos interesa mucho por aquí.
 
-    \section{Conclusión}
+    \section{Conclusión}\label{sec:conclusion}
 
     Se enlisto la información principal sobre los zócalos empleados en la
     actualidad año 2022 para microprocesadores convencionales o PCs. Se
