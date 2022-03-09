@@ -107,13 +107,105 @@
 
     \subsection{Reseña}\label{subsec:review}
 
+    Esta sub-sección contiene una reseña de datos y opinión personal que he
+    hecho para complementar este tema. Esto no es una crítica solamente para
+    Proteus, sino que también vale mucho para software anticuado y propietario
+    como los que suelen usar en las universidades para matemática e ingeniería.
+
+    \bigbreak
+
     Proteus es un software de uso en áreas como la ingeniería en electrónica
     donde se puede hacer simulaciones de todo tipo de circuito electrónico.
     Este software ha sido de gran utilidad tanto para profesionales como
     estudiantes, aunque ya ha quedado muy obsoleto y con altos modelos de
     monetización debido a que ha estado muchas décadas ya en el mercado. En
-    lo personal, yo he usado Proteus de forma básica desde que estudié
-    electrónica en la secundaria.
+    lo personal, yo he usado Proteus de forma básica cuando estudié
+    electrónica en la secundaria y me ha tocado usarlo de nuevo últimamente.
+
+    \bigbreak
+
+    Como todo software de los $90s$ cuenta al menos con los siguientes fallos
+    de diseño:
+
+    \begin{itemize}
+        \item Solo disponible para Windows y funciona en otros sistemas
+        \item mediante software como Wineskin Winery que permite hacer ports
+        \item de aplicaciones Windows a MacOS. No hay aplicación web ni para
+        \item hacer simples simulaciones y tener en cuenta que también es
+        \item usado por estudiantes.
+
+        \item Hay que descargar un \say{.exe} e instalarlo como en los viejos
+        \item tiempos de contaminar el registro de Windows como si se tratara
+        \item de una aplicación de escritorio de verdad que requiere acceso
+        \item al sistema para tomar su potencial (y recordar que es utilizada
+        \item por estudiantes) y además hay que recibir el enlace de descarga
+        \item por correo electrónico.
+
+        \item Para instalar otros paquetes como el de Arduino hay que buscar
+        \item \say{DLLs} o \say{LIBs} en páginas de internet lo cual es algo
+        \item inaceptable para la seguridad del usuario. Comparar esto a
+        \item software que se usan en la industria tecnológica como VS Code o
+        \item IntelliJ para instalar extensiones. Yo tuve que instalar el
+        \item software Proteus en otro OS por desconfianza ya que no es
+        \item usable en estos tiempos, pero tomar en cuenta que esto aplica
+        \item para todo el software anticuado que hay disponible para
+        \item ingeniería o matemática computacional. De entre toda esa lista,
+        \item para mi Proteus es el más profesional o accesible por lo que he
+        \item usado.
+
+        \item Todo esto (si, los monolitos) hace que halla que pagar
+        \item licencias ridículamente caras y la versión de prueba no deja
+        \item guardar (para entregar la tarea por ejemplo). Esto es muy común
+        \item con software del siglo pasado como todos esos que usan los
+        \item matemáticos que no saben computación y pagan licencias
+        \item propietarias innecesarias. Proteus usa QT (ni hablar del tipo
+        \item de código ofuscado y malo escrito en C++ del viejo como la
+        \item aplicación de escritorio de Telegram que es de código abierto
+        \item pero está escrita en C++ con QT \footnote{La aplicación de
+        \item Telegram de escritorio esta hecha por la comunidad de código
+        \item abierto y escrita en C++ con QT bajo la licencia GPL
+        \item \href{https://github.com/telegramdesktop/tdesktop}{Telegram
+        \item Desktop Github}}), el asunto es que la firma paga licensias a
+        \item QT para obtener una licencia comercial para usar QT sin liberar
+        \item el código de Proteus \footnote{La licensia GPL que provee QT es
+        \item una licensia copyleft por lo cual se \say{viraliza} y el
+        \item usuario debe liberar el código fuente de su programa también} y
+        \item entonces no estar bajo la licencia GPL de QT por lo cual el
+        \item usuario final termina pagando este tipo de estupideces cuando
+        \item hay mejores plataformas y de más alto nivel y de alto
+        \item rendimiento aún como JavaFX o incluso Java Swing o Web Assembly
+        \item los cuales permiten desplegar software propietario y más usable
+        \item tanto para los desarrolladores como el usuario. Comparar eso a
+        \item software moderno que se usa en ingeniería o desarrollo de
+        \item software como los productos de Microsoft, JetBrains o Google.
+        \item Parece que todo ese dinero de las licencias propietarias no
+        \item sirve para mejorar el producto por lo cual debemos apoyar el
+        \item código abierto que está respaldado por organizaciones
+        \item comprometidas.
+
+        \item La GUI y UX es muy buena en comparación a otros software, pero
+        \item se queda muy atrás en usabilidad.
+    \end{itemize}
+
+    Como he dicho, en lo personal no veo que Proteus sea tan malo y es el
+    único de los software anticuados que me cae bien por alguna razón.
+    Siempre he pensado querer hacer un software así para electrónica, ya que
+    me llama la atención lo que se puede hacer, pero no cuento con el tiempo y
+    conocimiento en el dominio de la electrónica para hacer este reto por lo
+    cual sugiero a otros ingenieros de software (electrónico) talentosos que
+    sería demasiado bueno para la comunidad tener un simulador profesional a
+    nivel industrial que sea de código abierto y moderno.
+
+    \bigbreak
+
+    Por último, una frase que me gusta mucho de programadores o estudiantes
+    de ciencias de la computación:
+
+    \begin{quote}
+        Matlab es de los peores lenguajes de programación que nadie usa y
+        todavía hay que pagar por ello (y muchos \$\$\$).\\ \footnotesize
+        Fuente: \textit{Opinión popular con mi propio estilo}
+    \end{quote}
 
     \subsection{Diseñador para Arduino}\label{subsec:diseñador-para-arduino}
 
@@ -300,7 +392,7 @@ void loop()
     Calculando el valor de la resistencia tenemos que con valores estándar
 
     \[
-    R_{LED} = \frac{5v}{20mA} = 100\Omega
+        R_{LED} = \frac{5v}{20mA} = 100\Omega
     \]
 
     En caso de no ser exacto la resistencia en valor comercial se deberá
