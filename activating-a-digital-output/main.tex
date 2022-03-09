@@ -13,7 +13,6 @@
 \usepackage[style=ieee]{biblatex}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{geometry}
 \usepackage[]{graphics}
 \usepackage[demo]{graphicx}
 \usepackage{csquotes}
@@ -73,7 +72,6 @@
 
 \begin{document}
 
-    \makeatletter
     \begin{titlepage}
         \begin{center}
             \includegraphics[width=0.3\linewidth]{images/logo-unah}\\[4ex]
@@ -91,7 +89,6 @@
             {\large \today}
         \end{center}
     \end{titlepage}
-    \makeatother
     \thispagestyle{empty}
     \newpage
 
@@ -129,7 +126,7 @@
 
     \subsection{Arduino}
 
-    Oficialmente temenos que:
+    Oficialmente tenemos que:
 
     \begin{quote}
         Arduino es una plataforma electrónica de código abierto basada en
@@ -140,7 +137,7 @@
 
     Destaca que es una plataforma de hardware de código abierto lo cual es
     una buena característica de plataformas actuales modernas y que son de
-    utilidad ya que se cuenta con sus comunidades de colaboradores de código
+    utilidad, ya que se cuenta con sus comunidades de colaboradores de código
     abierto.
 
     Además tenemos que Arduino es:
@@ -245,10 +242,10 @@
 
     \begin{itemize}
         \item \textbf{Tipo de Circuito:} Serie o paralelo.
-        \item \textbf{n:} Número de LEDs conecetados.
+        \item \textbf{n:} Número de LED conectado.
         \item \textbf{V:} Fuente de voltaje.
-        \item \textbf{$V_0$:} Caída de voltaje por cada LED.
-        \item \textbf{$I_0$:} Corriente por LED.
+        \item \textbf{$V_0$:} Caída de voltaje por cada LED\@.
+        \item \textbf{$I_0$:} Corriente por LED\@.
     \end{itemize}
 
     Los valores estándar más comunes son configuración en serie; pilas,
@@ -258,7 +255,7 @@
     \bigbreak
 
     Como bien sabemos por la ley de Ohm $R = \frac{V}{I}$ por lo que se
-    deberá aplicar en el cálculo de la resistencia del LED.
+    deberá aplicar en el cálculo de la resistencia del LED\@.
 
     \bigbreak
 
@@ -299,15 +296,15 @@ const int PIN = 12;
 
 void setup()
 {
-  pinMode(PIN, OUTPUT);
+    pinMode(PIN, OUTPUT);
 }
 
 void loop()
 {
-  digitalWrite(PIN, HIGH);
-  delay(500);
-  digitalWrite(PIN, LOW);
-  delay(100);
+    digitalWrite(PIN, HIGH);
+    delay(500);
+    digitalWrite(PIN, LOW);
+    delay(100);
 }
     \end{lstlisting}
 
