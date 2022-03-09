@@ -9,21 +9,7 @@
 % directory of this source tree or at https://spdx.org/licenses/CC-BY-SA-4.0.
 
 \documentclass[conference]{IEEEtran}
-\usepackage[letterpaper, portrait, margin=2cm]{geometry}
-\usepackage[style=ieee]{biblatex}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[]{graphics}
-\usepackage[demo]{graphicx}
-\usepackage{csquotes}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{lipsum}
-\usepackage{dirtytalk}
-\usepackage{listings}
-
-\addbibresource{bibliography.bib}
+\usepackage{preamble}
 
 \title{Microcontrolado PIC}
 \author{
@@ -36,47 +22,6 @@
     \textit{IS911-MICROPROCESADORES}} \\\vspace*{20pt} \normalsize  \\
     \today
 }
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,
-    urlcolor=cyan,
-    citecolor=black
-}
-
-\newcommand\blfootnote[1]{
-    \begingroup
-    \renewcommand\thefootnote{}\footnote{#1}
-    \addtocounter{footnote}{-1}
-    \endgroup
-}
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-
-\lstset{style=mystyle}
 
 \begin{document}
 
@@ -91,15 +36,7 @@
 
     \tableofcontents
 
-    \blfootnote{
-        Copyright (c) 2022 Tobias Briones. All rights reserved. \\
-        This work is licensed under the Creative Commons Attribution Share
-        Alike 4.0 International License (\href{https://spdx
-.org/licenses/CC-BY-SA-4.0}{CC-BY-SA-4.0}). \\
-        Third party contents available under their respective copyright and
-        license.\\
-        For more details go to the \href{https://github
-.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
+    \import{}{footer}
 
     \section{Introducción}
 

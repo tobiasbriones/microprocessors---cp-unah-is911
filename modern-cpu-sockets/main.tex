@@ -9,19 +9,7 @@
 % directory of this source tree or at https://spdx.org/licenses/CC-BY-SA-4.0.
 
 \documentclass[conference]{IEEEtran}
-\usepackage[letterpaper, portrait, margin=2cm]{geometry}
-\usepackage[style=ieee]{biblatex}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[]{graphics}
-\usepackage[demo]{graphicx}
-\usepackage{csquotes}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{lipsum}
-
-\addbibresource{bibliography.bib}
+\usepackage{preamble}
 
 \title{SOCKETS DE MICROPROCESADORES DE PC MODERNOS}
 \author{
@@ -35,21 +23,6 @@
     \today
 }
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,
-    urlcolor=cyan,
-    citecolor=black
-}
-
-\newcommand\blfootnote[1]{%
-    \begingroup
-    \renewcommand\thefootnote{}\footnote{#1}%
-    \addtocounter{footnote}{-1}%
-    \endgroup
-}
-
 \begin{document}
 
     \maketitle
@@ -61,15 +34,7 @@
 
     \tableofcontents
 
-    \blfootnote{
-        Copyright (c) 2022 Tobias Briones. All rights reserved. \\
-        This work is licensed under the Creative Commons Attribution Share
-        Alike 4.0 International License (\href{https://spdx
-.org/licenses/CC-BY-SA-4.0}{CC-BY-SA-4.0}). \\
-        Third party contents available under their respective copyright and
-        license.\\
-        For more details go to the \href{https://github
-.com/tobiasbriones/cp-unah-is911-microprocessors}{GitHub Repository}.}
+    \import{}{footer}
 
     \section{Introducción}
 
