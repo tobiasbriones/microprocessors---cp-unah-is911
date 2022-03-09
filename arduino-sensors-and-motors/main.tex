@@ -28,7 +28,7 @@
 
 \title{SENSORES Y MOTORES EN ARDUINO}
 \author{
-    \includegraphics[width = 40mm]{images/logo-unah.png}\\[8ex]
+    \includegraphics[width = 40mm]{images/logo-unah}\\[8ex]
     \IEEEauthorblockN{Tobias Briones}
     \IEEEauthorblockN{tobias.briones@unah.hn}
     \IEEEauthorblockA{\textit{Universidad Nacional Autónoma de Honduras} \\
@@ -134,7 +134,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.2\paperwidth]{images/house-pir.jpg}
+        \includegraphics[width=0.2\paperwidth]{images/house-pir}
         \caption{Sensor PIR de casa}
         \footnotesize
         Fuente: Wikipedia $\mid$ Passive infrared sensor. By Jack LaRosa - Photographed and uploaded by me., Public Domain, https://commons.wikimedia.org/w/index.php?curid=4479143.
@@ -142,7 +142,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.2\paperwidth]{images/pir-motion-detection.jpg}
+        \includegraphics[width=0.2\paperwidth]{images/pir-motion-detection}
         \caption{Sensor PIR para detección de movimiento}
         \footnotesize
         Fuente: Wikipedia $\mid$ Passive infrared sensor. By CHG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=6087132.
@@ -156,7 +156,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.2\paperwidth]{images/proximity-pyrosensor.png}
+        \includegraphics[width=0.2\paperwidth]{images/proximity-pyrosensor}
         \caption{Sensor de proximidad piroeléctrico}
         \footnotesize
         Fuente: Adafruit Learning System $\mid$ How PIRs Work. Converted from GIF to PNG. By lady ada. Licensed under the Attribution-ShareAlike Creative Commons License.
@@ -166,7 +166,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.3\paperwidth]{images/pir-trigger-consists-of-a-pyroelectric-sensor-and-fresnel-lens.png}
+        \includegraphics[width=0.3\paperwidth]{images/pir-trigger-consists-of-a-pyroelectric-sensor-and-fresnel-lens}
         \caption{El sensor PIR consiste de un sensor piroeléctrico y de un lente de Fresnel}
         \footnotesize
         Fuente: Research Gate $\mid$ How do passive infrared triggered camera traps operate and why does it matter? Breaking down common misconceptions. Licensed under the Creative Commons Attribution-NonCommercial 4.0 International.
@@ -191,32 +191,32 @@ int val = 0;
 
 void setup()
 {
-pinMode(ledPin, OUTPUT);
-pinMode(inputPin, INPUT);
-Serial.begin(9600);
+    pinMode(ledPin, OUTPUT);
+    pinMode(inputPin, INPUT);
+    Serial.begin(9600);
 }
 
 void loop()
 {
-val = digitalRead(inputPin);
-if (val == HIGH)
-{
-digitalWrite(ledPin, HIGH);
-if (pirState == LOW)
-{
-Serial.println("Motion detected!");
-pirState = HIGH;
-}
-}
-else
-{
-digitalWrite(ledPin, LOW);
-if (pirState == HIGH)
-{
-Serial.println("Motion ended!");
-pirState = LOW;
-}
-}
+    val = digitalRead(inputPin);
+    if (val == HIGH)
+    {
+        digitalWrite(ledPin, HIGH);
+        if (pirState == LOW)
+        {
+            Serial.println("Motion detected!");
+            pirState = HIGH;
+        }
+    }
+    else
+    {
+        digitalWrite(ledPin, LOW);
+        if (pirState == HIGH)
+        {
+            Serial.println("Motion ended!");
+            pirState = LOW;
+        }
+    }
 }
 \end{lstlisting}
 
@@ -230,7 +230,7 @@ El diagrama del circuito es simplemente:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/proximity-pir-arduino-circuit.png}
+\includegraphics[width=0.3\paperwidth]{images/proximity-pir-arduino-circuit}
 \caption{Circuito para sensor PIR en Arduino}
 \footnotesize
 Fuente: Adafruit Learning System $\mid$ Using a PIR w/Arduino. Converted from GIF to PNG. By lady ada. Licensed under the Attribution-ShareAlike Creative Commons License.
@@ -248,7 +248,7 @@ Con conectividad Bluetooth se puede tomar mayor control sobre las aplicaciones e
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/bt-hc-06-vs-hc-05.jpg}
+\includegraphics[width=0.3\paperwidth]{images/bt-hc-06-vs-hc-05}
 \caption{Módulos Bluetooth HC-06 vs HC-05}
 \footnotesize
 Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}
@@ -315,7 +315,7 @@ El circuito es trivial y se ilustra a continuación.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/bt-arduino-circuit.jpg}
+\includegraphics[width=0.3\paperwidth]{images/bt-arduino-circuit}
 \caption{Circuito para conexión de Arduino con módulo Bluetooth HC-06}
 \footnotesize
 Fuente: www.prometec.net $\mid$ MÓDULO BLUETOOTH HC-06. Under fair use. \cite{prometecnet-2019}
@@ -371,7 +371,7 @@ El diagrama contiene algunos aspectos a tener en cuenta:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/dc-motor-arduino-circuit.jpg}
+\includegraphics[width=0.3\paperwidth]{images/dc-motor-arduino-circuit}
 \caption{Circuito para control de motor DC en Arduino}
 \footnotesize
 Fuente: Adafruit Learning System $\mid$ Arduino Lesson 13. DC Motors. By Simon Monk. Licensed under the Attribution Creative Commons License.
@@ -402,7 +402,7 @@ Los motores unipolares tienen un devanado central por fase el cual permite que s
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.2\paperwidth]{images/unipolar-stepper-motor-windings.png}
+\includegraphics[width=0.2\paperwidth]{images/unipolar-stepper-motor-windings}
 \caption{Devanado de un motor unipolar}
 \footnotesize
 Fuente: Wikipedia $\mid$ Stepper motor. By Yegorius - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3845597.
@@ -416,7 +416,7 @@ El circuito tiene el siguiente diagrama:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-circuit.png}
+\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-circuit}
 \caption{Circuito para motor unipolar}
 \footnotesize
 Fuente: Arduino Docs $\mid$ Arduino and Stepper Motor Configurations. By Arduino. Licensed under the Creative Commons Attribution Share Alike 4.0
@@ -427,7 +427,7 @@ Para que sea más claro se adjunta el esquemático:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-schematic.png}
+\includegraphics[width=0.3\paperwidth]{images/unipolar-knob-schematic}
 \caption{Esquemático para motor unipolar}
 \footnotesize
 Fuente: Arduino Docs $\mid$ Arduino and Stepper Motor Configurations. By Arduino. Licensed under the Creative Commons Attribution Share Alike 4.0
