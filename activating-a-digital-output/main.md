@@ -1,8 +1,6 @@
 # Arduino Laboratory: Activating a Digital Output
 
-## Objectives
-
-### General Objective
+## Objective
 
 Develop and simulate an Arduino program that turns on and off iteratively an
 LED.
@@ -221,7 +219,7 @@ apply another configuration to obtain the equivalent resistance.
 
 ![Final Circuit Set Up on Proteus](images/sim-2.png)
 
-## Analysis of Results
+## Result
 
 Upon successful execution of the program in Proteus, the $$D2$$ LED flashes
 according to the iterations established in the program. Take into account that
@@ -231,7 +229,7 @@ simulator.
 The Arduino card issued the digital signals through pin $$12$$ which is defined
 in the program loop.
 
-## Conclusions
+## Conclusion
 
 A program was developed in Arduino IDE that activates the signal of pin $$12$$
 of the Arduino given a set interval. Then, a simulation of the circuit by adding
