@@ -57,12 +57,8 @@ provider company-:
 
 #### Review
 
-Proteus is software for use in areas such as electronic engineering where you
-can do simulations of all kinds of electronic circuits. This software has been
-very useful for both professionals and students, although it has already become
-very obsolete and with high-cost monetization models because it has been many
-decades already on the market. Personally, I have used Proteus in a basic way
-since I studied electronics at high school.
+I wrote [this review](review.md) about this kind of outdated proprietary
+software we have to use for sure in out professions.
 
 #### Arduino Designer
 
