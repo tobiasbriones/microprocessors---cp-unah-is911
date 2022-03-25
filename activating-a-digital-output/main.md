@@ -24,7 +24,7 @@ Officially, we have that:
 
 > Arduino is an open-source electronics platform based on easy-to-use hardware
 > and software. It's intended for anyone making interactive projects.
-> Source: Arduino.cc [@arduino-2022]
+> Source: Arduino.cc [1]
 
 It highlights that it is an open source hardware platform which is a good
 characteristic of current modern platforms and that are useful, since they have
@@ -37,7 +37,7 @@ In addition, Arduino is:
 > interact with the physical world. Our products are straightforward, simple,
 > and powerful, ready to satisfy users’ needs from students to makers and all
 > the way to professional developers.
-> Source: Arduino.cc [@arduino-2022]
+> Source: Arduino.cc [1]
 
 To write the programs and get the object code (compiled in hex) you use Arduino
 IDE which is the official Arduino IDE to program these boards and is available
@@ -47,13 +47,13 @@ from its
 
 ### Proteus Simulator
 
-According to *Labcenter Electronics*[@labcenter-electronics-2022] -Proteus
+According to *Labcenter Electronics*[3] -Proteus
 provider company-:
 
 > The Proteus Design Suite combines ease of use with a powerful feature set to
 > enable the rapid design, test and layout of professional printed circuit
 > boards.
-> Source: *Labcenter Electronics*[@labcenter-electronics-2022]
+> Source: *Labcenter Electronics*[3]
 
 #### Review
 
@@ -84,28 +84,28 @@ According to official information, with the capabilities of Proteus we can:
 > simulation models in Proteus VSM.
 >
 > Source: *Arduino Simulation Software - Processor, Shields and Peripherals*
-> [@labcenter-electronics-2022]
+> [3]
 
 **Arduino Board in Proteus**
 
 ![Arduino Board in Proteus](images/proteus.png)
 
 > Source: *Arduino Simulation Software - Processor, Shields and Peripherals*
-> [@labcenter-electronics-2022]. Under fair use.
+> [3]. Under fair use.
 
 #### Install Arduino Board
 
 If necessary, the Arduino library must be installed to Proteus. At the end of
 the simple installation, you can add the card Arduino from the list of devices.
 For more details, go to *How to Add Arduino Library in to Proteus 7 $\&$ 8*
-[@instructables-2018].
+[4].
 
 ### Compute the LED Resistor Value
 
 The LED diode is usually powered from a direct $3-5V$ source. The current and
 power of the LED is specified according to each diode, but it is knows in
 advance that some approximate values work well for a simple LED to be used.
-According to *Omni Calculator*[@szyk-2022] we need to know the following
+According to *Omni Calculator*[2] we need to know the following
 variables:
 
 - **Circuit Type:** Series or parallel.
@@ -120,12 +120,12 @@ variables:
 
 The most common standard values are serial configuration; power supplies or
 batteries from $1.5-12V$; LED voltage of $1.7-3.6V$ which depends on the color
-of the LEDs; and currents of$20-30mA$ [@szyk-2022].
+of the LEDs; and currents of$20-30mA$ [2].
 
 As we know from Ohm's law $R = \frac{V}{I}$ so it should be applied in the
 calculation of the resistor of the LED.
 
-For other calculations with series configuration we have [@szyk-2022]:
+For other calculations with series configuration we have [2]:
 
 - $$R = \frac{V - n*V_0}{I_0}$$.
 
@@ -238,7 +238,15 @@ also: [Tobias Briones &#124; Course Project at UNAH-IS911: Microprocessors](http
 
 ## References
 
-- [Arduino - Home (@arduino-2022)](https://www.arduino.cc)
-- [Omni Calculator &#124; LED Resistor Calculator (@szyk-2022)](https://www.omnicalculator.com/physics/led)
-- [Labcenter Electronics &#124; Arduino Simulation Software - Processor, Shields and Peripherals (@labcenter-electronics-2022)](https://www.labcenter.com/visualdesigner/arduino)
-- [Instructables &#124; How to Add Arduino Library in to Proteus 7 \& 8 (@instructables-2018)](https://www.instructables.com/How-to-add-Arduino-Library-in-to-Proteus-7-8)
+[1] Arduino. (2022). Arduino - Home. Retrieved February 7, 2022, from 
+[Arduino Home](https://www.arduino.cc).
+
+[2] Szyk, B. (2022, February 5). LED Resistor Calculator. Omni Calculator.
+Retrieved February 7, 2022, from [LED Resistor Calculator | Omni Calculator](https://www.omnicalculator.com/physics/led).
+
+[3] Labcenter Electronics. (2022). Arduino Simulation Software - Processor,
+Shields and Peripherals. Retrieved February 7, 2022,
+from [Arduino Simulation Software | Labcenter Electronics](https://www.labcenter.com/visualdesigner/arduino).
+
+[4] Instructables. (2018, April 8). How to Add Arduino Library in to Proteus 7 &
+8. Retrieved February 7, 2022, from [How to Add Arduino Library in to Proteus 7 & 8 | Instructables](https://www.instructables.com/How-to-add-Arduino-Library-in-to-Proteus-7-8).
