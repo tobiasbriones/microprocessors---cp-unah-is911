@@ -76,3 +76,18 @@ students:
 > you still have to pay for it (and many $$$).
 >
 > Source: *Popular opinion with my own style*
+
+## Alternatives
+
+Some online simulation tools have been developed these years. One modern IoT
+simulation web app for making projects I found is [Wokwi](https://wokwi.com). I
+fully recommended for your personal projects, it is cool and looks nice to the
+eye. It lacks some or many things obviously, but it sets a good example of
+modern applications, and is also free, and usable with no 90s bureaucracy.
+
+More of these applications are being developed nowadays, I also have major
+projects for other domains like mathematics, so make sure to research before
+using an archaic and proprietary software if you don't want to end up paying
+unnecessary licenses. Commercial software is good sometimes, but it has to be
+worthy. I encourage you to support open-source or at least free projects that
+are trying hard to make things better.
