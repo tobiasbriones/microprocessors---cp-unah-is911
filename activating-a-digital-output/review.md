@@ -81,13 +81,25 @@ students:
 
 Some online simulation tools have been developed these years. One modern IoT
 simulation web app for making projects I found is [Wokwi](https://wokwi.com). I
-fully recommended for your personal projects, it is cool and looks nice to the
-eye. It lacks some or many things obviously, but it sets a good example of
-modern applications, and is also free, and usable with no 90s bureaucracy.
+fully recommended it for your personal projects, it's cool and looks nice to the
+eye, it's also open-source. It lacks some or many things obviously, but it sets
+a good example of modern applications and is also free, and usable with no 90s
+bureaucracy.
 
 More of these applications are being developed nowadays, I also have major
 projects for other domains like mathematics, so make sure to research before
-using an archaic and proprietary software if you don't want to end up paying
+using archaic and proprietary software if you don't want to end up paying
 unnecessary licenses. Commercial software is good sometimes, but it has to be
 worthy. I encourage you to support open-source or at least free projects that
 are trying hard to make things better.
+
+Another astonishing  example is [Photopea](https://photopea.com), an online and
+free version of Photoshop. I'm not against Photoshop at all, but I just need
+editing graphics once in a while. Photoshop is not easily available for working
+once a month because you need to pay a lot of money for the subscription.
+Photopea is a great granular copy of Photoshop and you can use it for free (with
+ads) on the browser for most needs you can have. If you're not a dedicated photo
+professional then I'm pretty sure you can do anything in Photopea without fussy
+desktop software requirements. Now if you are a professional editor then go for
+Photoshop, but we have both options. Photopea has saved me in my professional
+endeavors.
