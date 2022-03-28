@@ -59,6 +59,73 @@
 
     \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
 
+    Para hacer los experimentos se usa \href{https://wokwi.com}{Wokwi}. En este se desarrollará el programa como el circuito y su simulación para cada ejercicio.
+
+    \subsection{Ejemplo 1}
+
+    Desarrollar un programa en MicroPython para Raspberry Pi Pico que encienda un LED cuando se mantenga presionado un botón.
+
+    \bigbreak
+
+    \textit{Solución:}
+
+    \bigbreak
+
+    El programa que se necesitará es sencillo:
+
+    \begin{lstlisting}[language=Python, caption={Programa para el ejemplo 1}]
+    import machine
+
+    led = machine.Pin(18, machine.Pin.OUT)
+    button = machine.Pin(0, machine.Pin.IN)
+
+    while True:
+        led.value(1) if button.value() == 1 else led.value(0)
+    \end{lstlisting}
+
+    Similar a como se programa en Arduino, primero se crearon dos variables para manejar la salida en el pin $18$ del LED y así también la entrada del pulsador en el pin $0$.
+
+    \bigbreak
+
+    Así, se puede construir el loop del programa el cual corre indefinidamente para ejecutar la lógica de programación. En este caso se define el valor ($1$ o $0$) del LED dependiendo del valor del pulsador en la entrada.
+
+    \bigbreak
+
+    El circuito se desarrollará de la siguiente manera:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/wokwi-actions}
+        \caption{Acciones disponibles en el menú de Wokwi}
+    \end{figure}
+
+    En la acción \say{Add a new part} se puede seleccionar un dispositivo para agregar al circuito.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\paperwidth]{images/wokwi-parts}
+        \caption{Partes o dispositivos en Wokwi}
+    \end{figure}
+
+    De esa forma, se puede agregar cualquier dispositivo como LED, resistencia, etc., a fin de elaborar el circuito. El circuito de este ejemplo es como sigue:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\paperwidth]{images/wokwi-example-1-circuit}
+        \caption{Circuito para el ejemplo 1}
+    \end{figure}
+
+    Notar que al hacer hover en un pin se muestra mayor información sobre ese pin. La conexión a tierra se hace simplemente con uno de los pines tierra de la tarjeta.
+
+    \bigbreak
+
+    Por último, hay una pestaña para configurar los atributos de los dispositivos que se han agregado al proyecto. Se puede modificar el valor de la resistencia así como cualquier atributo de cada parte o dispositivo.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\paperwidth]{images/wokwi-example-1-diagram-src-code}
+        \caption{Código fuente del circuito}
+    \end{figure}
 
     \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
