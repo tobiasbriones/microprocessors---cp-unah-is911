@@ -127,6 +127,54 @@
         \caption{Código fuente del circuito}
     \end{figure}
 
+    \subsection{Ejemplo 2}
+
+    Desarrollar un programa que tome dos entradas $A$ y $B$ y tenga dos salidas $Z_1$ y $Z_2$ que computen la compuerta lógica $AND$ y $OR$ de las entradas respectivamente.
+
+    \bigbreak
+
+    \textit{Solución:}
+
+    \bigbreak
+
+    De la misma manera que se desarrolló el ejemplo anterior, se seguirán trabajando los restantes. Por tanto, tenemos el código y circuito para este ejemplo:
+
+    \begin{lstlisting}[language=Python, caption={Programa para el ejemplo 2}]
+    import machine
+
+    A = machine.Pin(1, machine.Pin.IN)
+    B = machine.Pin(2, machine.Pin.IN)
+    Z0 = machine.Pin(12, machine.Pin.OUT)
+    Z1 = machine.Pin(13, machine.Pin.OUT)
+
+    while True:
+        Z0.value(A.value() and B.value())
+        Z1.value(A.value() or B.value())
+    \end{lstlisting}
+
+    Se crean las entradas y las salidas, y en el loop se calculan los valores lógicos para asignar a la salida.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-2-circuit}
+        \caption{Circuito para el ejemplo 2}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-2-sim-1}
+        \caption{Simulación 1 (OR)}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-2-sim-2}
+        \caption{Simulación 2 (AND, OR)}
+    \end{figure}
+
+    Como se puede ver en las capturas, al tener uno o dos interruptores cerrados se obtiene un uno lógico en la salida del LED azul y al tener ambos interruptores cerrados ya se activa el LED verde.
+
+
     \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
 
