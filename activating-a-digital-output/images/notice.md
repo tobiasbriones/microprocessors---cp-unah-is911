@@ -2,7 +2,7 @@
 
 ## Hard-copied
 
-- [Schematic](schematic.png)
+- [Schematic](proteus.png)
     - From [Labcenter Electronics](https://www.labcenter.com/visualdesigner/arduino).
     - Under fair use.
 - [Arduino-1](arduino-1.png)

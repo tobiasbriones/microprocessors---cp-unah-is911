@@ -24,7 +24,8 @@ Officially, we have that:
 
 > Arduino is an open-source electronics platform based on easy-to-use hardware
 > and software. It's intended for anyone making interactive projects.
-> Source: Arduino.cc [1]
+> 
+> Source: *Arduino.cc* (under fair use) [1]
 
 It highlights that it is an open source hardware platform which is a good
 characteristic of current modern platforms and that are useful, since they have
@@ -37,13 +38,13 @@ In addition, Arduino is:
 > interact with the physical world. Our products are straightforward, simple,
 > and powerful, ready to satisfy users’ needs from students to makers and all
 > the way to professional developers.
-> Source: Arduino.cc [1]
+> 
+> Source: *Arduino.cc* (under fair use) [1]
 
 To write the programs and get the object code (compiled in hex) you use Arduino
 IDE which is the official Arduino IDE to program these boards and is available
 from its
-[official download](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
-.
+[official download](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing).
 
 ### Proteus Simulator
 
@@ -53,12 +54,16 @@ provider company-:
 > The Proteus Design Suite combines ease of use with a powerful feature set to
 > enable the rapid design, test and layout of professional printed circuit
 > boards.
-> Source: *Labcenter Electronics*[3]
+> 
+> Source: *Labcenter Electronics* (under fair use) [3]
 
 #### Review
 
 I wrote [this review](review.md) about this kind of outdated proprietary
-software we have to use for sure in out professions.
+software we, for sure, have to use in our professions. It's not limited to
+Proteus, it's meant for all outdated software products. I still find Proteus one
+of the best old software, but it's important to notice and pay attention to some
+key details.
 
 #### Arduino Designer
 
@@ -70,28 +75,29 @@ According to official information, with the capabilities of Proteus we can:
 > Often the trickiest part of embedded development is the hardware design.
 > The Arduino™ ecosystem goes a long way to solving this problem with lots of
 > ready made shields. Visual Designer takes this into the software domain, using
-> our professional schematic capture and Proteus VSM simulation engine to make
-> simulation of complete Arduino systems possible. The Peripheral Gallery in
-> Visual Designer then simplifies the whole process as it will autoplace and
-> autoconnect the electronics on the schematic for you. Finally, Visual Designer
-> provides high level methods to enable the control of the embedded system from
-> a flowchart editor.
+> our professional schematic capture and Proteus VSM simulation engine ... The
+> Peripheral Gallery in Visual Designer then simplifies the whole process as it 
+> will autoplace and autoconnect the electronics on the schematic for you. 
+> Finally, Visual Designer provides high level methods to enable the control of
+> the embedded system from a flowchart editor.
 >
 > In addition to full Arduino Shields we have included many
-> individual sensors and modules from the Grove system and also added a bunch of
-> useful parts as breakout boards. More advanced users can even place and wire
-> their own custom hardware directly on the schematic using the thousands of
-> simulation models in Proteus VSM.
+> individual sensors and modules from the Grove system ... More advanced users 
+> can even place and wire their own custom hardware directly on the 
+> schematic ...
 >
-> Source: *Arduino Simulation Software - Processor, Shields and Peripherals*
-> [3]
+> Source: *Arduino Simulation Software - Processor, Shields and Peripherals* 
+> \| Labcenter Electronics (under fair use) [3]
 
-**Arduino Board in Proteus**
 
 ![Arduino Board in Proteus](images/proteus.png)
 
-> Source: *Arduino Simulation Software - Processor, Shields and Peripherals*
-> [3]. Under fair use.
+<figcaption>
+<p align="center"><strong>Arduino Board in Proteus</strong></p>
+
+Source: <it>Arduino Simulation Software - Processor, Shields and 
+Peripherals</it> | Labcenter Electronics [3]. Under fair use.
+</figcaption>
 
 #### Install Arduino Board
 
@@ -105,8 +111,7 @@ For more details, go to *How to Add Arduino Library in to Proteus 7 $\&$ 8*
 The LED diode is usually powered from a direct $3-5V$ source. The current and
 power of the LED is specified according to each diode, but it is knows in
 advance that some approximate values work well for a simple LED to be used.
-According to *Omni Calculator*[2] we need to know the following
-variables:
+According to *Omni Calculator* [2] we need to know the following variables:
 
 - **Circuit Type:** Series or parallel.
 
@@ -143,11 +148,12 @@ The procedure consists of the implementation in Arduino IDE and in Proteus.
 
 First you have to open a new project in Arduino IDE.
 
-**Initial Sketch in Arduino IDE**
 
 ![Initial Sketch in Arduino IDE](images/arduino-1.png)
 
-To update the name of the program go to File -\> Save As and select the
+<p align="center"><strong>Initial Sketch in Arduino IDE</strong></p>
+
+To update the name of the program go to File -> Save As and select the
 destination directory and program name. In this case, the name of the program
 is "activating-a-digital-output".
 
@@ -158,21 +164,21 @@ const int PIN = 12;
 
 void setup() 
 {
-  pinMode(PIN, OUTPUT);
+    pinMode(PIN, OUTPUT);
 }
 
 void loop() 
 {
-  digitalWrite(PIN, HIGH);
-  delay(500);
-  digitalWrite(PIN, LOW);
-  delay(100);
+    digitalWrite(PIN, HIGH);
+    delay(500);
+    digitalWrite(PIN, LOW);
+    delay(100);
 }
 ```
 
-**Final Sketch to Run**
-
 ![Final Sketch to Run](images/arduino-2.png)
+
+<p align="center"><strong>Final Sketch to Run</strong></p>
 
 To get the compiled hex binary from the source code, go to Sketch -\> Export
 compiled binary. Now the compiled .hex files will be found in the directory
@@ -182,22 +188,22 @@ where the program was saved.
 
 To run the simulation, Proteus will be used.
 
-When opening Proteus, go to File - New Project give the project a name.
+When opening Proteus, go to File -> New Project give the project a name.
 
-Next - Select "Create an outline of the selected template" with the
+Next -> Select "Create an outline of the selected template" with the
 "DEFAULT" option.
 
-Next - Select "Do not create a PCB layout".
+Next -> Select "Do not create a PCB layout".
 
-Next - Select with the Family options: ARDUINO, Controller:
+Next -> Select with the Family options: ARDUINO, Controller:
 Arduino Uno and Compiler: Arduino AVR (Proteus). Leave "Create selected. Quick
 Start Files".
 
-Next - Finish.
-
-**Initial Set Up of Proteus with Arduino Uno**
+Next -> Finish.
 
 ![Initial Set Up of Proteus with Arduino Uno](images/sim-1.png)
+
+<p align="center"><strong>Initial Set Up of Proteus with Arduino Uno</strong></p>
 
 The program that was written must be loaded into the simulator. Right-click on
 the Arduino board and go to Properties. In select the binary file that was
@@ -211,9 +217,9 @@ $$R_{LED} = \frac{5v}{20mA} = 100\Omega$$
 If the resistance in commercial value is not exact, it should be rounded up or
 apply another configuration to obtain the equivalent resistance.
 
-**Final Circuit Set Up on Proteus**
-
 ![Final Circuit Set Up on Proteus](images/sim-2.png)
+
+<p align="center"><strong>Final Circuit Set Up on Proteus</strong></p>
 
 ## Result
 
@@ -232,9 +238,10 @@ of the Arduino given a set interval. Then, a simulation of the circuit by adding
 an LED as a load to the $$12$$ output of the Arduino. It was calculated from
 beforehand the resistance of the LED so that it was protection for it.
 
-See
-also: [Tobias Briones &#124; Course Project at UNAH-IS911: Microprocessors](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
-.
+## Resources
+
+- [CP: Microprocessors \| Tobias Briones](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
+- [PDF Spanish version of this article](https://github.com/tobiasbriones/cp-unah-is911-microprocessors/releases/download/v2022.03.09/activating-a-digital-output.pdf)
 
 ## References
 
@@ -248,5 +255,6 @@ Retrieved February 7, 2022, from [LED Resistor Calculator | Omni Calculator](htt
 Shields and Peripherals. Retrieved February 7, 2022,
 from [Arduino Simulation Software | Labcenter Electronics](https://www.labcenter.com/visualdesigner/arduino).
 
-[4] Instructables. (2018, April 8). How to Add Arduino Library in to Proteus 7 &
-8. Retrieved February 7, 2022, from [How to Add Arduino Library in to Proteus 7 & 8 | Instructables](https://www.instructables.com/How-to-add-Arduino-Library-in-to-Proteus-7-8).
+[4] Instructables. (2018, April 8). How to Add Arduino Library in to Proteus 
+7 & 8. Retrieved February 7, 2022, from 
+[How to Add Arduino Library in to Proteus 7 & 8 | Instructables](https://www.instructables.com/How-to-add-Arduino-Library-in-to-Proteus-7-8).
