@@ -59,7 +59,7 @@ provider company-:
 
 #### Review
 
-I wrote [this review](review) about this kind of outdated proprietary
+I wrote [this review](review/) about this kind of outdated proprietary
 software we, for sure, have to use in our professions. It's not limited to
 Proteus, it's meant for all outdated software products. I still find Proteus one
 of the best old software, but it's important to notice and pay attention to some
