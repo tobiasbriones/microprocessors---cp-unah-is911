@@ -56,6 +56,58 @@
     \section{Marco Teórico}\label{sec:marco-teórico}
 
 
+    Para llevar a cabo este laboratorio se necesita conocer sobre Raspberry Pi Pico, MicroPython y de alguna herramienta para crear la simulación.
+
+    \subsection{Resistencia Pull Down}
+
+    Las resistencias Pull-Up o Pull-Down sirven para que la entrada sea definida correctamente. Tener nada conectado a un pin no significa que la señal sea cero, por tanto una resistencia Pull-Down es una resistencia Pull-Up conectada a tierra que verifica que la señal sea cero cuando no hay conectado otro dispositivo. Su valor depende de lo que de va a conectar \cite{arduino-2018}.
+
+    \subsection{Raspberry Pi Pico}
+
+    Esta es una versión simple y económica de Raspberry, es una tarjeta microcontrolador muy similar a Arduino. Actualmente su precio es de $4\$$. Un review de esta tarjeta y su precio se puede consultar en \href{https://www.raspberrypi.com/products/raspberry-pi-pico}{Buy a Raspberry Pi Pico - Raspberry Pi}. La documentación se puede consultar en \href{https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html}{Raspberry Pi Documentation - Raspberry Pi Pico} y se cuentan con los siguientes datos \cite{raspberry-pi-ltd-2022}:
+
+    \begin{itemize}
+        \item Microcontrolador RP2040.
+        \item Procesador doble núcleo ARM Cortex M0+, a 133MHz.
+        \item 264KB de SRAM, y 2MB de memoria flash.
+        \item USB 1.1.
+        \item $26$ $\times$ GPIO pines multifuncionales.
+        \item $2$ $\times$ SPI, $2 \times I2C$, $2 \times UART$, $3 \times 12-bit ADC$, $16 \times $ canales $PWM$ controlables.
+        \item Sensor de temperatura.
+        \item Otros.
+    \end{itemize}
+
+    La disposición de la tarjeta se ve en la siguiente imagen:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/pico-r3-sdk11-pinout}
+        \caption{Raspberry Pi Pico}\footnotesize
+        Fuente: \textit{Raspberry Pi Documentation} licensed under the CC BY-SA 4.0 licence \cite{raspberry-pi-ltd-2022}
+    \end{figure}
+
+    \subsection{MicroPython}
+
+    MicroPython es una versión ligera de Python para programar controladores disponible bajo la licencia MIT. Según la descripción oficial:
+
+    \begin{quote}
+        MicroPython es una implementación sencilla y eficiente del lenguaje de programación Python 3 que incluye un pequeño subconjunto de la biblioteca estándar de Python y está optimizado para ejecutarse en microcontroladores y en entornos restringidos.\\ \footnotesize
+        Fuente: \textit{MicroPython - Python for microcontrollers} (bajo uso justo, traducido de inglés a español)
+    \end{quote}
+
+    \subsection{Wokwi}
+
+    Wokwi es una aplicación web de código abierto que permite crear proyectos de simulación de circuitos de sistemas embebidos. Actualmente es muy limitada pero es una excelente herramienta teniendo en cuenta que es moderna y se está actualizando. Por la comunidad y lo que nos ofrece es definitivamente una plataforma recomendable. Además también hay soporte para uso profesional \cite{codemagic-ltd-2022}.
+
+    \bigbreak
+
+    Tenemos oficialmente que:
+
+    \begin{quote}
+        Wokwi es un simulador de electrónica en línea. Puede usarlo para simular Arduino, ESP32 y muchas otras placas, piezas y sensores populares.
+        \\ \footnotesize
+        Fuente: \textit{Welcome to Wokwi! $\mid$ Wokwi Docs} bajo la licencia CC BY 4.0
+    \end{quote}
 
     \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
 
