@@ -109,7 +109,7 @@ For more details, go to *How to Add Arduino Library in to Proteus 7 & 8* [4].
 
 ### Compute the LED Resistor Value
 
-The LED diode is usually powered from a direct $3-5V$ source. The current and
+The LED diode is usually powered from a direct $$3-5V$$ source. The current and
 power of the LED is specified according to each diode, but it is knows in
 advance that some approximate values work well for a simple LED to be used.
 According to *Omni Calculator* [2] we need to know the following variables:
@@ -125,10 +125,10 @@ According to *Omni Calculator* [2] we need to know the following variables:
 - **$$I_0$$:** Current per LED.
 
 The most common standard values are serial configuration; power supplies or
-batteries from $1.5-12V$; LED voltage of $$1.7-3.6V$$ which depends on the color
-of the LEDs; and currents of $$20-30mA$$ [2].
+batteries from $$1.5-12V$$; LED voltage of $$1.7-3.6V$$ which depends on the 
+color of the LEDs; and currents of $$20-30mA$$ [2].
 
-As we know from Ohm's law $R = \frac{V}{I}$ so it should be applied in the
+As we know from Ohm's law $$R = \frac{V}{I}$$ so it should be applied in the
 calculation of the resistor of the LED.
 
 For other calculations with series configuration we have [2]:
