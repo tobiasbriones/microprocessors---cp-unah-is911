@@ -41,8 +41,8 @@ example on how to create an Arduino project simulation in Proteus.
 
 ## Objective
 
-Develop and simulate an Arduino program that turns on and off iteratively an
-LED.
+Develop and simulate an Arduino program that iteratively turns a
+LED on and off.
 
 ### Specific Objectives
 
