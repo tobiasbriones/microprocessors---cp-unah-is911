@@ -1,5 +1,8 @@
 # Arduino Laboratory: Activating a Digital Output
 
+An introductory explanation about Arduino and Proteus is given along with an 
+example on how to create an Arduino project simulation in Proteus.
+
 ## Objective
 
 Develop and simulate an Arduino program that turns on and off iteratively an
