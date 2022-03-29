@@ -11,3 +11,10 @@
 {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
 {% if page.ogimage %}<meta property="og:image" content="{{ page.ogimage }}" />{% endif %}
 {% if page.ogimage %}<meta property="twitter:image" content="{{ page.ogimage }}" />{% endif %}
+
+<meta content="{{ site.title }}" property="og:site_name">
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% else %}
+  <meta content="{{ site.title }}" property="og:title">
+{% endif %}
