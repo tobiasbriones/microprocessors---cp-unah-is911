@@ -2,13 +2,13 @@
 
 [![GitHub Repository](https://img.shields.io/static/v1?label=GITHUB&message=REPOSITORY&labelColor=555&color=0277bd&style=for-the-badge&logo=GITHUB)](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
 
-Microprocessors optional course from Systems Engineering.
+Own works form the Microprocessors Course Project.
 
 ## About
 
 **Course Project at UNAH-IS911: Microprocessors**
 
-Microprocessors optional course from Systems Engineering.
+Own works form the Microprocessors Course Project.
 
 Copyright © 2022 Tobias Briones. All rights reserved.
 
