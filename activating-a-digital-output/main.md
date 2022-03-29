@@ -96,7 +96,7 @@ According to official information, with the capabilities of Proteus we can:
 ![Arduino Board in Proteus](images/proteus.png)
 
 <figcaption>
-<p align="center"><strong>Arduino Board in Proteus</strong></p>
+<p><strong>Arduino Board in Proteus</strong></p>
 
 Source: <it>Arduino Simulation Software - Processor, Shields and 
 Peripherals</it> | Labcenter Electronics [3]. Under fair use.
@@ -106,8 +106,7 @@ Peripherals</it> | Labcenter Electronics [3]. Under fair use.
 
 If necessary, the Arduino library must be installed to Proteus. At the end of
 the simple installation, you can add the card Arduino from the list of devices.
-For more details, go to *How to Add Arduino Library in to Proteus 7 $\&$ 8*
-[4].
+For more details, go to *How to Add Arduino Library in to Proteus 7 & 8* [4].
 
 ### Compute the LED Resistor Value
 
@@ -122,13 +121,13 @@ According to *Omni Calculator* [2] we need to know the following variables:
 
 - **V:** Voltage source.
 
-- **$V_0$:** Voltage drop for each LED.
+- **$$V_0$$:** Voltage drop for each LED.
 
-- **$I_0$:** Current per LED.
+- **$$I_0$$:** Current per LED.
 
 The most common standard values are serial configuration; power supplies or
-batteries from $1.5-12V$; LED voltage of $1.7-3.6V$ which depends on the color
-of the LEDs; and currents of$20-30mA$ [2].
+batteries from $1.5-12V$; LED voltage of $$1.7-3.6V$$ which depends on the color
+of the LEDs; and currents of $$20-30mA$$ [2].
 
 As we know from Ohm's law $R = \frac{V}{I}$ so it should be applied in the
 calculation of the resistor of the LED.
