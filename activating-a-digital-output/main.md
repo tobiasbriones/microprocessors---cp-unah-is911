@@ -51,7 +51,7 @@ from its
 
 ### Proteus Simulator
 
-According to *Labcenter Electronics*[3] -Proteus
+According to *Labcenter Electronics* [3] -Proteus
 provider company-:
 
 > The Proteus Design Suite combines ease of use with a powerful feature set to
