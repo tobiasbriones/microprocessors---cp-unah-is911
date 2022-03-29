@@ -175,6 +175,58 @@
     Como se puede ver en las capturas, al tener uno o dos interruptores cerrados se obtiene un uno lógico en la salida del LED azul y al tener ambos interruptores cerrados ya se activa el LED verde.
 
 
+    \subsection{Ejemplo 3}
+
+    Diseñar un circuito de arranque y paro. Para ello se requiere de un pulsador normalmente cerrado para paro, uno normalmente abierto para arranque, un contactor y un contactor normalmente abierto. Este circuito consiste en un circuito lógico secuencial con la siguiente ecuación:
+
+    $$
+    Q = (A + Q)\bar{P}
+    $$
+
+    \bigbreak
+
+    \textit{Solución:}
+
+    \bigbreak
+
+    En este caso, simplemente hay que calcular la fórmula en el programa y hacer un circuito similar al anterior pero con pulsadores. El código queda de la siguiente manera:
+
+    \bigbreak
+
+    \begin{lstlisting}[language=Python, caption={Programa para el ejemplo 3}]
+    import machine
+
+    A = machine.Pin(1, machine.Pin.IN)
+    P = machine.Pin(2, machine.Pin.IN)
+    Q = machine.Pin(13, machine.Pin.OUT)
+
+    while True:
+        value = (A.value() or Q.value()) and not(P.value())
+        Q.value(value)
+    \end{lstlisting}
+
+    El circuito es el siguiente:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-3-circuit}
+        \caption{Circuito para el ejemplo 3}
+    \end{figure}
+
+    Y al correr la simulación se puede arrancar con el botón verde y detener operaciones con el botón amarillo.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-3-sim-1}
+        \caption{Simulación 1 (Arranque)}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\paperwidth]{images/wokwi-example-3-sim-2}
+        \caption{Simulación 2 (Detener)}
+    \end{figure}
+
     \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
 
