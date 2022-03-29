@@ -42,29 +42,43 @@
 
     \section{Objetivo}
 
-    Desarrollar ejemplos de programas básicos para simular en Raspberry Pi Pico y MicroPython.
-
+    Desarrollar ejemplos de programas básicos para simular en Raspberry Pi
+    Pico y MicroPython.
 
     \subsection{Objetivos Específicos}\label{subsec:objetivos-específicos}
 
     \begin{itemize}
         \item Utilizar un simulador en línea que permita hacer los proyectos.
-        \item Entender la tarjeta Raspberry Pi Pico tanto en programación como en circuito.
+        \item Entender la tarjeta Raspberry Pi Pico tanto en programación
+        como en circuito.
         \item Desarrollar $3$ ejercicios prácticos en total.
     \end{itemize}
 
     \section{Marco Teórico}\label{sec:marco-teórico}
 
 
-    Para llevar a cabo este laboratorio se necesita conocer sobre Raspberry Pi Pico, MicroPython y de alguna herramienta para crear la simulación.
+    Para llevar a cabo este laboratorio se necesita conocer sobre Raspberry
+    Pi Pico, MicroPython y de alguna herramienta para crear la simulación.
 
     \subsection{Resistencia Pull Down}
 
-    Las resistencias Pull-Up o Pull-Down sirven para que la entrada sea definida correctamente. Tener nada conectado a un pin no significa que la señal sea cero, por tanto una resistencia Pull-Down es una resistencia Pull-Up conectada a tierra que verifica que la señal sea cero cuando no hay conectado otro dispositivo. Su valor depende de lo que de va a conectar \cite{arduino-2018}.
+    Las resistencias Pull-Up o Pull-Down sirven para que la entrada sea
+    definida correctamente. Tener nada conectado a un pin no significa que la
+    señal sea cero, por tanto una resistencia Pull-Down es una resistencia
+    Pull-Up conectada a tierra que verifica que la señal sea cero cuando no
+    hay conectado otro dispositivo. Su valor depende de lo que de va a
+    conectar \cite{arduino-2018}.
 
     \subsection{Raspberry Pi Pico}
 
-    Esta es una versión simple y económica de Raspberry, es una tarjeta microcontrolador muy similar a Arduino. Actualmente su precio es de $4\$$. Un review de esta tarjeta y su precio se puede consultar en \href{https://www.raspberrypi.com/products/raspberry-pi-pico}{Buy a Raspberry Pi Pico - Raspberry Pi}. La documentación se puede consultar en \href{https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html}{Raspberry Pi Documentation - Raspberry Pi Pico} y se cuentan con los siguientes datos \cite{raspberry-pi-ltd-2022}:
+    Esta es una versión simple y económica de Raspberry, es una tarjeta
+    microcontrolador muy similar a Arduino. Actualmente su precio es de $4\$$
+    . Un review de esta tarjeta y su precio se puede consultar en
+    \href{https://www.raspberrypi.com/products/raspberry-pi-pico}{Buy a
+    Raspberry Pi Pico - Raspberry Pi}. La documentación se puede consultar en
+    \href{https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html}{Raspberry Pi
+    Documentation - Raspberry Pi Pico} y se cuentan con los siguientes datos
+    \cite{raspberry-pi-ltd-2022}:
 
     \begin{itemize}
         \item Microcontrolador RP2040.
@@ -72,7 +86,8 @@
         \item 264KB de SRAM, y 2MB de memoria flash.
         \item USB 1.1.
         \item $26$ $\times$ GPIO pines multifuncionales.
-        \item $2$ $\times$ SPI, $2 \times I2C$, $2 \times UART$, $3 \times 12-bit ADC$, $16 \times $ canales $PWM$ controlables.
+        \item $2$ $\times$ SPI, $2 \times I2C$, $2 \times UART$, $3 \times
+        12-bit ADC$, $16 \times $ canales $PWM$ controlables.
         \item Sensor de temperatura.
         \item Otros.
     \end{itemize}
@@ -83,40 +98,56 @@
         \centering
         \includegraphics[width=0.5\paperwidth]{images/pico-r3-sdk11-pinout}
         \caption{Raspberry Pi Pico}\footnotesize
-        Fuente: \textit{Raspberry Pi Documentation} licensed under the CC BY-SA 4.0 licence \cite{raspberry-pi-ltd-2022}
+        Fuente: \textit{Raspberry Pi Documentation} licensed under the CC
+        BY-SA 4.0 Licence \cite{raspberry-pi-ltd-2022}
     \end{figure}
 
     \subsection{MicroPython}
 
-    MicroPython es una versión ligera de Python para programar controladores disponible bajo la licencia MIT. Según la descripción oficial:
+    MicroPython es una versión ligera de Python para programar controladores
+    disponible bajo la licencia MIT. Según la descripción oficial:
 
     \begin{quote}
-        MicroPython es una implementación sencilla y eficiente del lenguaje de programación Python 3 que incluye un pequeño subconjunto de la biblioteca estándar de Python y está optimizado para ejecutarse en microcontroladores y en entornos restringidos.\\ \footnotesize
-        Fuente: \textit{MicroPython - Python for microcontrollers} (bajo uso justo, traducido de inglés a español)
+        MicroPython es una implementación sencilla y eficiente del lenguaje
+        de programación Python 3 que incluye un pequeño subconjunto de la
+        biblioteca estándar de Python y está optimizado para ejecutarse en
+        microcontroladores y en entornos restringidos.\\ \footnotesize
+        Fuente: \textit{MicroPython - Python for microcontrollers} (bajo uso
+        justo, traducido de inglés a español)
     \end{quote}
 
     \subsection{Wokwi}
 
-    Wokwi es una aplicación web de código abierto que permite crear proyectos de simulación de circuitos de sistemas embebidos. Actualmente es muy limitada pero es una excelente herramienta teniendo en cuenta que es moderna y se está actualizando. Por la comunidad y lo que nos ofrece es definitivamente una plataforma recomendable. Además también hay soporte para uso profesional \cite{codemagic-ltd-2022}.
+    Wokwi es una aplicación web de código abierto que permite crear proyectos
+    de simulación de circuitos de sistemas embebidos. Actualmente es muy
+    limitada pero es una excelente herramienta teniendo en cuenta que es
+    moderna y se está actualizando. Por la comunidad y lo que nos ofrece es
+    definitivamente una plataforma recomendable. Además también hay soporte
+    para uso profesional \cite{codemagic-ltd-2022}.
 
     \bigbreak
 
     Tenemos oficialmente que:
 
     \begin{quote}
-        Wokwi es un simulador de electrónica en línea. Puede usarlo para simular Arduino, ESP32 y muchas otras placas, piezas y sensores populares.
+        Wokwi es un simulador de electrónica en línea. Puede usarlo para
+        simular Arduino, ESP32 y muchas otras placas, piezas y sensores
+        populares.
         \\ \footnotesize
-        Fuente: \textit{Welcome to Wokwi! $\mid$ Wokwi Docs} bajo la licencia CC BY 4.0
+        Fuente: \textit{Welcome to Wokwi! $\mid$ Wokwi Docs} bajo la licencia
+        CC BY 4.0
     \end{quote}
 
     \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
 
     Para hacer los experimentos se usa \href{https://wokwi.com}{Wokwi}. En
-    este se desarrollará el programa como el circuito y su simulación para cada ejercicio  \cite{ricardo-adonis-caraccioli-abrego-2022}.
+    este se desarrollará el programa como el circuito y su simulación para
+    cada ejercicio~\cite{ricardo-adonis-caraccioli-abrego-2022}.
 
     \subsection{Ejemplo 1}
 
-    Desarrollar un programa en MicroPython para Raspberry Pi Pico que encienda un LED cuando se mantenga presionado un botón.
+    Desarrollar un programa en MicroPython para Raspberry Pi Pico que
+    encienda un LED cuando se mantenga presionado un botón.
 
     \bigbreak
 
@@ -136,11 +167,16 @@
         led.value(1) if button.value() == 1 else led.value(0)
     \end{lstlisting}
 
-    Similar a como se programa en Arduino, primero se crearon dos variables para manejar la salida en el pin $18$ del LED y así también la entrada del pulsador en el pin $0$.
+    Similar a como se programa en Arduino, primero se crearon dos variables
+    para manejar la salida en el pin $18$ del LED y así también la entrada
+    del pulsador en el pin $0$.
 
     \bigbreak
 
-    Así, se puede construir el loop del programa el cual corre indefinidamente para ejecutar la lógica de programación. En este caso se define el valor ($1$ o $0$) del LED dependiendo del valor del pulsador en la entrada.
+    Así, se puede construir el loop del programa el cual corre
+    indefinidamente para ejecutar la lógica de programación. En este caso se
+    define el valor ($1$ o $0$) del LED dependiendo del valor del pulsador en
+    la entrada.
 
     \bigbreak
 
@@ -152,7 +188,8 @@
         \caption{Acciones disponibles en el menú de Wokwi}
     \end{figure}
 
-    En la acción \say{Add a new part} se puede seleccionar un dispositivo para agregar al circuito.
+    En la acción \say{Add a new part} se puede seleccionar un dispositivo
+    para agregar al circuito.
 
     \begin{figure}[H]
         \centering
@@ -160,7 +197,9 @@
         \caption{Partes o dispositivos en Wokwi}
     \end{figure}
 
-    De esa forma, se puede agregar cualquier dispositivo como LED, resistencia, etc., a fin de elaborar el circuito. El circuito de este ejemplo es como sigue:
+    De esa forma, se puede agregar cualquier dispositivo como LED,
+    resistencia, etc., a fin de elaborar el circuito. El circuito de este
+    ejemplo es como sigue:
 
     \begin{figure}[H]
         \centering
@@ -168,21 +207,28 @@
         \caption{Circuito para el ejemplo 1}
     \end{figure}
 
-    Notar que al hacer hover en un pin se muestra mayor información sobre ese pin. La conexión a tierra se hace simplemente con uno de los pines tierra de la tarjeta.
+    Notar que al hacer hover en un pin se muestra mayor información sobre ese
+    pin. La conexión a tierra se hace simplemente con uno de los pines tierra
+    de la tarjeta.
 
     \bigbreak
 
-    Por último, hay una pestaña para configurar los atributos de los dispositivos que se han agregado al proyecto. Se puede modificar el valor de la resistencia así como cualquier atributo de cada parte o dispositivo.
+    Por último, hay una pestaña para configurar los atributos de los
+    dispositivos que se han agregado al proyecto. Se puede modificar el valor
+    de la resistencia así como cualquier atributo de cada parte o dispositivo.
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.3\paperwidth]{images/wokwi-example-1-diagram-src-code}
+        \includegraphics[width=0.3\paperwidth]
+        {images/wokwi-example-1-diagram-src-code}
         \caption{Código fuente del circuito}
     \end{figure}
 
     \subsection{Ejemplo 2}
 
-    Desarrollar un programa que tome dos entradas $A$ y $B$ y tenga dos salidas $Z_1$ y $Z_2$ que computen la compuerta lógica $AND$ y $OR$ de las entradas respectivamente.
+    Desarrollar un programa que tome dos entradas $A$ y $B$ y tenga dos
+    salidas $Z_1$ y $Z_2$ que computen la compuerta lógica $AND$ y $OR$ de
+    las entradas respectivamente.
 
     \bigbreak
 
@@ -190,7 +236,9 @@
 
     \bigbreak
 
-    De la misma manera que se desarrolló el ejemplo anterior, se seguirán trabajando los restantes. Por tanto, tenemos el código y circuito para este ejemplo:
+    De la misma manera que se desarrolló el ejemplo anterior, se seguirán
+    trabajando los restantes. Por tanto, tenemos el código y circuito para
+    este ejemplo:
 
     \begin{lstlisting}[language=Python, caption={Programa para el ejemplo 2}]
     import machine
@@ -205,7 +253,8 @@
         Z1.value(A.value() or B.value())
     \end{lstlisting}
 
-    Se crean las entradas y las salidas, y en el loop se calculan los valores lógicos para asignar a la salida.
+    Se crean las entradas y las salidas, y en el loop se calculan los valores
+    lógicos para asignar a la salida.
 
     \begin{figure}[H]
         \centering
@@ -225,12 +274,16 @@
         \caption{Simulación 2 (AND, OR)}
     \end{figure}
 
-    Como se puede ver en las capturas, al tener uno o dos interruptores cerrados se obtiene un uno lógico en la salida del LED azul y al tener ambos interruptores cerrados ya se activa el LED verde.
-
+    Como se puede ver en las capturas, al tener uno o dos interruptores
+    cerrados se obtiene un uno lógico en la salida del LED azul y al tener
+    ambos interruptores cerrados ya se activa el LED verde.
 
     \subsection{Ejemplo 3}
 
-    Diseñar un circuito de arranque y paro. Para ello se requiere de un pulsador normalmente cerrado para paro, uno normalmente abierto para arranque, un contactor y un contactor normalmente abierto. Este circuito consiste en un circuito lógico secuencial con la siguiente ecuación:
+    Diseñar un circuito de arranque y paro. Para ello se requiere de un
+    pulsador normalmente cerrado para paro, uno normalmente abierto para
+    arranque, un contactor y un contactor normalmente abierto. Este circuito
+    consiste en un circuito lógico secuencial con la siguiente ecuación:
 
     $$
     Q = (A + Q)\bar{P}
@@ -242,7 +295,9 @@
 
     \bigbreak
 
-    En este caso, simplemente hay que calcular la fórmula en el programa y hacer un circuito similar al anterior pero con pulsadores. El código queda de la siguiente manera:
+    En este caso, simplemente hay que calcular la fórmula en el programa y
+    hacer un circuito similar al anterior pero con pulsadores. El código
+    queda de la siguiente manera:
 
     \bigbreak
 
@@ -266,7 +321,8 @@
         \caption{Circuito para el ejemplo 3}
     \end{figure}
 
-    Y al correr la simulación se puede arrancar con el botón verde y detener operaciones con el botón amarillo.
+    Y al correr la simulación se puede arrancar con el botón verde y detener
+    operaciones con el botón amarillo.
 
     \begin{figure}[H]
         \centering
@@ -283,15 +339,21 @@
     \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
 
-    Cada enunciado dado en cada ejemplo fue comprobado en el simulador al corre el experimento.
+    Cada enunciado dado en cada ejemplo fue comprobado en el simulador al
+    corre el experimento.
 
     \bigbreak
 
-    Para el ejemplo 1 se encendió un LED de acuerdo a la entrada de un pulsador. Para el ejemplo 2 se obtuvieron las dos salidas $AND$ y $OR$ para operar las dos entradas. Por último, para el ejemplo 3 se probó el sistema de arranque al enclavar la salida con el botón verde y reiniciar con el botón amarillo.
+    Para el ejemplo 1 se encendió un LED de acuerdo a la entrada de un
+    pulsador. Para el ejemplo 2 se obtuvieron las dos salidas $AND$ y $OR$
+    para operar las dos entradas. Por último, para el ejemplo 3 se probó el
+    sistema de arranque al enclavar la salida con el botón verde y reiniciar
+    con el botón amarillo.
 
     \section{Conclusión}\label{sec:conclusion}
 
-    Se desarrollaron tres ejemplos básicos sobre Raspberry Pi Pico, utilizando MicroPython para el código y Wokwi para la simulación.
+    Se desarrollaron tres ejemplos básicos sobre Raspberry Pi Pico,
+    utilizando MicroPython para el código y Wokwi para la simulación.
 
     \printbibliography
 
