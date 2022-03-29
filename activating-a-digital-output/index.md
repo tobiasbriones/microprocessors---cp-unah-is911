@@ -1,19 +1,7 @@
 ---
-title: Arduino Laboratory: Activating a Digital Output
 description: An introductory explanation about Arduino and Proteus is given along with an example on how to create an Arduino project simulation in Proteus.
 ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microprocessors/gh-pages/activating-a-digital-output/images/sim-2.png
 ---
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
 
 # Arduino Laboratory: Activating a Digital Output
 
@@ -42,8 +30,7 @@ example on how to create an Arduino project simulation in Proteus.
 
 ## Objective
 
-Develop and simulate an Arduino program that iteratively turns a
-LED on and off.
+Develop and simulate an Arduino program that iteratively turns a LED on and off.
 
 ### Specific Objectives
 
@@ -99,7 +86,7 @@ provider company-:
 
 #### Review
 
-I wrote [this review](review) about this kind of outdated proprietary
+I wrote [this review](review.md) about this kind of outdated proprietary
 software we, for sure, have to use in our professions. It's not limited to
 Proteus, it's meant for all outdated software products. I still find Proteus one
 of the best old software, but it's important to notice and pay attention to some
@@ -147,7 +134,7 @@ For more details, go to *How to Add Arduino Library in to Proteus 7 & 8* [4].
 
 ### Compute the LED Resistor Value
 
-The LED diode is usually powered from a direct $3-5V$ source. The current and
+The LED diode is usually powered from a direct $$3-5V$$ source. The current and
 power of the LED is specified according to each diode, but it is knows in
 advance that some approximate values work well for a simple LED to be used.
 According to *Omni Calculator* [2] we need to know the following variables:
@@ -163,10 +150,10 @@ According to *Omni Calculator* [2] we need to know the following variables:
 - **$$I_0$$:** Current per LED.
 
 The most common standard values are serial configuration; power supplies or
-batteries from $1.5-12V$; LED voltage of $$1.7-3.6V$$ which depends on the color
-of the LEDs; and currents of $$20-30mA$$ [2].
+batteries from $$1.5-12V$$; LED voltage of $$1.7-3.6V$$ which depends on the 
+color of the LEDs; and currents of $$20-30mA$$ [2].
 
-As we know from Ohm's law $R = \frac{V}{I}$ so it should be applied in the
+As we know from Ohm's law $$R = \frac{V}{I}$$ so it should be applied in the
 calculation of the resistor of the LED.
 
 For other calculations with series configuration we have [2]:
