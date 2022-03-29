@@ -9,3 +9,4 @@
 - [Wokwi Example 2 Circuit](wokwi-example-2-circuit.png)
 - [Wokwi Example 2 Sim 1](wokwi-example-2-sim-1.png)
 - [Wokwi Example 2 Sim 2](wokwi-example-2-sim-2.png)
+- [Wokwi Example 3 Circuit](wokwi-example-3-circuit.png)
