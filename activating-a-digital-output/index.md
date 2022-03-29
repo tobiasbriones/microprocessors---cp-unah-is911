@@ -1,4 +1,5 @@
 ---
+title: Arduino Laboratory: Activating a Digital Output
 description: An introductory explanation about Arduino and Proteus is given along with an example on how to create an Arduino project simulation in Proteus.
 ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microprocessors/gh-pages/activating-a-digital-output/images/sim-2.png
 ---
