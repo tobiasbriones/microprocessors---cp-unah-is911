@@ -19,6 +19,26 @@ ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microproc
 An introductory explanation about Arduino and Proteus is given along with an 
 example on how to create an Arduino project simulation in Proteus.
 
+## Contents
+
+- [Arduino Laboratory: Activating a Digital Output](#arduino-laboratory--activating-a-digital-output)
+  * [Objective](#objective)
+    + [Specific Objectives](#specific-objectives)
+  * [Framework](#framework)
+    + [Arduino](#arduino)
+    + [Proteus Simulator](#proteus-simulator)
+      - [Review](#review)
+      - [Arduino Designer](#arduino-designer)
+      - [Install Arduino Board](#install-arduino-board)
+    + [Compute the LED Resistor Value](#compute-the-led-resistor-value)
+  * [Experimental Procedure](#experimental-procedure)
+    + [Create Arduino Program](#create-arduino-program)
+    + [Run Simulation in Proteus](#run-simulation-in-proteus)
+  * [Result](#result)
+  * [Conclusion](#conclusion)
+  * [Resources](#resources)
+  * [References](#references)
+
 ## Objective
 
 Develop and simulate an Arduino program that turns on and off iteratively an
