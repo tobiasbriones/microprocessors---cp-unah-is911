@@ -19,26 +19,6 @@ ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microproc
 An introductory explanation about Arduino and Proteus is given along with an 
 example on how to create an Arduino project simulation in Proteus.
 
-## Contents
-
-- [Arduino Laboratory: Activating a Digital Output](#arduino-laboratory--activating-a-digital-output)
-  * [Objective](#objective)
-    + [Specific Objectives](#specific-objectives)
-  * [Framework](#framework)
-    + [Arduino](#arduino)
-    + [Proteus Simulator](#proteus-simulator)
-      - [Review](#review)
-      - [Arduino Designer](#arduino-designer)
-      - [Install Arduino Board](#install-arduino-board)
-    + [Compute the LED Resistor Value](#compute-the-led-resistor-value)
-  * [Experimental Procedure](#experimental-procedure)
-    + [Create Arduino Program](#create-arduino-program)
-    + [Run Simulation in Proteus](#run-simulation-in-proteus)
-  * [Result](#result)
-  * [Conclusion](#conclusion)
-  * [Resources](#resources)
-  * [References](#references)
-
 ## Objective
 
 Develop and simulate an Arduino program that turns on and off iteratively an
@@ -98,7 +78,7 @@ provider company-:
 
 #### Review
 
-I wrote [this review](review.md) about this kind of outdated proprietary
+I wrote [this review](review) about this kind of outdated proprietary
 software we, for sure, have to use in our professions. It's not limited to
 Proteus, it's meant for all outdated software products. I still find Proteus one
 of the best old software, but it's important to notice and pay attention to some
@@ -132,7 +112,7 @@ According to official information, with the capabilities of Proteus we can:
 ![Arduino Board in Proteus](images/proteus.png)
 
 <figcaption>
-<p align="center"><strong>Arduino Board in Proteus</strong></p>
+<p><strong>Arduino Board in Proteus</strong></p>
 
 Source: <it>Arduino Simulation Software - Processor, Shields and 
 Peripherals</it> | Labcenter Electronics [3]. Under fair use.
@@ -142,8 +122,7 @@ Peripherals</it> | Labcenter Electronics [3]. Under fair use.
 
 If necessary, the Arduino library must be installed to Proteus. At the end of
 the simple installation, you can add the card Arduino from the list of devices.
-For more details, go to *How to Add Arduino Library in to Proteus 7 $\&$ 8*
-[4].
+For more details, go to *How to Add Arduino Library in to Proteus 7 & 8* [4].
 
 ### Compute the LED Resistor Value
 
@@ -158,13 +137,13 @@ According to *Omni Calculator* [2] we need to know the following variables:
 
 - **V:** Voltage source.
 
-- **$V_0$:** Voltage drop for each LED.
+- **$$V_0$$:** Voltage drop for each LED.
 
-- **$I_0$:** Current per LED.
+- **$$I_0$$:** Current per LED.
 
 The most common standard values are serial configuration; power supplies or
-batteries from $1.5-12V$; LED voltage of $1.7-3.6V$ which depends on the color
-of the LEDs; and currents of$20-30mA$ [2].
+batteries from $1.5-12V$; LED voltage of $$1.7-3.6V$$ which depends on the color
+of the LEDs; and currents of $$20-30mA$$ [2].
 
 As we know from Ohm's law $R = \frac{V}{I}$ so it should be applied in the
 calculation of the resistor of the LED.
