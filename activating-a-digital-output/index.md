@@ -2,6 +2,16 @@
 description: An introductory explanation about Arduino and Proteus is given along with an example on how to create an Arduino project simulation in Proteus.
 ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microprocessors/gh-pages/activating-a-digital-output/images/sim-2.png
 ---
+<!--
+  ~ Copyright (c) 2022 Tobias Briones. All rights reserved.
+  ~ SPDX-License-Identifier: CC-BY-SA-4.0
+  ~
+  ~ This source code is part of
+  ~ https://github.com/tobiasbriones/cp-unah-is911-microprocessors and is
+  ~ licensed under the Creative Commons Attribution Share Alike 4.0
+  ~ International License found in the LICENSE file in the root
+  ~ directory of this source tree or at https://spdx.org/licenses/CC-BY-SA-4.0
+  -->
 
 # Arduino Laboratory: Activating a Digital Output
 
