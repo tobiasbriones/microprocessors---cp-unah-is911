@@ -2,9 +2,10 @@
 
 ## Hard-copied
 
-- [Schematic](proteus.png)
+- [Proteus](proteus.png)
     - From [Labcenter Electronics](https://www.labcenter.com/visualdesigner/arduino).
     - Under fair use.
+    - Modification: Compress image.
 - [Arduino-1](arduino-1.png)
     - Derivative screenshot from Arduino IDE.
 - [Arduino-2](arduino-2.png)
