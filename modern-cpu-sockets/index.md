@@ -10,3 +10,6 @@
   -->
 
 # Modern CPU Sockets
+
+This research framework provides a summary of existing modern PC sockets in
+2022.
