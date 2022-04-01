@@ -9,4 +9,4 @@
   ~ directory of this source tree or at https://spdx.org/licenses/CC-BY-SA-4.0
   -->
 
-# Modern CPU Sockets (2022-01-31)
+# Modern CPU Sockets
