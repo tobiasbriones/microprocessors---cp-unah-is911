@@ -127,8 +127,57 @@ Fuente: \textit{ESPRESSIF} $\mid$ ESP32 Datasheet \cite{espressif-systems-shangh
 
 Por último, en \href{http://esp32.net}{http://esp32.net} se encuentran también características y especificaciones, recursos de desarrollo para muchos lenguajes de programación y plataformas, comunidades en línea sobre este dispositivo en específico, lecturas y videos, plataformas de hardware, información sobre proveedores que venden este dispositivo y otros accesorios \cite{esp32net-esp32net-iot}.
 
-\section{}
+\section{Desarrollo en Arduino IDE y C++}
 
+En esta sección se tratará de abordar como poder crear un programa para la tarjeta ESP32 mediante Arduino IDE y C++. En la siguiente sección, se verá como es el proceso en MicoPython.
+
+\bigbreak
+
+Lo que se necesita hacer para establecer esta configuración es lo siguiente \cite{pieters-2022}:
+
+\begin{itemize}
+\item Descargar e instalar Arduino IDE.
+
+\item Ir a File - Preferences - Aditional Boards Manager URLs e ingresar la dirección oficial para instalar la tarjeta ESP32 \url{https://dl.espressif.com/dl/package_esp32_index.json}.
+
+\item Ir a Tools - Board - Boards manager.
+
+\item Seleccionar la tarjeta ESP32 ya que se ha agregado al repositorio con el paso anterior y proceder a instalarla.
+
+\item Seleccionar la tarjeta que se tiene, de entre las tantas opciones.
+
+\item Seleccionar el puerto USB ESP32 al conectar el módulo ESP.
+\end{itemize}
+
+Se usará la herramienta esptool para crear el firmware y flashearlo en la tarjete ESP32.
+
+\bigbreak
+
+La tarjeta puede estar desacoplada, esto es, solamente el chip, o en una tarjeta NodeMCU como se ilustró arriba. Utilizar Arduino IDE para flashear esta tarjeta es más complicado ya que lleva varios pasos más. Claro está, es Arduino IDE y no ESP32 IDE. Para esto, se tiene que resetear el microcontrolador y empezar lo en modo flash usando GPIO-0 a Tierra. También tener en cuenta sobre el programador que se va a emplear como se mencionó al principio. Por último, para una forma visual y más profunda sobre este proceso se puede consultar \href{https://www.studiopieters.nl/esp32-program-a-esp32}{ESP32 - Program a ESP32 $\mid$ Studio Pieters} \cite{pieters-2022}, así como también esta otra guía de mayor calidad \href{https://www.electronicshub.org/esp32-arduino-ide}{How to Program ESP32 with Arduino IDE?} \cite{teja-2021}.
+
+\subsection{Programa}
+
+El siguiente programa puede ser usado para la ESP32. Es lo mismo que el C++ para Arduino, y se explica por si mismo.
+
+\begin{lstlisting}[language=C, caption={Programa que hace parpadear el LED en el pin 2}]
+#define ledPin 2
+
+void setup()
+{
+pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+digitalWrite(ledPin, HIGH);
+delay(1000);
+
+digitalWrite(ledPin, LOW);
+delay(1000);
+}
+\end{lstlisting}
+
+Para este programa, es probable que el LED (SMD) ya se encuentre en la tarjeta, de lo contrario se tendrá que conectar un LED con su resistencia a esta salida. La tarea de flashear la tarjeta con Arduino IDE es un poco complicada, por lo que si no queda claro este aspecto, es muy recomendable visitar los enlaces proveídos para entrar a más detalles.
 
 
 
