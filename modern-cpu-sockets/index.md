@@ -14,6 +14,37 @@
 This research framework provides a summary of existing modern PC sockets in
 2022.
 
+## Introduction
+
+Sockets are connectors that allow physical and electrical connectivity from the
+microprocessor to the motherboard. They are also known as "slots".
+
+As mentioned above, we can make the following statement about sockets:
+
+> A **CPU socket** or **CPU slot** contains one or more mechanical
+> components providing mechanical and electrical connections between a
+> microprocessor and a printed circuit board (PCB). This allows for placing and
+> replacing the central processing unit (CPU) without soldering.
+>
+> Source: *Wikipedia* \| CPU socket [11] (under CC-BY-SA-3.0)
+
+To list some types of sockets, we have [1]: TR4, AM4, LGA 1151, 2066, sTRX4.
+When designing a configuration for a PC, it must be taken into account that the
+motherboard is compatible with the rest of the chosen hardware and, in
+particular, that the socket is the one that corresponds to the model of the CPU
+that must be installed.
+
+### Definition
+
+A simple definition of a socket is:
+
+> The socket refers to a physical connector on a computer motherboard that
+> accepts a single physical chip. Many motherboards can have multiple sockets 
+> that can in turn accept multi-core chips.
+> 
+> Source: *University Information Technology Services* \| About processors, 
+> chips, sockets, and cores [6] (under fair use)
+
 ## References
 
 [1] Authortechnews. (2020, June 22). Building Your Own PC: Part Picking –
