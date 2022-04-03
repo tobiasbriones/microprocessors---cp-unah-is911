@@ -20,3 +20,4 @@ The following modules contain third party content:
 - [arduino-sensors-and-motors](arduino-sensors-and-motors/images/notice.md)
 - [getting-started-with-lcd](getting-started-with-lcd/images/notice.md)
 - [raspberry-pi-pico-and-micropython](raspberry-pi-pico-and-micropython/images/notice.md)
+- [esp32-with-cpp-and-micropython](esp32-with-cpp-and-micropython/images/notice.md)
