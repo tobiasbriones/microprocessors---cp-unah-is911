@@ -11,3 +11,6 @@
 - [ESP32 Functional Block Diagram](esp32-functional-block-diagram.png)
     - From [ESPRESSIF](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf).
     - Under fair use.
+- [ESP32 Pin Layout](esp32-pin-layout.png)
+    - From [ESPRESSIF](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf).
+    - Under fair use.
