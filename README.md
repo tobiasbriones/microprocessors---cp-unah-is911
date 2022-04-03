@@ -4,6 +4,11 @@
 
 Own works for the Microprocessors Course Project.
 
+## Latex
+
+Use Overleaf, and take into account SVG images have to be converted to PNG 
+to make them work with Latex.
+
 ## About
 
 **Course Project at UNAH-IS911: Microprocessors**
