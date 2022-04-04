@@ -179,7 +179,101 @@ delay(1000);
 
 Para este programa, es probable que el LED (SMD) ya se encuentre en la tarjeta, de lo contrario se tendrá que conectar un LED con su resistencia a esta salida. La tarea de flashear la tarjeta con Arduino IDE es un poco complicada, por lo que si no queda claro este aspecto, es muy recomendable visitar los enlaces proveídos para entrar a más detalles.
 
+\section{Desarrollo con MicroPython}
 
+Lo que nos proporciona la documentación de MicroPython para la tarjeta ESP32 es la siguiente información \cite{micropython-esp32}:
+
+\begin{itemize}
+\item Se obtienen los mejores beneficios al usar MicroPython en ESP32 (recordar que con Arduino IDE no fue tan bonito).
+
+\item El software MicroPython soporta ESP32 y hay que tener en cuenta la disposición de los pines, y si incluye un serial USB para tener el UART disponible en el PC.
+
+\item Verificar la alimentación de la tarjeta si no tiene USB.
+
+\item Se debe descargar el \href{https://micropython.org/download/#esp32}{firmware} de MicroPython para cargarlo en la tarjeta ESP32.
+
+\item Para cargar el firmware se debe de primero, poner la tarjeta en modo bootloader, y segundo, copiar el firmware. Esto depende de cada tarjeta por lo cual se deberá consultar la documentación correspondiente para mayor detalle.
+
+\item Para copiar el firmware, \href{https://github.com/espressif/esptool}{esptool} es soportada por MicroPython y se debe tener instalada (pip install esptool).
+
+\item Se borra el flash: esptool.py --port /dev/ttyUSB0 erase\_flash.
+
+\item Y se despliega el firmware: esptool.py --chip esp32 --port /dev/ttyUSB0 write\_flash -z 0x1000 esp32-20180511-v1.9.4.bin.
+\end{itemize}
+
+\subsection{Programa}
+
+Para la creación del programa se recomienda utilizar Thonny IDE. Entonces se deberá de seleccionar en el IDE el intérprete y el puerto del dispositivo. Ahí mismo en la pestaña de Intérprete, se selecciona en la parte de Firmware para flashear el firmware que se descargó. El nombre del archivo debe ser \say{main.py} ya que se carga \say{boot.py} de primero y luego \say{main.py}.
+
+\bigbreak
+
+\begin{lstlisting}[language=C, caption={Programa que hace parpadear un LED hasta que se presiona el botón de salir en MicroPython. Fuente: Sparkfun Electronics \cite{hymel}.}]
+import machine
+import sys
+import utime
+
+repl_button = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+led = machine.Pin(5, machine.Pin.OUT)
+
+while True:
+if repl_button.value() == 0:
+print("Dropping to REPL")
+sys.exit()
+
+led.value(1)
+utime.sleep_ms(500)
+led.value(0)
+utime.sleep_ms(500)
+\end{lstlisting}
+
+También se pude ver el otro ejemplo más detalladamente: Utilizar PWM para controlar un LED de acuerdo a cuando se presione un botón pulsador.
+
+\bigbreak
+
+El código es el siguiente:
+
+\begin{lstlisting}[language=C, caption={Programa que utiliza PWM en MicroPython para ESP32. Fuente: Sparkfun Electronics \cite{hymel}.}]
+import machine
+import sys
+import utime
+
+repl_button = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+repl_led = machine.Pin(5, machine.Pin.OUT)
+button = machine.Pin(14, machine.Pin.IN, machine.Pin.PULL_UP)
+pwm_pin = machine.Pin(27, machine.Pin.OUT)
+pwm = machine.PWM(pwm_pin)
+
+while True:
+if repl_button.value() == 0:
+print("Dropping to REPL")
+repl_led.value(1)
+sys.exit()
+
+for i in range(1024):
+if button.value() == 0:
+pwm.duty(i)
+utime.sleep_ms(2)
+else:
+pwm.duty(0)
+\end{lstlisting}
+
+El diagrama es el siguiente:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/esp32-micropython-pwm-circuit}
+\caption{Circuito para programa PWM con MicroPython} \footnotesize
+Fuente: \textit{Sparkfun} $\mid$ MicroPython Programming Tutorial: Getting Started with the ESP32 Thing \cite{hymel} (under the CC BY-SA 4.0 license)
+\end{figure}
+
+Y se ve algo así:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{images/esp32-micropython-pwm-photo}
+\caption{Resultado para programa PWM con MicroPython} \footnotesize
+Fuente: \textit{Sparkfun} $\mid$ MicroPython Programming Tutorial: Getting Started with the ESP32 Thing \cite{hymel} (under the CC BY-SA 4.0 license)
+\end{figure}
 
 \section{Conclusión}\label{sec:conclusion}
 
