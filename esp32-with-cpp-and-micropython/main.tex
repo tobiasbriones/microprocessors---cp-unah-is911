@@ -10,7 +10,7 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{preamble}
 
-\title{ESP32 CON C++ Y MICOPHYTHON}
+\title{ESP32 CON C++ Y MICROPYTHON}
 \author{
     \includegraphics[width = 40mm]{images/logo-unah}\\[8ex]
     \IEEEauthorblockN{Tobias Briones}
@@ -154,10 +154,10 @@ Para poder hacer uso del dispositivo, es importante saber su disposición de
 pines, esto se obtiene de la siguiente documentación oficial:
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3\paperwidth]{images/esp32-pin-layout.png}
-    \caption{ESP32 layout de pines (QFN 6*6, Vista desde arriba)} \footnotesize
-    Fuente: \textit{ESPRESSIF} $\mid$ ESP32 Datasheet \cite{espressif-systems-shanghai-co-ltd-2022B} (bajo uso justo)
+\centering
+\includegraphics[width=0.3\paperwidth]{images/esp32-pin-layout.png}
+\caption{ESP32 layout de pines (QFN 6*6, Vista desde arriba)} \footnotesize
+Fuente: \textit{ESPRESSIF} $\mid$ ESP32 Datasheet \cite{espressif-systems-shanghai-co-ltd-2022B} (bajo uso justo)
 \end{figure}
 
 Por último, en \href{http://esp32.net}{http://esp32.net} se encuentran
@@ -179,20 +179,20 @@ Lo que se necesita hacer para establecer esta configuración es lo siguiente
 \cite{pieters-2022}:
 
 \begin{itemize}
-    \item Descargar e instalar Arduino IDE.
+\item Descargar e instalar Arduino IDE.
 
-    \item Ir a File - Preferences - Aditional Boards Manager URLs e ingresar la
-    dirección oficial para instalar la tarjeta ESP32 \url{https://dl.espressif
+\item Ir a File - Preferences - Aditional Boards Manager URLs e ingresar la
+dirección oficial para instalar la tarjeta ESP32 \url{https://dl.espressif
     .com/dl/package_esp32_index.json}.
 
-    \item Ir a Tools - Board - Boards manager.
+\item Ir a Tools - Board - Boards manager.
 
-    \item Seleccionar la tarjeta ESP32 ya que se ha agregado al repositorio con
-    el paso anterior y proceder a instalarla.
+\item Seleccionar la tarjeta ESP32 ya que se ha agregado al repositorio con
+el paso anterior y proceder a instalarla.
 
-    \item Seleccionar la tarjeta que se tiene, de entre las tantas opciones.
+\item Seleccionar la tarjeta que se tiene, de entre las tantas opciones.
 
-    \item Seleccionar el puerto USB ESP32 al conectar el módulo ESP.
+\item Seleccionar el puerto USB ESP32 al conectar el módulo ESP.
 \end{itemize}
 
 Se usará la herramienta esptool para crear el firmware y flashearlo en la
@@ -223,16 +223,16 @@ el pin 2}]
 
 void setup()
 {
-    pinMode(ledPin, OUTPUT);
+pinMode(ledPin, OUTPUT);
 }
 
 void loop()
 {
-    digitalWrite(ledPin, HIGH);
-    delay(1000);
+digitalWrite(ledPin, HIGH);
+delay(1000);
 
-    digitalWrite(ledPin, LOW);
-    delay(1000);
+digitalWrite(ledPin, LOW);
+delay(1000);
 }
 \end{lstlisting}
 
@@ -304,14 +304,14 @@ repl_button = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
 led = machine.Pin(5, machine.Pin.OUT)
 
 while True:
-    if repl_button.value() == 0:
-        print("Dropping to REPL")
-        sys.exit()
+if repl_button.value() == 0:
+print("Dropping to REPL")
+sys.exit()
 
-    led.value(1)
-    utime.sleep_ms(500)
-    led.value(0)
-    utime.sleep_ms(500)
+led.value(1)
+utime.sleep_ms(500)
+led.value(0)
+utime.sleep_ms(500)
 \end{lstlisting}
 
 También se pude ver el otro ejemplo más detalladamente: Utilizar PWM para
@@ -334,17 +334,17 @@ pwm_pin = machine.Pin(27, machine.Pin.OUT)
 pwm = machine.PWM(pwm_pin)
 
 while True:
-    if repl_button.value() == 0:
-        print("Dropping to REPL")
-        repl_led.value(1)
-        sys.exit()
+if repl_button.value() == 0:
+print("Dropping to REPL")
+repl_led.value(1)
+sys.exit()
 
-    for i in range(1024):
-        if button.value() == 0:
-            pwm.duty(i)
-            utime.sleep_ms(2)
-        else:
-            pwm.duty(0)
+for i in range(1024):
+if button.value() == 0:
+pwm.duty(i)
+utime.sleep_ms(2)
+else:
+pwm.duty(0)
 \end{lstlisting}
 
 El diagrama es el siguiente:
