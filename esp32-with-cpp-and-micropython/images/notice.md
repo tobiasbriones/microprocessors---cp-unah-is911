@@ -17,3 +17,7 @@
     - From [ESPRESSIF](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf).
     - Under fair use.
     - Modification: Compress image.
+- [ESP32 Micropython PWM Circuit](esp32-micropython-pwm-circuit.png)
+    - From [Sparkfun](https://learn.sparkfun.com/tutorials/micropython-programming-tutorial-getting-started-with-the-esp32-thing/all).
+    - Licensed under the CC BY-SA 4.0 license.
+    - Modification: Compress image.
