@@ -21,3 +21,7 @@
     - From [Sparkfun](https://learn.sparkfun.com/tutorials/micropython-programming-tutorial-getting-started-with-the-esp32-thing/all).
     - Licensed under the CC BY-SA 4.0 license.
     - Modification: Compress image.
+- [ESP32 Micropython PWM Photo](esp32-micropython-pwm-photo.jpg)
+    - From [Sparkfun](https://learn.sparkfun.com/tutorials/micropython-programming-tutorial-getting-started-with-the-esp32-thing/all).
+    - Licensed under the CC BY-SA 4.0 license.
+    - Modification: Compress image.
