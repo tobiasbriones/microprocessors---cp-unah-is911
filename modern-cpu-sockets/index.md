@@ -60,9 +60,9 @@ implements the CPU, memory, and others' components on a single chip.
 
 ## References
 
-[1] Authortechnews. (2020, June 22). Building Your Own PC: Part Picking –
-TechTalk. TechTalk - Articles on the Latest Technology, on and off Campus.
-Retrieved January 31, 2022,
+[1] Johnson, Q. (2020, June 22). Building Your Own PC: Part Picking – TechTalk.
+TechTalk - Articles on the Latest Technology, on and off Campus. Retrieved
+January 31, 2022,
 from https://itblogs.semo.edu/2020/06/22/building-your-own-pc-part-picking.
 
 [2] B.-O. (2019, August 8). Cpu Processor Chip - Free photo on Pixabay. Pixabay.
