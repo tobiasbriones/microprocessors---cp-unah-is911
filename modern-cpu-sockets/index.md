@@ -45,6 +45,19 @@ A simple definition of a socket is:
 > Source: *University Information Technology Services* \| About processors, 
 > chips, sockets, and cores [6] (under fair use)
 
+Personal computers (including gaming PCs) and industrial computers have similar
+or the same sockets. These sockets are mostly found on these computers, unlike
+mobile devices like laptops or smartphones, which bring the CPU soldered on the
+motherboard or have a SoC (System on a Chip), an integrated circuit that
+implements the CPU, memory, and others' components on a single chip.
+
+![CPU Socket](images/cpu-socket.jpg)
+
+<figcaption>
+<p align="center"><strong>CPU Socket</strong></p>
+<p align="center">Source: Image by Bruno /Germany Pixabay [2].</p>
+</figcaption>
+
 ## References
 
 [1] Authortechnews. (2020, June 22). Building Your Own PC: Part Picking –
