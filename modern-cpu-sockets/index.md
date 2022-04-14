@@ -104,9 +104,55 @@ s), generation, compatible chipsets, and type of personal computer:
   X570/X470/X370/B550/B450/B350/B450/A320/X300/A300, Convencional.
 
 <figcaption>
-<p align="center"><strong></strong></p>
+<p align="center"><strong>List of modern CPU sockets</strong></p>
 <p align="center">Source: <it>tom'sHARDWARE</it> [4]</p>
 </figcaption>
+
+## Functioning
+
+The mechanism of functioning is defined according to the socket package. As
+mentioned, the operation of a socket is such that it allows the physical
+connection of the microprocessor to the motherboard.
+
+### Land Grid Array (LGA)
+
+LGA sockets are the most populars since much today's PC CPU models employ 
+this kind of socket.
+
+According to *ONLOGIC Blog* [3], most modern removable CPUs use LGA sockets.
+
+Their functioning consists of:
+
+> The land grid array (LGA) is a type of surface-mount packaging for integrated
+> circuits (ICs) that is notable for having the pins on the socket 
+> (when a socket is used) rather than the integrated circuit.
+> 
+> LGA can be electrically connected to a printed circuit board (PCB) either by 
+> the use of a socket or by soldering directly to the board.
+> 
+> The land grid array is a packaging technology with a rectangular grid of 
+> contacts, 'lands', on the underside of a package. The contacts are to be 
+> connected to a grid of contacts on the PCB. Not all rows and columns of the 
+> grid need to be used.
+> 
+> Unlike the pin grid array (PGA) interface found on most AMD and older Intel 
+> processors, there are no pins on the chip; in place of the pins are pads of 
+> bare gold-plated copper that touch protruding pins on the microprocessor's 
+> connector on the motherboard.
+> 
+> Source: *Wikipedia* \| Land grid array [10] (under CC-BY-SA-3.0)
+
+![LGA Socket](images/lga-socket.jpg)
+
+<figcaption>
+<p align="center"><strong>LGA Socket</strong></p>
+<p align="center">Source: By User Smial on de.wikipedia - Own work, CC BY-SA 
+2.0 de, https://commons.wikimedia.org/w/index.php?curid=1066500 [10]</p>
+</figcaption>
+
+As can be seen, both major manufacturers, AMD and Intel use it for many of their
+microprocessors. Note that, for example, Socket sTRX4 is actually an LGA 
+4094 [10].
 
 ## References
 
