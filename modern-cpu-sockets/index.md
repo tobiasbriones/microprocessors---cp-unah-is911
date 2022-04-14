@@ -8,6 +8,10 @@
   ~ International License found in the LICENSE file in the root
   ~ directory of this source tree or at https://spdx.org/licenses/CC-BY-SA-4.0
   -->
+---
+description: This research framework provides a summary of existing modern PC sockets in 2022.
+ogimage: https://raw.githubusercontent.com/tobiasbriones/cp-unah-is911-microprocessors/main/modern-cpu-sockets/images/cpu-socket.jpg
+---
 
 # Modern CPU Sockets
 
