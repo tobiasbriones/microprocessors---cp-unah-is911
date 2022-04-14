@@ -225,7 +225,6 @@ is the most widely used for PCs.
 - [CP: Microprocessors \| Tobias Briones](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
 - [PDF Spanish version of this article](https://github.com/tobiasbriones/cp-unah-is911-microprocessors/releases/download/v2022.03.09/modern-cpu-sockets.pdf)
 
-
 ## References
 
 [1] Johnson, Q. (2020, June 22). Building Your Own PC: Part Picking – TechTalk.
