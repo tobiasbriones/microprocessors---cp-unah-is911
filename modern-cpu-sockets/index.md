@@ -185,6 +185,33 @@ Mostly used for mobile devices or for electrical engineering
 > 
 > Source: *Wikipedia* \| Ball grid array [9] (under CC-BY-SA-3.0)
 
+### Zero Insertion Force (ZIF)
+
+The ZIF socket allows to insert the IC pretty easy. For example, we have the 
+PIC microcontroller's programmer where we insert the IC directly into the 
+socket.
+
+![ZIF Socket](images/zif-socket.jpg)
+
+<figcaption>
+<p align="center"><strong>ZIF Socket</strong></p>
+<p align="center">Source: By User Smial on de.wikipedia - Own work, CC BY-SA 
+2.0 de, https://commons.wikimedia.org/w/index.php?curid=1058788 [7]</p>
+</figcaption>
+
+Its functioning consists of:
+
+> Zero insertion force (ZIF) is a type of IC socket or electrical connector that
+> requires very little force for insertion. With a ZIF socket, before the IC is 
+> inserted, a lever or slider on the side of the socket is moved, pushing all 
+> the sprung contacts apart so that the IC can be inserted with very little 
+> force - generally the weight of the IC itself is sufficient and no external 
+> downward force is required.
+> 
+> Source: *Wikipedia* \| Zero insertion force [7] (under CC-BY-SA-3.0)
+
+Therefore, they are niche sockets, and we don't care about them eiter. 
+
 ## References
 
 [1] Johnson, Q. (2020, June 22). Building Your Own PC: Part Picking – TechTalk.
