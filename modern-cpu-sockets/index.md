@@ -154,6 +154,19 @@ As can be seen, both major manufacturers, AMD and Intel use it for many of their
 microprocessors. Note that, for example, Socket sTRX4 is actually an LGA 
 4094 [10].
 
+### Pin Grid Array (PGA)
+
+Its functioning is as follows:
+
+> A pin grid array (PGA) is a type of integrated circuit packaging. In a PGA,
+> the package is square or rectangular, and the pins are arranged in a regular 
+> array on the underside of the package.
+> 
+> PGAs are often mounted on printed circuit boards using the through hole method
+> or inserted into a socket.
+> 
+> Source: *Wikipedia* \| Pin grid array [8]
+
 ## References
 
 [1] Johnson, Q. (2020, June 22). Building Your Own PC: Part Picking – TechTalk.
