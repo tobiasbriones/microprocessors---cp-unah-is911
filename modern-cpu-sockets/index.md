@@ -80,7 +80,7 @@ For desktop PC there are the following models:
 
 <figcaption>
 <p align="center"><strong>Recent CPU Sockets</strong></p>
-<p align="center">Source: <it>Wikipedia</it> \| CPU Socket [11]</p>
+<p align="center">Source: <it>Wikipedia</it> | CPU Socket [11]</p>
 </figcaption>
 
 Computers can be classified into conventional (PC or personal computer), HEDT 
