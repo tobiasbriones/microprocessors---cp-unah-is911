@@ -55,7 +55,57 @@ implements the CPU, memory, and others' components on a single chip.
 
 <figcaption>
 <p align="center"><strong>CPU Socket</strong></p>
-<p align="center">Source: Image by Bruno /Germany Pixabay [2].</p>
+<p align="center">Source: Image by Bruno /Germany Pixabay [2]</p>
+</figcaption>
+
+## Socket Types
+
+According to current data, the types of sockets that are currently used for
+personal computers, gaming and even workstation or industrial / servers will be
+shown next.
+
+There is a large number of old sockets, only the most recent will be detailed.
+
+For desktop PC there are the following models:
+
+| Socket Name               | Introduction Year | CPUs                                                      | Package | Pins |
+|---------------------------|-------------------|-----------------------------------------------------------|---------|------|
+| Socket AM5                | 2022              | AMD Zen 4                                                 | LGA     | 1718 |
+| LGA 1700                  | 2021              | Intel Alder Lake                                          | LGA     | 1700 |
+| LGA 1200                  | 2020              | Intel Comet Lake Intel Rocket Lake                        | LGA     | 1200 |
+| Socket sTRX4/Socket SP3r3 | 2019              | AMD Ryzen Threadripper (series 3, 000)                    | LGA     | 4094 |
+| LGA 2066/Socket R4        | 2017              | Intel Skylake-X Intel Kaby Lake-X Intel Cascade Lake-X    | LGA     | 2066 |
+| Socket TR4/Socket SP3r2   | 2017              | AMD Ryzen Threadripper                                    | LGA     | 4094 |
+| Socket AM4                | 2017              | AMD Ryzen 9AMD Ryzen 7 AMD Ryzen 5 AMD Ryzen 3 Athlon 200 | PGA     | 1331 |
+
+<figcaption>
+<p align="center"><strong>Recent CPU Sockets</strong></p>
+<p align="center">Source: <it>Wikipedia</it> \| CPU Socket [11]</p>
+</figcaption>
+
+Computers can be classified into conventional (PC or personal computer), HEDT 
+(High-End Desktop are High-Performance PCs), or Servers/Industrial/WorkStations.
+The sockets listed here are for conventional desktop PCs with very popular CPUs,
+and some of them are high-performance CPUs like the AMD Ryzen Threadripper, and
+Intel Core X (LGA 2066/Socket R4). These are examples of desktop and server
+models as well.
+
+Among the mentioned models above and other popular ones, a resume with the
+following more-practical information is displayed next, including the CPU model(
+s), generation, compatible chipsets, and type of personal computer:
+
+- **Intel LGA 2066:** 10ma Gen., X299, HEDT.
+- **Intel LGA 1200:** 11/10ma Gen., Z490/H470, B460, H410, Convencional.
+- **Intel LGA 1151:** 9/8va Gen., Z390/Z370/Z370/Q370/H370/B365/B360/H310,
+  Convencional.
+- **AMD sTRX4:** Ryzen Threadripper 3000, TRX40, HEDT.
+- **AMD TR4:** Ryzen Threadripper 2000 y 1000, x399, HEDT.
+- **AMD AM4:** Ryzen 5000, 3000, 2000 y 1000,
+  X570/X470/X370/B550/B450/B350/B450/A320/X300/A300, Convencional.
+
+<figcaption>
+<p align="center"><strong></strong></p>
+<p align="center">Source: <it>tom'sHARDWARE</it> [4]</p>
 </figcaption>
 
 ## References
