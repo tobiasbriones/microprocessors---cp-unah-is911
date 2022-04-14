@@ -14,6 +14,18 @@
 This research framework provides a summary of existing modern PC sockets in
 2022.
 
+- [Modern CPU Sockets](#modern-cpu-sockets)
+  * [Introduction](#introduction)
+    + [Definition](#definition)
+  * [Socket Types](#socket-types)
+  * [Functioning](#functioning)
+    + [Land Grid Array (LGA)](#land-grid-array--lga-)
+    + [Pin Grid Array (PGA)](#pin-grid-array--pga-)
+    + [Ball Grid Array (BGA)](#ball-grid-array--bga-)
+    + [Zero Insertion Force (ZIF)](#zero-insertion-force--zif-)
+  * [Conclusion](#conclusion)
+  * [References](#references)
+
 ## Introduction
 
 Sockets are connectors that allow physical and electrical connectivity from the
