@@ -86,7 +86,7 @@ For desktop PC there are the following models:
 
 <figcaption>
 <p align="center"><strong>Recent CPU Sockets</strong></p>
-<p align="center">Source: <it>Wikipedia</it> \| CPU Socket [11]</p>
+<p align="center">Source: <it>Wikipedia</it> | CPU Socket [11]</p>
 </figcaption>
 
 Computers can be classified into conventional (PC or personal computer), HEDT 
@@ -225,6 +225,12 @@ microprocessors or PCs was listed. It was briefly explained how the CPU sockets
 work, and that there are categories of PCs depending on the needs of users,
 requiring different types of sockets. It was noticed that the LGA socket package
 is the most widely used for PCs.
+
+## Resources
+
+- [CP: Microprocessors \| Tobias Briones](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
+- [PDF Spanish version of this article](https://github.com/tobiasbriones/cp-unah-is911-microprocessors/releases/download/v2022.03.09/modern-cpu-sockets.pdf)
+
 
 ## References
 
