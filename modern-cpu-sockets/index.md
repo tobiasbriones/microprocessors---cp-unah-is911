@@ -212,6 +212,14 @@ Its functioning consists of:
 
 Therefore, they are niche sockets, and we don't care about them eiter. 
 
+## Conclusion
+
+The main information on the sockets currently used (year 2022) for conventional
+microprocessors or PCs was listed. It was briefly explained how the CPU sockets
+work, and that there are categories of PCs depending on the needs of users,
+requiring different types of sockets. It was noticed that the LGA socket package
+is the most widely used for PCs.
+
 ## References
 
 [1] Johnson, Q. (2020, June 22). Building Your Own PC: Part Picking – TechTalk.
