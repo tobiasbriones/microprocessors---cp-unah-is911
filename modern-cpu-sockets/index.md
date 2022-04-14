@@ -165,7 +165,25 @@ Its functioning is as follows:
 > PGAs are often mounted on printed circuit boards using the through hole method
 > or inserted into a socket.
 > 
-> Source: *Wikipedia* \| Pin grid array [8]
+> Source: *Wikipedia* \| Pin grid array [8] (under CC-BY-SA-3.0)
+
+### Ball Grid Array (BGA)
+
+Mostly used for mobile devices or for electrical engineering
+[9] thus we don't care too much about it in this article. We have that:
+
+> A ball grid array (BGA) is a type of surface-mount packaging (a chip carrier) 
+> used for integrated circuits. BGA packages are used to permanently mount 
+> devices such as microprocessors.
+> 
+> The BGA is descended from the pin grid array (PGA), which is a package with 
+> one face covered (or partly covered) with pins in a grid pattern which, in 
+> operation, conduct electrical signals between the integrated circuit and the 
+> printed circuit board (PCB) on which it is placed. In a BGA the pins are 
+> replaced by pads on the bottom of the package, each initially with a tiny 
+> solder ball stuck to it.
+> 
+> Source: *Wikipedia* \| Ball grid array [9] (under CC-BY-SA-3.0)
 
 ## References
 
