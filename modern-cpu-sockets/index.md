@@ -72,7 +72,9 @@ shown next.
 
 There is a large number of old sockets [^1], only the most recent will be detailed.
 
-[^1]: Wikipedia [11] lists a great amount of old models from 1,970 which can be recognized by the reader (if old enough) like the LGA775 in which was used by our old Intel Pentium 4/D or Core2Duo
+[^1]: Wikipedia [11] lists a great amount of old models from 1,970 which can be
+    recognized by the reader (if old enough) like the LGA775 used by our old 
+    Intel Pentium 4/D or Core2Duo
 
 For desktop PC there are the following models:
 
