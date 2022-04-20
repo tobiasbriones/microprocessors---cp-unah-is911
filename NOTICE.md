@@ -21,3 +21,4 @@ The following modules contain third party content:
 - [getting-started-with-lcd](getting-started-with-lcd/images/notice.md)
 - [raspberry-pi-pico-and-micropython](raspberry-pi-pico-and-micropython/images/notice.md)
 - [esp32-with-cpp-and-micropython](esp32-with-cpp-and-micropython/images/notice.md)
+- [gal16v8-circuit-sim](gal16v8-circuit-sim/images/notice.md)
