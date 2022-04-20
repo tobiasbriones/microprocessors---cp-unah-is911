@@ -55,13 +55,21 @@
 
     \section{Marco Teórico}\label{sec:marco-teórico}
 
-    Los dispositivos lógicos programables (DLP) o programmable logic devices (PLD) son dispositivos de hardware que no tienen una funcionalidad predeterminada de fábrica como las compuertas lógicas. Esta funcionalidad es dada por el programador.
+    Los dispositivos lógicos programables (DLP) o programmable logic devices
+    (PLD) son dispositivos de hardware que no tienen una funcionalidad
+    predeterminada de fábrica como las compuertas lógicas. Esta funcionalidad
+    es dada por el programador.
 
     \subsection{Definiciones}
 
     \begin{quote}
-        Un dispositivo lógico programable (PLD) es un componente electrónico utilizado para construir circuitos digitales reconfigurables. A diferencia de la lógica digital construida utilizando puertas lógicas discretas con funciones fijas, un PLD tiene una función indefinida en el momento de la fabricación.\\ \footnotesize
-        Fuente: \textit{Wikipedia} $\mid$ Programmable logic device \cite{wikipedia-pld-2022} (traducido de inglés a español)
+        Un dispositivo lógico programable (PLD) es un componente electrónico
+        utilizado para construir circuitos digitales reconfigurables. A
+        diferencia de la lógica digital construida utilizando puertas lógicas
+        discretas con funciones fijas, un PLD tiene una función indefinida en
+        el momento de la fabricación.\\ \footnotesize
+        Fuente: \textit{Wikipedia} $\mid$ Programmable logic device
+        \cite{wikipedia-pld-2022} (traducido de inglés a español)
     \end{quote}
 
     Hay muchas formas de utilizarlos, entre ellas \cite{wikipedia-pld-2022}:
@@ -72,18 +80,23 @@
         \item Field-Programmable Gate Arrays (FPGAs).
     \end{itemize}
 
-    Los GALs (cuales nos interesa) son útiles para prototipos y una mejora de los PAL. GAL significa \say{Dispositivo de Lógica de Arreglo Genérico}. Y su forma física es como la siguiente:
+    Los GALs (cuales nos interesa) son útiles para prototipos y una mejora de
+    los PAL. GAL significa \say{Dispositivo de Lógica de Arreglo Genérico}. Y
+    su forma física es como la siguiente:
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/lattice-gal-16v8}
         \caption{GAL16V8}\footnotesize
-        Fuente: \textit{Wikipedia} $\mid$  Programmable logic device \cite{wikipedia-pld-2022}. By Michael Holley - English Wikipedia, Public Domain, https://commons.wikimedia.org/w/index.php?curid=3146615.
+        Fuente: \textit{Wikipedia} $\mid$  Programmable logic device
+        \cite{wikipedia-pld-2022}. By Michael Holley - English Wikipedia,
+        Public Domain, https://commons.wikimedia.org/w/index.php?curid=3146615.
     \end{figure}
 
     \subsection{Características del GAL16V8}
 
-    Las principales características de GAL16V8 son \cite{lattice-semiconductor-corp-2004}:
+    Las principales características de GAL16V8 son
+    \cite{lattice-semiconductor-corp-2004}:
 
     \begin{itemize}
         \item Tecnología de alto rendimiento.
@@ -92,7 +105,8 @@
         \item Tecnología CELL $E^2$.
         \item Ocho marcoceldas de salida lógica.
         \item Precarga y reinicio de encendido para todos los registros.
-        \item Aplicaciones como control de DMA, control de máquina de estados, proceso de gráficos de alta velocidad.
+        \item Aplicaciones como control de DMA, control de máquina de
+        estados, proceso de gráficos de alta velocidad.
         \item Firma electrónica para identificación.
     \end{itemize}
 
@@ -101,18 +115,22 @@
         \centering
         \includegraphics[width=0.5\paperwidth]{images/datasheet-gal16v8-pins}
         \caption{GAL16V8 Configuración de Pines}\footnotesize
-        Fuente: \textit{ece-classes.usc.edu} $\mid$ GAL16V8 Data Sheet \cite{lattice-semiconductor-corp-2004} (bajo uso justo)
+        Fuente: \textit{ece-classes.usc.edu} $\mid$ GAL16V8 Data Sheet
+        \cite{lattice-semiconductor-corp-2004} (bajo uso justo)
     \end{figure}
 
-    Podemos hablar sobre otros detalles como las operaciones lógicas. Estas se definen como $(!, NOT)$, $(\&, AND)$, $(\#, OR)$, $(\$, XOR)$ \cite{warneke-1998}.
+    Podemos hablar sobre otros detalles como las operaciones lógicas. Estas
+    se definen como $(!, NOT)$, $(\&, AND)$, $(\#, OR)$, $(\$, XOR)$
+    \cite{warneke-1998}.
 
     \bigbreak
 
-    Por otro lado, la extensión de archivo que necesitamos, la cual contiene el mapa de fusible (código a simular) es el archivo con formato JED. Este es generado por CUPL y usado por el programador para quemar el chip \cite{warneke-1998}.
+    Por otro lado, la extensión de archivo que necesitamos, la cual contiene
+    el mapa de fusible (código a simular) es el archivo con formato JED. Este
+    es generado por CUPL y usado por el programador para quemar el chip
+    \cite{warneke-1998}.
 
     \section{Procedimiento Experimental}\label{sec:procedimiento-experimental}
-
-
 
     \begin{figure}[H]
         \centering
@@ -128,8 +146,10 @@
 
     \subsection{Programa}
 
-    Primero se debe instalar el software WinCUPL de \href{https://www.microchip.com/en-us/products/fpgas-and-plds/spld-cplds/pld-design-resources}{La descarga oficial}. Puede salir un mensaje de advertencia que no se puede descargar de forma segura.
-
+    Primero se debe instalar el software WinCUPL de
+    \href{https://www.microchip.com/en-us/products/fpgas-and-plds/spld-cplds/pld-design-resources}{La descarga oficial}.
+    Puede salir un mensaje de advertencia que no se puede descargar de forma
+    segura.
 
     \begin{figure}[H]
         \centering
@@ -137,7 +157,11 @@
         \caption{Descarga de WinCUPL}
     \end{figure}
 
-    El software es super anticuado (data de los años 80s), inseguro de descargar (el navegador no permite su descarga), y el binario no está firmado, por lo cual no es software de confianza pero es lo que hay. En la página de descarga se da un serial, con este se deberá ingresar al programa. Siendo así, se seguirán los siguientes pasos:
+    El software es super anticuado (data de los años 80s), inseguro de
+    descargar (el navegador no permite su descarga), y el binario no está
+    firmado, por lo cual no es software de confianza pero es lo que hay. En
+    la página de descarga se da un serial, con este se deberá ingresar al
+    programa. Siendo así, se seguirán los siguientes pasos:
 
     \bigbreak
 
@@ -153,16 +177,21 @@
 
     \bigbreak
 
-    A continuación, se ingresa la cantidad de entradas ($4$) y salidas ($2$) que se van a utilizar. El pinnodes no se utilizará por lo que se deja en $0$.
-
-
-    \bigbreak
-
-    En el programa, se definen las entradas primero, luego las salidas, y por último la lógica del programa para asignar las salidas el valor que se obtuvo en las fórmulas.
+    A continuación, se ingresa la cantidad de entradas ($4$) y salidas ($2$)
+    que se van a utilizar. El pinnodes no se utilizará por lo que se deja en
+    $0$.
 
     \bigbreak
 
-    Cabe destacar, que en el lenguaje CUPL, además de lo que se verá a continuación, la sintaxis cambia un poco, utilizando ! para NOT, \# para OR, y \& para AND.
+    En el programa, se definen las entradas primero, luego las salidas, y por
+    último la lógica del programa para asignar las salidas el valor que se
+    obtuvo en las fórmulas.
+
+    \bigbreak
+
+    Cabe destacar, que en el lenguaje CUPL, además de lo que se verá a
+    continuación, la sintaxis cambia un poco, utilizando ! para NOT, \# para
+    OR, y \& para AND.
 
     \begin{figure}[H]
         \centering
@@ -170,11 +199,14 @@
         \caption{Programa CUPL}
     \end{figure}
 
-    Por lo que se procede a guardar y compilar el código con F9. El archivo binario se encontrará el directorio de instalación de WinCUPL -> WinCUPL -> LAB5.jed.
+    Por lo que se procede a guardar y compilar el código con F9. El archivo
+    binario se encontrará el directorio de instalación de WinCUPL -> WinCUPL
+    -> LAB5.jed.
 
     \subsection{Simulación}
 
-    Se abre un nuevo proyecto en Proteus, y se agregan los siguientes dispositivos:
+    Se abre un nuevo proyecto en Proteus, y se agregan los siguientes
+    dispositivos:
 
     \begin{itemize}
         \item AM16V8
@@ -183,14 +215,14 @@
         \item SW-SPST
     \end{itemize}
 
-
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/proteus-sim-circuit}
         \caption{Circuito para la Simulación}
     \end{figure}
 
-    Para agregar el mapa de fusible, hacer doble click en el integrado, y seleccionar el mapa de fusible, o archivo .jed.
+    Para agregar el mapa de fusible, hacer doble click en el integrado, y
+    seleccionar el mapa de fusible, o archivo .jed.
 
     \section{Análisis de Resultados}\label{sec:análisis-de-resultados}
 
@@ -199,8 +231,6 @@
     \bigbreak
 
     Si todos son cero $\implies$ $Q_1 = 1$ y $Q_0 = 1$.
-
-
 
     \begin{figure}[H]
         \centering
@@ -212,7 +242,6 @@
 
     Si se tiene $0001$ $\implies$ $Q_1 = 1$ y $Q_0 = 0$.
 
-
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/proteus-sim-2}
@@ -223,18 +252,22 @@
 
     Si se tiene $0011$ $\implies$ $Q_1 = 1$ y $Q_0 = 0$.
 
-
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\paperwidth]{images/proteus-sim-3}
         \caption{Simulación 3}
     \end{figure}
 
-    De igual forma, se pudo terminar de comprobar la funcionalidad del programa con los valores restantes de la tabla de verdad del problema resuelto.
+    De igual forma, se pudo terminar de comprobar la funcionalidad del
+    programa con los valores restantes de la tabla de verdad del problema
+    resuelto.
 
     \section{Conclusión}\label{sec:conclusion}
 
-    Se instaló el software WinCUPL para compilar el programa del problema propuesto. Se convirtió el circuito lógico a una tabla de verdad o ecuación lógica. Se simuló el programa en Proteus y se verificó su funcionamiento normal.
+    Se instaló el software WinCUPL para compilar el programa del problema
+    propuesto. Se convirtió el circuito lógico a una tabla de verdad o
+    ecuación lógica. Se simuló el programa en Proteus y se verificó su
+    funcionamiento normal.
 
     \printbibliography
 
