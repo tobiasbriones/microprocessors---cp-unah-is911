@@ -6,3 +6,4 @@
 - [Microchip.com Download WinCUPL](microchip.com-download-wincupl.jpeg)
 - [WinCUPL Design Properties](wincupl-design-properties.png)
 - [WinCUPL Program](wincupl-program.png)
+- [Proteus Sim 1](proteus-sim-1.png)
