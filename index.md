@@ -21,3 +21,7 @@ Go to:
 - [gal16v8-circuit-sim](gal16v8-circuit-sim)
 - [pic-microcontroller](pic-microcontroller)
 - [raspberry-pi-pico-and-micropython](raspberry-pi-pico-and-micropython)
+
+### Others
+
+- [course-professor-review](course-professor-review)
