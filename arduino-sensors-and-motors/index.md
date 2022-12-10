@@ -13,10 +13,25 @@ Bluetooth connection and for direct current motors applied to the Arduino board.
 When learning the Arduino platform in overall there are many possibilities to
 explore and some of them are sensors, external modules that attach to the
 Arduino board like a Bluetooth module for wireless connectivity, and actuators
-like direct current motors including stepper motors. These are some basic 
+like direct current motors including stepper motors. These are some basic
 devices to start getting utility out of Arduino board applications.
 
 Here you can identify the needs to use inputs, outputs, power control by PWM,
 response times, wireless control of devices, coupling of external devices and
 others that are widely applied to daily life in mobile or security devices or
 even industrial applications for heavier power control but with similar designs.
+
+## Objective
+
+The objective of this research is to collect a theoretical framework on basic
+sensors and motors that work with Arduino.
+
+### Specific Objectives
+
+Find out the general operation and example programs for Arduino of:
+
+- PIR sensors.
+- IR sensors.
+- Bluetooth HC-06 module.
+- Control of DC motors.
+- Unipolar stepper motor.
