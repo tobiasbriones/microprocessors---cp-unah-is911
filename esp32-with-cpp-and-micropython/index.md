@@ -210,3 +210,89 @@ is the following information [8]:
 - Delete the flash: `esptool.py --port /dev/ttyUSB0 erase\_flash`.
 - Deploy the firmware: `esptool.py --chip esp32 --port /dev/ttyUSB0
   write\_flash -z 0x1000 esp32-20180511-v1.9.4.bin`.
+
+### Program
+
+For the creation of the program it's recommended to use Thonny IDE. Then
+You must select the interpreter and the port of the device in the IDE.
+Right there in the Interpreter tab, select in the Firmware part to flash the
+firmware that was downloaded. The file name must be `main.py` since `boot.py` is
+loaded first and then `main.py`.
+
+```python
+import machine
+import sys
+import utime
+
+repl_button = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+led = machine.Pin(5, machine.Pin.OUT)
+
+while True:
+    if repl_button.value() == 0:
+        print("Dropping to REPL")
+        sys.exit()
+    
+    led.value(1)
+    utime.sleep_ms(500)
+    led.value(0)
+    utime.sleep_ms(500)
+```
+
+<figcaption>
+<p align="center"><strong>Program to blink a LED until the exit 
+button is pressed in MicroPython</strong></p>
+<p align="center">Source: <it>Sparkfun Electronics</it> [9]
+</p>
+</figcaption>
+
+You can also see the other example in more detail: Using PWM to control an LED
+according to when a push button is pressed.
+
+The code is as follows:
+
+```python
+import machine
+import sys
+import utime
+
+repl_button = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+repl_led = machine.Pin(5, machine.Pin.OUT)
+button = machine.Pin(14, machine.Pin.IN, machine.Pin.PULL_UP)
+pwm_pin = machine.Pin(27, machine.Pin.OUT)
+pwm = machine.PWM(pwm_pin)
+
+while True:
+    if repl_button.value() == 0:
+        print("Dropping to REPL")
+        repl_led.value(1)
+        sys.exit()
+    
+    for i in range(1024):
+        if button.value() == 0:
+            pwm.duty(i)
+            utime.sleep_ms(2)
+        else:
+            pwm.duty(0)
+```
+
+The diagram is the following:
+
+![ESP32 MicroPython PWM Circuit](images/esp32-micropython-pwm-circuit.png)
+
+<figcaption>
+<p align="center"><strong>ESP32 MicroPython PWM Circuit</strong></p>
+<p align="center">Source: MicroPython Programming Tutorial: Getting Started
+with the ESP32 Thing | <it>Sparkfun</it> [9] (under the CC BY-SA 4.0 license)
+</p>
+</figcaption>
+
+And it looks like:
+
+![ESP32 MicroPython PWM Photo](images/esp32-micropython-pwm-photo.jpg)
+
+<figcaption>
+<p align="center"><strong>ESP32 MicroPython PWM Photo</strong></p>
+<p align="center">Source: MicroPython Programming Tutorial: Getting Started
+with the ESP32 Thing | <it>Sparkfun</it> [9] (under the CC BY-SA 4.0 license)
+</p>
+</figcaption>
