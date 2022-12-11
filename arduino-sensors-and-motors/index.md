@@ -483,6 +483,11 @@ Documentation and small example projects were provided on various infrared
 sensors and motors or actuators on Arduino as well as wireless Bluetooth
 connectivity.
 
+## Resources
+
+- [CP: Microprocessors \| Tobias Briones](https://github.com/tobiasbriones/cp-unah-is911-microprocessors)
+- [PDF Spanish version of this article](https://github.com/tobiasbriones/cp-unah-is911-microprocessors/releases/download/v2022.03.09/arduino-sensors-and-motors.pdf)
+
 ## References
 
 [1] Jost, D. J. (2019, July 30). What is an IR sensor? Fierce Electronics. 
