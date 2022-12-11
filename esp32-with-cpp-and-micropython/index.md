@@ -149,3 +149,42 @@ process can be consulted
 [6], as well as this other higher quality guide
 [How to Program ESP32 with Arduino IDE?](https://www.electronicshub.org/esp32-arduino-ide)
 [7].
+
+### Program
+
+The following program can be used for the ESP32. It's the same as C++ for
+Arduino, and is self-explanatory.
+
+```c
+#define ledPin 2
+
+void setup()
+{
+    pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+    digitalWrite(ledPin, HIGH);
+    delay(1000);
+    
+    digitalWrite(ledPin, LOW);
+    delay(1000);
+}
+```
+
+<figcaption>
+<p align="center"><strong>Program to blink the LED at pin 2</strong></p>
+</figcaption>
+
+For this program, it is likely that the LED (SMD) will already be on the
+board, otherwise you will have to connect a LED with its resistance to
+this output. The task of flashing the board with the Arduino IDE is a bit
+complicated, so if this aspect is not clear, it is highly recommended
+visit the links provided for more details.
+
+To use the discrete inputs, in the same way, we have `pinMode(ledPin, INPUT);`
+to use it just like any Arduino program.
+
+It's recommended to use MicroPython which is developed in the next section
+as it works best for the ESP32 board.
