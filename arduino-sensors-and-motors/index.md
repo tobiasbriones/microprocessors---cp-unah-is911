@@ -294,3 +294,9 @@ use [5].
 To test the other part of the system, a smartphone with some application such as
 Bluetooth SPP Manager can be used to establish communication with the HC-06
 Bluetooth module.
+
+## DC Motor
+
+Direct current motors were among the first to be widely used and transform
+electrical energy into mechanical energy. Its operation is related to torque,
+coils and electromagnetism.
