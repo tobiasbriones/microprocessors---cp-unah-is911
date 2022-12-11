@@ -476,3 +476,9 @@ it builds by passing the steps and the pins where the motor is connected. In the
 `setup` the motor speed is set to $$30RPM$$. In the `loop` the value of the
 potentiometer is read and the difference in reading is calculated with respect
 to the previous one in order to move the motor with that difference.
+
+## Conclusion
+
+Documentation and small example projects were provided on various infrared
+sensors and motors or actuators on Arduino as well as wireless Bluetooth
+connectivity.
