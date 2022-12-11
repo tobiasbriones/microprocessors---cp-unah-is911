@@ -181,3 +181,10 @@ Attribution-ShareAlike Creative Commons License.
 Which consists of feeding the sensor and connecting the output of the sensor to
 Arduino's input $$2$$. Remember to also connect the LED to Arduino's $$13$$
 terminal.
+
+### IR Sensors
+
+Active IR sensors act as proximity sensors by having LED light emission,
+noticing the principle that light can come out and be reflected by the 
+"intruder" object and be able to measure latency. Basically that's the 
+difference from PIRs.
