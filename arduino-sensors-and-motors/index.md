@@ -188,3 +188,23 @@ Active IR sensors act as proximity sensors by having LED light emission,
 noticing the principle that light can come out and be reflected by the 
 "intruder" object and be able to measure latency. Basically that's the 
 difference from PIRs.
+
+## Bluetooth HC-06 Module
+
+With Bluetooth connectivity you can take greater control over the applications
+on Arduino by being able to pass control to mobile devices such as smartphones.
+There are two popular modules, the HC-06 and the HC-05, which differ mainly in
+software and functionality in that the HC-06 only works as a slave while the
+HC-05 can be slave or master. This means that a connection from a slave can
+only connect to a master while a master module does not have this
+limitation. When connecting a Bluetooth device, this has a unique address of
+$$48bit$$ and a name to be identified [5].
+
+![BT HC-06 vs HC-05](images/bt-hc-06-vs-hc-05.jpg)
+
+<figcaption>
+<p align="center"><strong>BT HC-06 vs HC-05</strong></p>
+<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair ´
+use.
+</p>
+</figcaption>
