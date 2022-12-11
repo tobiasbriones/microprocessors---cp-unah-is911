@@ -296,3 +296,12 @@ And it looks like:
 with the ESP32 Thing | <it>Sparkfun</it> [9] (under the CC BY-SA 4.0 license)
 </p>
 </figcaption>
+
+## Conclusion
+
+The main features and steps to follow of the ESP32 microcontroller were 
+briefly explained to be able to use either Arduino IDE or MicroPython
+for the development of applications for ESP32. The use of digital inputs and
+outputs were exemplified in both C++ Arduino and MicroPython, and adding a
+PWM project for MicroPython. Finally, it was recommended to use MicroPython
+for better use of the ESP32 board.
