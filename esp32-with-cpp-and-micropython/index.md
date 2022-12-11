@@ -188,3 +188,25 @@ to use it just like any Arduino program.
 
 It's recommended to use MicroPython which is developed in the next section
 as it works best for the ESP32 board.
+
+## Development with MicroPython
+
+What the MicroPython documentation for the ESP32 board gives us
+is the following information [8]:
+
+- Best benefits are gained from using MicroPython on ESP32 (remember that 
+  the process with Arduino IDE was not so nice).
+- The MicroPython software supports ESP32 and you have to take into account the
+  layout of the pins, and if it includes a USB serial to have the UART
+  available on PC.
+- Check the power of the board if it does not have USB.
+- You must download the [firmware](https://micropython.org/download/#esp32)
+  of MicroPython to load it on the ESP32 board.
+- To load the firmware you must first put the board in bootloader mode, and 
+  second, copy the firmware. This depends on each board so the corresponding 
+  documentation should be consulted for more details.
+- To copy the firmware, [esptool](https://github.com/espressif/esptool) is 
+  supported by MicroPython and must be installed (`pip install esptool`).
+- Delete the flash: `esptool.py --port /dev/ttyUSB0 erase\_flash`.
+- Deploy the firmware: `esptool.py --chip esp32 --port /dev/ttyUSB0
+  write\_flash -z 0x1000 esp32-20180511-v1.9.4.bin`.
