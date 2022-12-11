@@ -204,7 +204,93 @@ $$48bit$$ and a name to be identified [5].
 
 <figcaption>
 <p align="center"><strong>BT HC-06 vs HC-05</strong></p>
-<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair ´
-use.
+<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+use [5].
 </p>
 </figcaption>
+
+### Program that Reads and Writes via Bluetooth
+
+The following program uses the `SoftwareSerial` library to establish the
+connection to the HC-06 Bluetooth module via `Serial` and as specified at a data
+rate of $$9,600\, baud$$ which must be correctly configured. Remember that the
+Arduino terminals $$0$$ and $$1$$ are intended for serial communication with the
+computer according to previous articles, so other terminals will be used for the
+Bluetooth module instead.
+
+```c
+// By https://www.prometec.net/bt-hc06/
+
+#include <SoftwareSerial.h>
+
+SoftwareSerial BT1(4,2);
+
+void setup()
+{
+    Serial.begin(9600);
+    Serial.println("Enter AT commands:");
+    BT1.begin(9600);
+}
+
+void loop()
+{
+    if (BT1.available())
+    {
+        Serial.write(BT1.read());
+    }
+    if (Serial.available())
+    {
+        String str = getLine();
+        BT1.print(str);
+        Serial.println("---> " + str);
+    }
+}
+
+String getLine()
+{
+    String S = "" ;
+    if (Serial.available())
+    {
+        char c = Serial.read();
+        while (c != '\n')
+        {
+            S = S + c;
+            delay(25);
+            c = Serial.read();
+        }
+        return(S + '\n');
+    }
+}
+```
+
+<figcaption>
+<p align="center"><strong>Program that Reads and Writes via Bluetooth</strong></p>
+<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+use [5].
+</p>
+</figcaption>
+
+As explained, the `SoftwareSerial` library is imported to create a `BT1` object
+which gives us the API to communicate with the Bluetooth device. Likewise, the
+Arduino serial is used to communicate with the computer. In the loop, it can be
+seen that when there is data from the bluetooth device, it's read and printed
+by the serial, and if there is data waiting in the serial, then a line of text
+is requested to be entered to later send it through the Bluetooth device.
+
+To read the line of text from serial, the string is concatenated by inputting
+`Serial.read()` until a new line or "enter" is entered on the computer.
+
+The circuit is trivial and is depicted below.
+
+![BT Arduino Circuit](images/bt-arduino-circuit.jpg)
+
+<figcaption>
+<p align="center"><strong>BT Arduino Circuit</strong></p>
+<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+use [5].
+</p>
+</figcaption>
+
+To test the other part of the system, a smartphone with some application such as
+Bluetooth SPP Manager can be used to establish communication with the HC-06
+Bluetooth module.
