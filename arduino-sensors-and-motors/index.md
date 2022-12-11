@@ -300,3 +300,81 @@ Bluetooth module.
 Direct current motors were among the first to be widely used and transform
 electrical energy into mechanical energy. Its operation is related to torque,
 coils and electromagnetism.
+
+### DC Motor Control with PWM
+
+The motor will be controlled by analog output with PWM. Remember that PWN
+modulates the signal that is sent to control the power delivered by varying the
+width of the square or digital wave which averages the voltage delivered in each
+cycle so that the power — that is proportional to the voltage — is eventually
+controlled.
+
+The code is the following:
+
+```c
+/*
+Adafruit Arduino - Lesson 13. DC Motor
+*/
+
+int motorPin = 3;
+
+void setup()
+{
+    pinMode(motorPin, OUTPUT);
+    Serial.begin(9600);
+    while (!Serial);
+    Serial.println("Speed 0 to 255");
+}
+
+void loop()
+{
+    if (Serial.available())
+    {
+        int speed = Serial.parseInt();
+    }
+    if (speed >= 0 && speed <= 255)
+    {
+        analogWrite(motorPin, speed);
+    }
+}
+```
+
+<figcaption>
+<p align="center"><strong>DC Motor Control with PWM</strong></p>
+<p align="center">Source: <it> Adafruit Learning System</it> | Arduino Lesson
+13. DC Motors. Under fair use. [6]
+</p>
+</figcaption>
+
+The terminal for the motor is defined as $$3$$ in output mode. The loop 
+reads the value in $$[0, 255]$$ from the `Serial` to control the speed of the 
+motor. This value is written using PWM and the `analogWrite` method.
+
+The diagram contains some aspects to take into account:
+
+![DC Motor Arduino Circuit](images/dc-motor-arduino-circuit.jpg)
+
+<figcaption>
+<p align="center"><strong>DC Motor Arduino Circuit</strong></p>
+<p align="center">Source: <it> Adafruit Learning System</it> | Arduino Lesson 13. DC Motors. By
+Simon Monk. Licensed under the Attribution Creative Commons License/ 
+</p>
+</figcaption>
+
+We can see here we need:
+
+- $$1$$ DC Motor $$6V$$.
+- $$1$$ Transistor $$PN2222$$.
+- $$1$$ Diode $$1N4001$.
+- $$1$$ Resistor $$270\ohm$$.
+- Arduino Board.
+- Others like cable.
+
+The transistor acts as a switch to control the motor with the signal it receives
+at its base from the Arduino pin and to the collector that connects to the motor
+through the diode and the emitter that goes to ground. Note that, as usual when
+studying electronics, we put a diode when there are inductive devices such as
+coils or motors to avoid a discharge with current in the opposite direction
+towards our circuit or incorrect polarizations. Also, the motor obviously draws
+a lot of current so the Arduino can't handle it, and a simple transistor is used
+for power control.
