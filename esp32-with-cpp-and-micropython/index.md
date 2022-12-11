@@ -115,3 +115,37 @@ specifications, development resources for many programming languages and
 platforms, online communities about this specific device, readings and videos,
 hardware platforms, information about vendors who sell this device and other
 accessories [5].
+
+## Development in Arduino IDE and C++
+
+This section will try to address how to create a program for the ESP32 board 
+using Arduino IDE and C++. In the next section, you will see how the process is
+in MicoPython.
+
+What needs to be done to set this configuration is the following [6]:
+
+- Download and install Arduino IDE.
+- Go to File / Preferences / Additional Boards Manager URLs and enter the 
+  official address to install the ESP32 board [https://dl.espressif.com/dl/package_esp32_index.json](https://dl.espressif.com/dl/package_esp32_index.json).
+- Go to Tools / Board / Boards manager.
+- Select the ESP32 board now that has been added to the repository with the 
+  previous step, and proceed to install it.
+- Select the board you have from all the possible options.
+- Select the ESP32 USB port when connecting the ESP module.
+
+The esptool tool will be used to create the firmware and flash it on the ESP32
+board.
+
+The board can be decoupled, that is, only the chip, or in a NodeMCU card as
+illustrated above. Using Arduino IDE to flash this card is more complicated 
+as it takes several more steps. Of course, it's Arduino IDE and not ESP32 
+IDE (that's why it's harder). 
+
+For this, you have to reset the microcontroller and start it in flash mode using
+GPIO-0 to Ground. Also take into account about the programmer to be used as
+mentioned at the beginning. Lastly, for a more visual and in-depth look at this
+process can be consulted
+[ESP32 - Program a ESP32 \| Studio Pieters](https://www.studiopieters.nl/esp32-program-a-esp32)
+[6], as well as this other higher quality guide
+[How to Program ESP32 with Arduino IDE?](https://www.electronicshub.org/esp32-arduino-ide)
+[7].
