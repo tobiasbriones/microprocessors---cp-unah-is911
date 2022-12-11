@@ -106,3 +106,78 @@ International.</p>
 
 The Fresnel lens can be used to collect light more punctually and the rest of
 the operation is as described above.
+
+### PIR Sensor in Arduino
+
+This Arduino program demonstrates how to use the PIR sensor to detect nearby
+objects. The PIR sensor simply acts as a digital input to establish whether
+there is an object in the sensor's viewing area.
+
+```c
+/*
+* PIR sensor tester
+* by Adafruit Learning System
+*/
+
+int ledPin = 13;
+int inputPin = 2;
+int pirState = LOW;
+int val = 0;
+
+void setup()
+{
+    pinMode(ledPin, OUTPUT);
+    pinMode(inputPin, INPUT);
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    val = digitalRead(inputPin);
+    if (val == HIGH)
+    {
+        digitalWrite(ledPin, HIGH);
+        if (pirState == LOW)
+        {
+            Serial.println("Motion detected!");
+            pirState = HIGH;
+        }
+    }
+    else
+    {
+        digitalWrite(ledPin, LOW);
+        if (pirState == HIGH)
+        {
+            Serial.println("Motion ended!");
+            pirState = LOW;
+        }
+    }
+}
+```
+
+<figcaption>
+<p align="center"><strong>PIR Sensor in Arduino</strong></p>
+<p align="center">Source: <it>Adafruit Learning System</it> | PIR
+Motion Sensor [4]</p>
+</figcaption>
+
+Simply define the output of the LED at Arduino's pin $$13$$ and the 
+input of the sensor at PIN $$2$$. There's a state variable `pirState` to 
+debug the current value of the sensor by `Serial`. The variable `val` stores
+the digital value of the sensor.
+
+The circuit diagram is simply:
+
+![Proximity PIR Arduino Circuit](images/proximity-pir-arduino-circuit.png)
+
+<figcaption>
+<p align="center"><strong>Proximity PIR Arduino Circuit</strong></p>
+<p align="center">Source: <it>Adafruit Learning System</it> | Using a PIR w/Arduino. 
+Converted from GIF to PNG. By lady ada. Licensed under the 
+Attribution-ShareAlike Creative Commons License.
+</p>
+</figcaption>
+
+Which consists of feeding the sensor and connecting the output of the sensor to
+Arduino's input $$2$$. Remember to also connect the LED to Arduino's $$13$$
+terminal.
