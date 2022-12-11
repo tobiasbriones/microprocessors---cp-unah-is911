@@ -378,3 +378,24 @@ coils or motors to avoid a discharge with current in the opposite direction
 towards our circuit or incorrect polarizations. Also, the motor obviously draws
 a lot of current so the Arduino can't handle it, and a simple transistor is used
 for power control.
+
+### Unipolar Stepper Motor
+
+Stepper motors are DC motors that rotate a specific amount each time they
+receive a pulse. This pulse can be a square wave. There are two types of
+two-phase stepper motors according to the arrangement of their coils: unipolar
+and bipolar [7].
+
+Unipolar motors have one center winding per phase which allows the polarity to
+be easily changed without changing the center winding.
+
+![Unipolar Stepper Motor Windings](images/unipolar-stepper-motor-windings.png)
+
+<figcaption>
+<p align="center"><strong>Unipolar Stepper Motor Windings</strong></p>
+<p align="center">Source: <it>Wikipedia</it> | Stepper motor. By Yegorius - Own work, CC BY-SA
+4.0, https://commons.wikimedia.org/w/index.php?curid=3845597.
+</p>
+</figcaption>
+
+However, bipolar motors have a single winding per phase.
