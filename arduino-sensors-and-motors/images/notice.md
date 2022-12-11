@@ -13,11 +13,13 @@
     - Converted from GIF to PNG
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
+    - Modification: Compress image.
 - [Proximity PIR Arduino Circuit](proximity-pir-arduino-circuit.png)
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/543)
     - Converted from GIF to PNG
     - By lady ada
     - Licensed under the Attribution-ShareAlike Creative Commons License
+    - Modification: Compress image
 - [DC Motor Arduino Circuit](dc-motor-arduino-circuit.jpg)
     - From [Adafruit Learning System](https://learn.adafruit.com/assets/2346)
     - By Simon Monk
@@ -27,15 +29,18 @@
     - By Arduino
     - Licensed under the Creative Commons Attribution Share Alike 4.0 
       International License
+    - Modification: Compress image.
 - [Unipolar Knob Schematic](unipolar-knob-schematic.png)
     - From [Arduino Docs](https://docs.arduino.cc/learn/electronics/stepper-motors)
     - By Arduino
     - Licensed under the Creative Commons Attribution Share Alike 4.0
     International License
+    - Modification: Compress image.
 - [PIR Trigger Consists of a Pyroelectric Sensor And Fresnel Lens](pir-trigger-consists-of-a-pyroelectric-sensor-and-fresnel-lens.png)
     - From [Research Gate | How do passive infrared triggered camera traps operate and why does it matter? Breaking down common misconceptions](https://www.researchgate.net/figure/The-passive-infrared-PIR-trigger-consists-of-a-pyroelectric-sensor-and-Fresnel-lens_fig5_304608153)
     - DOI 10.1002/rse2.20
     - Licensed under the Creative Commons Attribution-NonCommercial 4.0 International
+    - Modification: Compress image
 - [BT HC-06 vs HC-05](bt-hc-06-vs-hc-05.jpg)
     - From [www.prometec.net](https://www.prometec.net/bt-hc06/)
     - Under fair use.
@@ -45,3 +50,4 @@
 - [Unipolar Stepper Motor Windings](unipolar-stepper-motor-windings.png)
     - From [Wikipedia](https://en.wikipedia.org/wiki/Stepper_motor#/media/File:Unipolar-stepper-motor-windings.png)
     - By Yegorius - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3845597
+    - Modification: Compress image.
