@@ -55,13 +55,13 @@ According to Wikipedia, PIR sensors:
 > are most often used in PIR-based motion detectors. PIR sensors are commonly
 > used in security alarms and automatic lighting applications.
 >
-> Source: *Wikipedia* \| Passive infrared sensor (under CC-BY-SA-3.0)
+> Source: Passive infrared sensor \| *Wikipedia* (under CC-BY-SA-3.0)
 
 ![House PIR](images/house-pir.jpg)
 
 <figcaption>
 <p align="center"><strong>House PIR</strong></p>
-<p align="center">Source: Wikipedia | Passive infrared sensor. By Jack LaRosa -
+<p align="center">Source: Passive infrared sensor | Wikipedia. By Jack LaRosa -
 Photographed and uploaded by me., Public Domain,
 https://commons.wikimedia.org/w/index.php?curid=4479143.</p>
 </figcaption>
@@ -70,7 +70,8 @@ https://commons.wikimedia.org/w/index.php?curid=4479143.</p>
 
 <figcaption>
 <p align="center"><strong>PIR Motion Detection</strong></p>
-<p align="center">Source: Wikipedia | Passive infrared sensor. By CHG - Own work, Public
+<p align="center">Source: Passive infrared sensor | <it>Wikipedia</it>. By CHG - 
+Own work, Public
 Domain, https://commons.wikimedia.org/w/index.php?curid=6087132.</p>
 </figcaption>
 
@@ -98,8 +99,9 @@ The following figure explains how a PIR works:
 
 <figcaption>
 <p align="center"><strong>PIR Trigger Consists of a Pyroelectric Sensor and Fresnel Lens</strong></p>
-<p align="center">Source: Research Gate | How do passive infrared triggered camera traps
-operate and why does it matter? Breaking down common misconceptions.
+<p align="center">Source: How do passive infrared triggered camera traps
+operate and why does it matter? Breaking down common misconceptions. | 
+<it>Research Gate</it>.
 Licensed under the Creative Commons Attribution-NonCommercial 4.0
 International.</p>
 </figcaption>
@@ -157,8 +159,7 @@ void loop()
 
 <figcaption>
 <p align="center"><strong>PIR Sensor in Arduino</strong></p>
-<p align="center">Source: <it>Adafruit Learning System</it> | PIR
-Motion Sensor [4]</p>
+<p align="center">Source: PIR Motion Sensor | <it>Adafruit Learning System</it> [4]</p>
 </figcaption>
 
 Simply define the output of the LED at Arduino's pin $$13$$ and the 
@@ -172,7 +173,7 @@ The circuit diagram is simply:
 
 <figcaption>
 <p align="center"><strong>Proximity PIR Arduino Circuit</strong></p>
-<p align="center">Source: <it>Adafruit Learning System</it> | Using a PIR w/Arduino. 
+<p align="center">Source: Using a PIR w/Arduino | <it>Adafruit Learning System</it>. 
 Converted from GIF to PNG. By lady ada. Licensed under the 
 Attribution-ShareAlike Creative Commons License.
 </p>
@@ -204,7 +205,7 @@ $$48bit$$ and a name to be identified [5].
 
 <figcaption>
 <p align="center"><strong>BT HC-06 vs HC-05</strong></p>
-<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+<p align="center">Source: MODULO BLUETOOTH HC-06 | <it>www.prometec.net</it>. Under fair
 use [5].
 </p>
 </figcaption>
@@ -265,7 +266,7 @@ String getLine()
 
 <figcaption>
 <p align="center"><strong>Program that Reads and Writes via Bluetooth</strong></p>
-<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+<p align="center">Source: MODULO BLUETOOTH HC-06 | <it>www.prometec.net</it>. Under fair
 use [5].
 </p>
 </figcaption>
@@ -286,7 +287,7 @@ The circuit is trivial and is depicted below.
 
 <figcaption>
 <p align="center"><strong>BT Arduino Circuit</strong></p>
-<p align="center">Source: <it>www.prometec.net</it> | MODULO BLUETOOTH HC-06. Under fair
+<p align="center">Source: MODULO BLUETOOTH HC-06 | <it>www.prometec.net</it>. Under fair
 use [5].
 </p>
 </figcaption>
@@ -341,8 +342,8 @@ void loop()
 
 <figcaption>
 <p align="center"><strong>DC Motor Control with PWM</strong></p>
-<p align="center">Source: <it> Adafruit Learning System</it> | Arduino Lesson
-13. DC Motors. Under fair use. [6]
+<p align="center">Source: Arduino Lesson 13. DC Motors | <it>Adafruit Learning 
+System</it>. Under fair use. [6]
 </p>
 </figcaption>
 
@@ -356,8 +357,9 @@ The diagram contains some aspects to take into account:
 
 <figcaption>
 <p align="center"><strong>DC Motor Arduino Circuit</strong></p>
-<p align="center">Source: <it> Adafruit Learning System</it> | Arduino Lesson 13. DC Motors. By
-Simon Monk. Licensed under the Attribution Creative Commons License/ 
+<p align="center">Source: Arduino Lesson 13. DC Motors | <it>Adafruit Learning
+System</it>. By Simon Monk. Licensed under the Attribution Creative Commons 
+License.
 </p>
 </figcaption>
 
@@ -393,8 +395,8 @@ be easily changed without changing the center winding.
 
 <figcaption>
 <p align="center"><strong>Unipolar Stepper Motor Windings</strong></p>
-<p align="center">Source: <it>Wikipedia</it> | Stepper motor. By Yegorius - Own work, CC BY-SA
-4.0, https://commons.wikimedia.org/w/index.php?curid=3845597.
+<p align="center">Source: Stepper motor | <it>Wikipedia</it>. By Yegorius - Own
+work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3845597.
 </p>
 </figcaption>
 
@@ -408,7 +410,8 @@ The circuit is the following:
 
 <figcaption>
 <p align="center"><strong>Unipolar Knob Circuit</strong></p>
-<p align="center">Source: <it>Arduino Docs</it> | Arduino and Stepper Motor Configurations. By
+<p align="center">Source: Arduino and Stepper Motor Configurations | 
+<it>Arduino Docs</it>. By
 Arduino. Licensed under the Creative Commons Attribution Share Alike
 4.0 International License.
 </p>
@@ -420,7 +423,8 @@ To make it clearer, the schematic is given below:
 
 <figcaption>
 <p align="center"><strong>Unipolar Knob Schematic</strong></p>
-<p align="center">Source: <it>Arduino Docs</it> | Arduino and Stepper Motor Configurations. By
+<p align="center">Source: Arduino and Stepper Motor Configurations |
+<it>Arduino Docs</it>. By
 Arduino. Licensed under the Creative Commons Attribution Share Alike
 4.0 International License.
 </p>
@@ -432,7 +436,7 @@ potentiometer, and the Arduino board. Pins $$8-11$$, control the motor.
 [^2]: ULN2004s are high-voltage, high-current Darlington arrays, each containing
     seven open-collector Darlington pairs with common emitters. Each channel is
     rated for $$500 mA$$ and can handle maximum currents of $$600 mA$$. Source: 
-    grobotronics.com \| Darlington Array ULN2004 [8].
+    Darlington Array ULN2004 \| *grobotronics.com* [8].
 
 The code will control the motor via the analog input of the potentiometer, and
 it works for unipolar and bipolar motors (but the given circuit is for 
@@ -465,8 +469,9 @@ void loop()
 <figcaption>
 <p align="center"><strong>Program to Control Unipolar/Bipolar Stepper 
 Motor with Potentiometer</strong></p>
-<p align="center">Source: <it>Arduino Docs</it> | 
-https://docs.arduino.cc/learn/electronics/stepper-motors [9]
+<p align="center">Source:
+https://docs.arduino.cc/learn/electronics/stepper-motors | <it>Arduino Docs</it>
+[9]
 </p>
 </figcaption>
 
