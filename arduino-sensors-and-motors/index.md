@@ -399,3 +399,80 @@ be easily changed without changing the center winding.
 </figcaption>
 
 However, bipolar motors have a single winding per phase.
+
+#### Configuration of a Stepper Motor in Arduino
+
+The circuit is the following:
+
+![Unipolar Knob Circuit](images/unipolar-knob-circuit.png)
+
+<figcaption>
+<p align="center"><strong>Unipolar Knob Circuit</strong></p>
+<p align="center">Source: <it>Arduino Docs</it> | Arduino and Stepper Motor Configurations. By
+Arduino. Licensed under the Creative Commons Attribution Share Alike
+4.0 International License.
+</p>
+</figcaption>
+
+To make it clearer, the schematic is given below:
+
+![Unipolar Knob Schematic](images/unipolar-knob-schematic.png)
+
+<figcaption>
+<p align="center"><strong>Unipolar Knob Schematic</strong></p>
+<p align="center">Source: <it>Arduino Docs</it> | Arduino and Stepper Motor Configurations. By
+Arduino. Licensed under the Creative Commons Attribution Share Alike
+4.0 International License.
+</p>
+</figcaption>
+
+You basically need a U2004 Darlington Array [^2], a unipolar stepper motor, a
+potentiometer, and the Arduino board. Pins $$8-11$$, control the motor.
+
+[^2]: ULN2004s are high-voltage, high-current Darlington arrays, each containing
+    seven open-collector Darlington pairs with common emitters. Each channel is
+    rated for $$500 mA$$ and can handle maximum currents of $$600 mA$$. Source: 
+    grobotronics.com \| Darlington Array ULN2004 [8].
+
+The code will control the motor via the analog input of the potentiometer, and
+it works for unipolar and bipolar motors (but the given circuit is for 
+unipolar).
+
+```c
+// By https://docs.arduino.cc/learn/electronics/stepper-motors
+
+#include <Stepper.h>
+
+#define STEPS 100
+
+Stepper stepper(STEPS, 8, 9, 10, 11);
+int previous = 0;
+
+void setup()
+{
+    stepper.setSpeed(30);
+}
+
+void loop()
+{
+    int val = analogRead(0);
+
+    stepper.step(val - previous);
+    previous = val;
+}
+```
+
+<figcaption>
+<p align="center"><strong>Program to Control Unipolar/Bipolar Stepper 
+Motor with Potentiometer</strong></p>
+<p align="center">Source: <it>Arduino Docs</it> | 
+https://docs.arduino.cc/learn/electronics/stepper-motors [9]
+</p>
+</figcaption>
+
+The `Stepper` library is imported to create an object of the `Stepper` class and
+the number of steps is defined according to the engine. For the `Stepper` object
+it builds by passing the steps and the pins where the motor is connected. In the
+`setup` the motor speed is set to $$30RPM$$. In the `loop` the value of the
+potentiometer is read and the difference in reading is calculated with respect
+to the previous one in order to move the motor with that difference.
