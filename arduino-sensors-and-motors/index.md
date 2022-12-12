@@ -367,8 +367,8 @@ We can see here we need:
 
 - $$1$$ DC Motor $$6V$$.
 - $$1$$ Transistor $$PN2222$$.
-- $$1$$ Diode $$1N4001$.
-- $$1$$ Resistor $$270\ohm$$.
+- $$1$$ Diode $$1N4001$$.
+- $$1$$ Resistor $$270\Omega$$.
 - Arduino Board.
 - Others like cable.
 
