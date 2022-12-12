@@ -497,33 +497,33 @@ connectivity.
 
 [1] Jost, D. J. (2019, July 30). What is an IR sensor? Fierce Electronics. 
 Retrieved February 27, 2022, from
-https://www.fierceelectronics.com/sensors/what-ir-sensor
+[What is an IR sensor? | Fierce Electronics](https://www.fierceelectronics.com/sensors/what-ir-sensor)
 
 [2] Wikipedia contributors. (2022, February 15). Passive infrared sensor.
 Wikipedia. Retrieved February 27, 2022, from
-https://en.wikipedia.org/wiki/Passive_infrared_sensor
+[Passive infrared sensor | Wikipedia](https://en.wikipedia.org/wiki/Passive_infrared_sensor)
 
 [3] Adafruit Learning System by lady ada. (2014b, January 29). PIR Motion 
 Sensor. Adafruit Learning System. Retrieved February 27, 2022, from 
-https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work
+[How PIRs Work | PIR Motion Sensor | Adafruit Learning System](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work)
 
 [4] Adafruit Learning System by lady ada. (2014a, January 29). PIR Motion 
 Sensor. Adafruit Learning System. Retrieved February 27, 2022, from
-https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/using-a-pir-w-arduino
+[Using a PIR w/Arduino | PIR Motion Sensor | Adafruit Learning System](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/using-a-pir-w-arduino)
 
 [5] designthemes. (2022, March 6). Módulo BlueTooth HC-06. Tienda Y Tutoriales
-Arduino. https://www.prometec.net/bt-hc06/
+Arduino. [Módulo BlueTooth HC-06 | Tienda y Tutoriales Arduino](https://www.prometec.net/bt-hc06)
 
 [6] Monk, S. M. (2012, December 17). Arduino Lesson 13. DC Motors. Adafruit 
 Learning System.
-https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview
+[Overview | Arduino Lesson 13. DC Motors | Adafruit Learning System](https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview)
 
 [7] Wikipedia contributors. (2022b, November 26). Stepper motor. Wikipedia. 
-https://en.wikipedia.org/wiki/Stepper_motor
+[Stepper motor | Wikipedia](https://en.wikipedia.org/wiki/Stepper_motor)
 
 [8] Darlington Array ULN2004. (n.d.). grobotronics.com. 
-https://grobotronics.com/darlington-array-uln2004.html?sl=en
+[Darlington Array ULN2004 | GRobotronics](https://grobotronics.com/darlington-array-uln2004.html)
 
 [9] Arduino Docs. (2022, February 4). Arduino and Stepper Motor Configurations. 
 Arduino Documentation. Retrieved February 27, 2022, from 
-https://docs.arduino.cc/learn/electronics/stepper-motors/
+[Arduino and Stepper Motor Configurations | Arduino Documentation](https://docs.arduino.cc/learn/electronics/stepper-motors)
