@@ -12,6 +12,8 @@ This is a research article that presents a collection of documentation and code
 examples as a theoretical framework for different infrared sensors, for
 Bluetooth connection and for direct current motors applied to the Arduino board.
 
+## Contents
+
 - [Arduino Sensors and Motors](#arduino-sensors-and-motors)
   * [Introduction](#introduction)
   * [Objective](#objective)
